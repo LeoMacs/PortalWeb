@@ -204,7 +204,7 @@ public class modeloPublicacion extends Conexion{
             rs= pst.executeQuery();
             
             while(rs.next()){
-                publicacion.add(new publicacion(rs.getInt("entryId"),"",rs.getString("title"),rs.getString("description"),""));
+                publicacion.add(new publicacion(rs.getInt("entryId"),"",rs.getString("title"),rs.getString("description"),rs.getString("fileName")));
                 
                 
             }

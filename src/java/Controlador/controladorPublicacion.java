@@ -15,6 +15,10 @@ import jdk.nashorn.internal.objects.NativeString;
  * @author PEDRO
  */
 public class controladorPublicacion {
+     String servidor="http://localhost:8080";
+     String nombreImagen="campamento.jpg";
+     String prueba="/documents/30951/30978/";
+    
     
     public boolean crearPublicacion(publicacion p) {
         
@@ -172,9 +176,7 @@ public class controladorPublicacion {
     
     
     public String getDetallePubli(int idPubli){
-        String servidor="http://localhost:8080";
-        String nombreImagen="campamento.jpg";
-        String prueba="/documents/30951/30978/";
+       
         
         String htmlCode="";
         modeloPublicacion mp = new modeloPublicacion();
@@ -223,7 +225,7 @@ public class controladorPublicacion {
             htmlCode = htmlCode + "<div class=\"col-sm-3 col-md-3 \">\n" +
 "  \n" +
 "    			<div class=\"thumbnail thumbnail-efect\">\n" +
-"     				<a id='btnmodificarpublicacion' href='detallePubli.jsp?id="+p.getId()+"'> <img src='img/publicaciones/aulas.jpg' class=\"col-md-12 imag-producto\" ></a>\n" +
+"     				<a id='btnmodificarpublicacion' href='detallePubli.jsp?id="+p.getId()+"'> <img src="+servidor+"/documents/30951/30978/"+p.getImagen()+"/ "+" class=\"col-md-12 imag-producto\" ></a>\n" +
 "\n" +
 "      				<div class=\"caption\">\n" +
 "	       				 <h1 class=\"lead\">"+p.getTitulo()+"</h1>\n" +
