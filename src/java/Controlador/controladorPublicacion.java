@@ -172,18 +172,30 @@ public class controladorPublicacion {
     
     
     public String getDetallePubli(int idPubli){
+        String servidor="http://localhost:8080";
+        String nombreImagen="campamento.jpg";
+        String prueba="/documents/30951/30978/";
+        
         String htmlCode="";
         modeloPublicacion mp = new modeloPublicacion();
         publicacion p=  mp.getDetalle(idPubli);
+        //nombreImagen=mp.getNombreImagen(p.getidImagen());
+        System.out.println(nombreImagen);
+        System.out.println("*******************************");
+
         return htmlCode="<br><br><h1 class='letras' style='font-size:60px;line-height: 80px;margin-bottom: 25px;text-align: center;'>"+p.getTitulo()+"</h1>"
                 + "<h3>"+p.getSubtitulo()+"</h3>"
                 + "<div class=\"col-md-8 col-sm-1 col-xs-12\">\n" +
-"                        <div class=\"thumbnail  thumb-shadow s-padding\" style=\"padding: 0px; height:  470px\">\n" +
-"                            <img src=\"imagenes/doctorado.jpg\" alt=\"\" >\n" +
-"                            <div class=\"caption bg3\">\n" +
+                  "<div class=\"thumbnail  thumb-shadow s-padding\" style=\"padding: 0px; height:  470px\">\n" +
+                  /*"<img src=\"imagenes/doctorado.jpg\" alt=\"\" >\n" +*/
+                
+                
+                "<img src="+servidor+"/documents/30951/30978/"+p.getNameImagen()+"/"+">\n"+/*AÑADIDO*/
+                
+                  "<div class=\"caption bg3\">\n" +
 
-"                                <div class=\"wrap\">\n" +
-"                                    <p >\n" +
+                  "<div class=\"wrap\">\n" +
+                  "<p >\n" +
 "                                        Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod.\n" +
 "                                        Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod.\n" +
 "                                    </p>\n" +
@@ -194,7 +206,7 @@ public class controladorPublicacion {
 "                    </div>"
                 +"<h2>"+p.getDescripcion()+"</h2>"
                 + p.getDetalle();
-               
+              
     }
     
     public boolean updateProducto(publicacion p){

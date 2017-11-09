@@ -104,21 +104,24 @@ public class modeloPublicacion extends Conexion{
             
     }
     
-      public publicacion getDetalle(int idPublicacion){
+     public publicacion getDetalle(int idPublicacion){
         
         publicacion publicaciones = null;
         PreparedStatement pst = null;
         ResultSet rs =  null;
                 
          try {
-            String sql ="select entryId, title , subtitle, description, content  from blogsentry where entryId = ?";
+            String sql ="SELECT entryId, dlfileentry.fileEntryId, blogsentry.title, blogsentry.subtitle, blogsentry.description,blogsentry.content, dlfileentry.fileName FROM blogsentry " +
+" INNER JOIN dlfileentry ON blogsentry.coverImageFileEntryId = dlfileentry.fileEntryId " +
+" WHERE dlfileentry.fileEntryId=(select coverImageFileEntryId FROM blogsentry where entryId=?)";
+
+            //String sql ="select entryId, title , subtitle, description, content, coverImageFileEntryId  from blogsentry where entryId = ?";
             pst = getConnection().prepareCall(sql);
             pst.setInt(1,idPublicacion);
-            rs= pst.executeQuery();
-            
-            while(rs.next()){
-                publicaciones = new publicacion(rs.getString("title"),rs.getInt("entryId"),rs.getString("subtitle"),rs.getString("description"),rs.getString("content"));
-               
+            rs= pst.executeQuery();      
+            while(rs.next()){           
+                publicaciones = new publicacion(rs.getString("title"),rs.getInt("entryId"),rs.getString("subtitle"),rs.getString("description"),rs.getString("content"),rs.getString("fileName")); 
+                System.out.println("Nombre de imagen::"+rs.getString("fileName"));
             }
         } catch (Exception e) {
         }finally{
@@ -128,10 +131,11 @@ public class modeloPublicacion extends Conexion{
              } catch (Exception e) {
              }
          }
-   
-    return publicaciones;
-            
+        return publicaciones;      
     }
+    
+     
+   
     
      public boolean deletePublicacion(int idPublicacion){
         boolean flag = false;

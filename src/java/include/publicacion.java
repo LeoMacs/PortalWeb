@@ -19,20 +19,34 @@ public class publicacion {
     private String detalle; /*content*/
     private String titulo;  /*title*/
     private String descripcion ; /*description*/
+    private String nameImagen;/*fileName*/
     private String imagen;
     private int orden;
     private int estado;
     private Date fechaRegistro;
+
     
-   public publicacion( String titulo, int id, String subtitulo,String descripcion, String detalle){
+    
+   public publicacion( String titulo, int id, String subtitulo,String descripcion, String detalle,String nameImagen){
        this.id =id;
        this.titulo = titulo;
        this.subtitulo=subtitulo;
        this.descripcion = descripcion;
        this.detalle = detalle;
-        
+       this.nameImagen=nameImagen;
+   }
+   
+    public publicacion( String titulo, int id, String subtitulo,String descripcion, String detalle){
+       this.id =id;
+       this.titulo = titulo;
+       this.subtitulo=subtitulo;
+       this.descripcion = descripcion;
+       this.detalle = detalle;
+      
        
    }
+   
+   
 
     public publicacion(int id, String oficina,  String titulo,String detalle, String imagen) {
         this.id = id;
@@ -56,6 +70,14 @@ public class publicacion {
    public publicacion(){
        
    }
+    
+   public String getNameImagen() {
+        return nameImagen;
+    }
+
+    public void setNameImagen(String nameImagen) {
+        this.nameImagen = nameImagen;
+    }
     
     public int getId() {
         return id;
