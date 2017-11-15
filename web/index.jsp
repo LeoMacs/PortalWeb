@@ -13,10 +13,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title>FISI</title>
+        <!-- Favicon -->
+        <link rel="icon" href="http://sistemas.unmsm.edu.pe/assets/fisi/img/logo/logo-fisi.png">
+        <link rel="shortcut icon" href="http://sistemas.unmsm.edu.pe/assets/fisi/img/logo/logo-fisi.png"/>
+        <!--Icons-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!--Estilos Locales-->
         <link rel="stylesheet" href="css/estilos.css">
         <link rel="stylesheet" href="css/estilos-home.css">
         <link rel="stylesheet" href="css/font-awesome.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!---->
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -40,10 +47,11 @@
                 <div id="btn" class="btn2">
                     <a href="#" class="w3-bar-item w3-button w3-mobile" style="display: block; background: #5F6F81; color: white"><i class="fa fa-bars" aria-hidden="true"></i> &nbsp;La Facultad</a>
                 </div>
-                <a href="#" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;UNMSM</a>
-                <a href="#" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;SUM</a>
-                <a href="#" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;FISI Blog</a>
+                <a href="http://www.unmsm.edu.pe/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;UNMSM</a>
+                <a href="http://sum.unmsm.edu.pe/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;SUM</a>
+                <a href="https://alumnitosfisiunmsm.wordpress.com/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;FISI Blog</a>
                 <a href="#" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-address-book-o" aria-hidden="true"></i>&nbsp;Contacto</a>
+                <a href="transparencia.jsp" class="w3-bar-item w3-button w3-mobile"><i class="material-icons" >gavel</i>&nbsp;Transparencia</a>
                 <a href="" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><i class="fa fa-search"></i>&nbsp; Buscar</a>
             </div>
             <nav class="navegacion">
@@ -52,7 +60,7 @@
                     <li class="title-menu">FISI</li>
                     <!-- TITULAR -->
 
-                    <li><a href="#"><span class="fa fa-home icon-menu"></span>Inicio</a></li>
+                    <li><a href="index.jsp"><span class="fa fa-home icon-menu"></span>Inicio</a></li>
 
                     <li class="item-submenu" menu="1">
                         <a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;La Facultad</a>
@@ -65,8 +73,8 @@
                             <li><a href="#">&nbsp;Autoridades</a></li>
                         </ul>
                     </li>
-                    <li><a href="#"><i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;Ing de Sistemas</a></li>
-                    <li><a href="#"><i class="fa fa-code" aria-hidden="true"></i>&nbsp;Ing de Software</a></li>
+                    <li><a href="eapis.jsp"><i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;Ing de Sistemas</a></li>
+                    <li><a href="software.jsp"><i class="fa fa-code" aria-hidden="true"></i>&nbsp;Ing de Software</a></li>
                     <li class="item-submenu" menu="2">
                         <a href="#"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</a>
                         <ul class="submenu">
@@ -80,8 +88,8 @@
                     </li>
 
                     <li><a href="#"><span class="fa fa-envelope icon-menu"></span>Ins. De Investigación</a></li>
-                    <li><a href="#"><i class="fa fa-industry" aria-hidden="true"></i>&nbsp;CENPRO</a></li>
-                    <li><a href="#"><i class="fa fa-desktop" aria-hidden="true"></i>&nbsp;CERSEU</a></li>
+                    <li><a href="cenpro.jsp"><i class="fa fa-industry" aria-hidden="true"></i>&nbsp;CENPRO</a></li>
+                    <li><a href="cerseu.jsp"><i class="fa fa-desktop" aria-hidden="true"></i>&nbsp;CERSEU</a></li>
                     <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Biblioteca</a></li>
                 </ul>
             </nav>
@@ -104,114 +112,114 @@
                 <h1 class="lead titulo2">Ceremonia de sustentación Tesis Doctoral</h1>
                 <p class="titulo2">El último viernes se llevó a cabo en las instalaciones de la facultad la sustentación de tesis </p>
             </div>
-            
+
         </div>
-        
+
         <div class="thumbnail col-md-10 col-md-offset-1">
-        <%controladorPublicacion cp = new controladorPublicacion();%>
-        <%= cp.getViewPublicaciones()%>
+            <%controladorPublicacion cp = new controladorPublicacion();%>
+            <%= cp.getViewPublicaciones()%>
         </div>
-        
+
         <div class="thumbnail col-md-10 col-md-offset-1">
-         
-			<div class="thumbnail col-md-6">
-				
-					
-					<h1>Eventos</h1>
-				
-					
-				<div class="thumbnail thumbnail-efect1 color-fondo2" style="background-color: #FFB918; " >
-				  		<h1 class="lead titulo1">La FISI acreditada</h1>
-       		 			 <p class="detalle1">Luego de un gran esfuerzo y de un proceso muy riguroso la facultad de ingeniería de sistemas logró la acreditación internacional.</p>
 
-				</div>
+            <div class="thumbnail col-md-6">
 
-				<div class="thumbnail thumbnail-efect1 color-fondo1" style="background-color:#273640;">
-				  		 <h1 class="lead titulo">Convenio internacional</h1>
-       		 			 <p class="detalle">Desde enero del año pasado contamos con los convenios logrados en el exterior...</p>
-				</div>
 
-				<div class="thumbnail thumbnail-efect1 color-fondo2 " style="background-color: #FFB918; ">
-				 		 <h1 class="lead titulo1 ">La FISI acreditada</h1>
-       		 			 <p class="detalle1">Luego de un gran esfuerzo y de un proceso muy riguroso la facultad de ingeniería de sistemas logró la acreditación internacional.</p>
-				</div>
+                <h1>Eventos</h1>
 
-				<div class="thumbnail thumbnail-efect1 color-fondo1" style="background-color:#273640;" >
-					     <h1 class="lead titulo">Convenio internacional</h1>
-       		 			 <p class="detalle">Desde enero del año pasado contamos con los convenios logrados en el exterior...</p>
-				</div>
 
-			</div>
+                <div class="thumbnail thumbnail-efect1 color-fondo2" style="background-color: #FFB918; " >
+                    <h1 class="lead titulo1">La FISI acreditada</h1>
+                    <p class="detalle1">Luego de un gran esfuerzo y de un proceso muy riguroso la facultad de ingeniería de sistemas logró la acreditación internacional.</p>
 
-			<div class="thumbnail col-md-6">
-				<h1>Nuestros Logros</h1>
-			</div>
+                </div>
 
-		</div>
-        
+                <div class="thumbnail thumbnail-efect1 color-fondo1" style="background-color:#273640;">
+                    <h1 class="lead titulo">Convenio internacional</h1>
+                    <p class="detalle">Desde enero del año pasado contamos con los convenios logrados en el exterior...</p>
+                </div>
+
+                <div class="thumbnail thumbnail-efect1 color-fondo2 " style="background-color: #FFB918; ">
+                    <h1 class="lead titulo1 ">La FISI acreditada</h1>
+                    <p class="detalle1">Luego de un gran esfuerzo y de un proceso muy riguroso la facultad de ingeniería de sistemas logró la acreditación internacional.</p>
+                </div>
+
+                <div class="thumbnail thumbnail-efect1 color-fondo1" style="background-color:#273640;" >
+                    <h1 class="lead titulo">Convenio internacional</h1>
+                    <p class="detalle">Desde enero del año pasado contamos con los convenios logrados en el exterior...</p>
+                </div>
+
+            </div>
+
+            <div class="thumbnail col-md-6">
+                <h1>Nuestros Logros</h1>
+            </div>
+
+        </div>
+
         <div class="thumbnail col-md-10 col-md-offset-1 contacto">
-		
-			<div class="panel-body" >
-		    	<div class="col-md-8 col-md-offset-2">
-					<h2><b>¡Escríbenos cualquier consulta que tengas!</b></h2>
-		   		</div>
 
-				<div class="row col-md-8 col-md-offset-2">
-  		  			<div class="col-md-6">
-  		  				<input type="text" class="form-control" placeholder="Ingresa tu correo electrónico"  >
-  		  			</div>
+            <div class="panel-body" >
+                <div class="col-md-8 col-md-offset-2">
+                    <h2><b>¡Escríbenos cualquier consulta que tengas!</b></h2>
+                </div>
 
-  		  			<div class="col-md-4">
-  		  				<input type="button" class = "btn btn-primary btn-block"  value="Regístrate" ng-click="redirect()">
-  		  			</div>	
-  				</div>
-  			</div>	
-     
-	    </div>
-        
+                <div class="row col-md-8 col-md-offset-2">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Ingresa tu correo electrónico"  >
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="button" class = "btn btn-primary btn-block"  value="Regístrate" ng-click="redirect()">
+                    </div>	
+                </div>
+            </div>	
+
+        </div>
+
         <div class="thumbnail col-md-10 col-md-offset-1">
-			<div class="row"> 
-			<div class="col-md-3 col-md-offset-5">
-				<h2 class="lead"><b>FISI APPS</b></h2>
-			</div>
-			</div>
+            <div class="row"> 
+                <div class="col-md-3 col-md-offset-5">
+                    <h2 class="lead"><b>FISI APPS</b></h2>
+                </div>
+            </div>
 
-			
-			<div class="row"> 
-				<div class="thumbnail thumbnail-efect col-md-5 col-md-offset-1">
-					<div class="col-md-6 col-md-offset-4">	
-						<h4>Asistencia Docentess</h4>
-					</div>
-					<img src="imagenes/asistencia.png" class="img-responsive icono" alt="Responsive image">
-				</div>
 
-				<div class="thumbnail thumbnail-efect col-md-5">
-					<div class="col-md-6 col-md-offset-4">	
-						<h4>Biblioteca Virtual</h4>
-					</div>
-					<img src="imagenes/biblioteca.png" class="img-responsive icono" alt="Responsive image">
-				</div>
-			</div>
-			
+            <div class="row"> 
+                <div class="thumbnail thumbnail-efect col-md-5 col-md-offset-1">
+                    <div class="col-md-6 col-md-offset-4">	
+                        <h4>Asistencia Docentess</h4>
+                    </div>
+                    <img src="imagenes/asistencia.png" class="img-responsive icono" alt="Responsive image">
+                </div>
 
-			<div class="row">
-				<div class="thumbnail thumbnail-efect col-md-5 col-md-offset-1">
-					<div class="col-md-8 col-md-offset-4">	
-						<h4>Verificación de deuda</h4>
-					</div>
-					<img src="imagenes/deudas.png" class="img-responsive icono" alt="Responsive image">
-				</div>
+                <div class="thumbnail thumbnail-efect col-md-5">
+                    <div class="col-md-6 col-md-offset-4">	
+                        <h4>Biblioteca Virtual</h4>
+                    </div>
+                    <img src="imagenes/biblioteca.png" class="img-responsive icono" alt="Responsive image">
+                </div>
+            </div>
 
-			
-				<div class="thumbnail thumbnail-efect col-md-5">
-					<div class="col-md-8 col-md-offset-2">	
-						<h4>Trámite de documentos online</h4>
-					</div>
-					<img src="imagenes/tramite.jpg" class="img-responsive icono" alt="Responsive image">
-				</div>
-			</div>
 
-		</div>
-        
+            <div class="row">
+                <div class="thumbnail thumbnail-efect col-md-5 col-md-offset-1">
+                    <div class="col-md-8 col-md-offset-4">	
+                        <h4>Verificación de deuda</h4>
+                    </div>
+                    <img src="imagenes/deudas.png" class="img-responsive icono" alt="Responsive image">
+                </div>
+
+
+                <div class="thumbnail thumbnail-efect col-md-5">
+                    <div class="col-md-8 col-md-offset-2">	
+                        <h4>Trámite de documentos online</h4>
+                    </div>
+                    <img src="imagenes/tramite.jpg" class="img-responsive icono" alt="Responsive image">
+                </div>
+            </div>
+
+        </div>
+
     </body>
 </html>

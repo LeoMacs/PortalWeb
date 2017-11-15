@@ -15,10 +15,11 @@ import jdk.nashorn.internal.objects.NativeString;
  * @author PEDRO
  */
 public class controladorPublicacion {
-     String servidor="http://localhost:8080";
-     String nombreImagen="campamento.jpg";
-     String prueba="/documents/30951/30978/";
+     String servidor="http://52.168.76.15:8080";
+     String codDocumento="30243/30245/";
+     String imagPrueba="http://52.168.76.15:8080/documents/30243/30245/descarga.jpg";
     
+
     
     public boolean crearPublicacion(publicacion p) {
         
@@ -130,6 +131,7 @@ public class controladorPublicacion {
     modeloPublicacion mp= new modeloPublicacion();
     return mp.deletePublicacion(id);
 }
+    
     public String getEditViewPublicacion(int idProducto){
     modeloPublicacion mp = new modeloPublicacion();
     publicacion p=  mp.getProducto(idProducto);
@@ -176,38 +178,19 @@ public class controladorPublicacion {
     
     
     public String getDetallePubli(int idPubli){
-       
-        
         String htmlCode="";
         modeloPublicacion mp = new modeloPublicacion();
         publicacion p=  mp.getDetalle(idPubli);
-        //nombreImagen=mp.getNombreImagen(p.getidImagen());
-        System.out.println(nombreImagen);
-        System.out.println("*******************************");
-
-        return htmlCode="<br><br><h1 class='letras' style='font-size:60px;line-height: 80px;margin-bottom: 25px;text-align: center;'>"+p.getTitulo()+"</h1>"
+        //nombreImagen=mp.getNombreImagen(p.getidImagen());  
+        return htmlCode="<h1>"+p.getTitulo()+"</h1>"
                 + "<h3>"+p.getSubtitulo()+"</h3>"
-                + "<div class=\"col-md-8 col-sm-1 col-xs-12\">\n" +
-                  "<div class=\"thumbnail  thumb-shadow s-padding\" style=\"padding: 0px; height:  470px\">\n" +
-                  /*"<img src=\"imagenes/doctorado.jpg\" alt=\"\" >\n" +*/
-                
-                
-                "<img src="+servidor+"/documents/30951/30978/"+p.getNameImagen()+"/"+">\n"+/*AÑADIDO*/
-                
-                  "<div class=\"caption bg3\">\n" +
+                + "<p>11/11/2017 - 09:16h</p>" //Ahi se puede jalar la fecha tambien 
 
-                  "<div class=\"wrap\">\n" +
-                  "<p >\n" +
-"                                        Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod.\n" +
-"                                        Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod.\n" +
-"                                    </p>\n" +
-"\n" +
-"                                </div>  \n" +
-"                            </div>\n" +
-"                        </div> \n" +
-"                    </div>"
-                +"<h2>"+p.getDescripcion()+"</h2>"
-                + p.getDetalle();
+                + "<img src='"+servidor+"/documents/"+codDocumento+p.getNameImagen()+"' class=\"img-rounded center-block\" alt=\"Cinque Terre\">"
+                //+ "<img src='"+imagPrueba+"' class=\"img-rounded center-block\" alt=\"Cinque Terre\">"
+
+                + "<br>"+p.getDetalle();
+                
               
     }
     
@@ -225,7 +208,29 @@ public class controladorPublicacion {
             htmlCode = htmlCode + "<div class=\"col-sm-3 col-md-3 \">\n" +
 "  \n" +
 "    			<div class=\"thumbnail thumbnail-efect\">\n" +
-"     				<a id='btnmodificarpublicacion' href='detallePubli.jsp?id="+p.getId()+"'> <img src="+servidor+"/documents/30951/30978/"+p.getImagen()+"/ "+" class=\"col-md-12 imag-producto\" ></a>\n" +
+"     				<a id='btnmodificarpublicacion' href='detallePubli.jsp?id="+p.getId()+"'> <img src="+servidor+"/documents/"+codDocumento+p.getImagen()+"/ "+" class=\"col-md-12 imag-producto\" ></a>\n" +
+"\n" +
+"      				<div class=\"caption\">\n" +
+"	       				 <h1 class=\"lead\">"+p.getTitulo()+"</h1>\n" +
+"    	   		 		<p>"+p.getDetalle()+"</p>\n" +
+"      				</div>\n" +
+"\n" +
+"    			</div>\n" +
+"			</div>";
+        }
+        return htmlCode;
+    }
+     
+     public String getViewPublicacionesxCategoria(String categoria) {
+        String htmlCode = "";
+
+        modeloPublicacion modelop = new modeloPublicacion();
+
+        for (publicacion p : modelop.getfourPublicacionesCategoria(categoria)) {
+            htmlCode = htmlCode + "<div class=\"col-sm-3 col-md-3  \">\n" +
+"  \n" +
+"    			<div class=\"thumbnail thumbnail-efect\" style=\"height:250px\">  \n" +
+"     				<a id='btnmodificarpublicacion' href='detallePubli.jsp?id="+p.getId()+"'> <img src="+servidor+"/documents/"+codDocumento+p.getImagen()+"/ "+" class=\"col-md-12 imag-producto\" ></a>\n" +
 "\n" +
 "      				<div class=\"caption\">\n" +
 "	       				 <h1 class=\"lead\">"+p.getTitulo()+"</h1>\n" +
@@ -239,14 +244,14 @@ public class controladorPublicacion {
     }
      
     
-    public String getFourBlog(){
-        String htmlCode="";
+    public String getFourBlog(String categoria){
+        String htmlCode="<br>";
          modeloPublicacion modelop = new modeloPublicacion();
 
-        for (publicacion p : modelop.getFourPublicaciones()) {
+        for (publicacion p : modelop.getfourPublicacionesCategoria(categoria)) {
             htmlCode = htmlCode + "<div class=\"col-md-3\">\n" +
 "              <div class=\"thumbnail  thumb-shadow s-padding\" style=\"padding: 0px; height: 250px\">\n" +
-"                 <a id='btnmodificarpublicacion' href='detallePubli.jsp?id="+p.getId()+"'><img src='imagenes/reunion.jpg' alt=\"\" ></a>\n" +
+"                 <a id='btnmodificarpublicacion' href='detallePubli.jsp?id="+p.getId()+"'><img src="+servidor+"/documents/"+codDocumento+p.getImagen()+"/ "+" alt=\"\" ></a>\n" +
 "                <div class=\"caption bg3\">\n" +
 "                  <h3>"+p.getTitulo()+" </h3>\n" +
 "                  <div class=\"wrap\">\n" +
