@@ -13,20 +13,22 @@
         <link rel="shortcut icon" href="http://sistemas.unmsm.edu.pe/assets/fisi/img/logo/logo-fisi.png"/>
         <!--Icons-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="css/estilos.css">
-        <link rel="stylesheet" href="css/estilos-blog.css">
+       <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/estilos-home.css">
         <link rel="stylesheet" href="css/font-awesome.css">
-        <link rel="stylesheet" href="http://www2.trabajo.gob.pe/wp-content/themes/mitraTheme/css/bootstrap.min.css">
-        <link rel="stylesheet" href="http://www2.trabajo.gob.pe/wp-content/themes/mitraTheme/css/owl.carousel.css">
-        <link rel="stylesheet" href="http://www2.trabajo.gob.pe/wp-content/themes/mitraTheme/css/admin.css">
-        <link rel="stylesheet" type="text/css" href="http://www.cepefodes.org.pe/Hector/css/hector.css"> 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://www2.trabajo.gob.pe/wp-content/themes/mitraTheme/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://www2.trabajo.gob.pe/wp-content/themes/mitraTheme/css/owl.carousel.css">
+        <link rel="stylesheet" href="http://www2.trabajo.gob.pe/wp-content/themes/mitraTheme/css/admin.css">
+        <link rel="stylesheet" type="text/css" href="http://www.cepefodes.org.pe/Hector/css/hector.css">
         <script src="js/jquery-3.2.1.js"></script>
         <script src="js/main.js"></script>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
         <script>
             $(document).ready(function () {
                 $("#fotoPrincipal").click(function () {
@@ -94,6 +96,7 @@
 
         <br>
         <br>
+        <br>
         <!-- video -->
         <div class = "container">
             <section class = "row">
@@ -116,13 +119,9 @@
             </section>
         </div>    
         <!-- noticias -->
-        <div class="col-xs-12 divTituloSeccion colAzul2">
-            <h3 style="margin-top: 0px;">Últimas Noticias</h3> 
-        </div>
+        <br>
         <div>
-
             <section style="background-color: #363740;">
-
                 <div class="container center991">
                     <div class="secundarias">
                         <% controladorPublicacion cp = new controladorPublicacion();%>
@@ -137,69 +136,76 @@
 
         <!-- FORMULARIO -->
         <section>
-            <div class="col-xs-12 divTituloSeccion colAzul2">
-                <h3 style="margin-top: 0px;">Consultas</h3> 
+        <div class="col-xs-12 divTituloSeccion colAzul2">
+            <h3 style="margin-top: 0px;">Consultas</h3> 
+        </div>
+        <div class="thumbnail col-md-10 col-md-offset-1" style="background-color:#FFBF00">
+            <div class=" col-md-8 col-md-offset-2">
+                <h2><b><center>¡Escríbenos cualquier consulta que tengas!</center></b></h2>  
             </div>
-            <div class="thumbnail col-md-10 col-md-offset-1 contacto">
-                <div class=" col-md-8 col-md-offset-2">
-                    <h2><b><center>¡Escríbenos cualquier consulta que tengas!</center></b></h2>  
+
+            <div class="col-xs-12 col-md-6">
+                <div class="form-group">
+                    <label for="InputNombre">Nombre</label>
+                    <input type="text" name= "nombre" class="form-control" id="InputNombre"  placeholder="Ingrese su nombre..."/>
                 </div>
-
-                <div class="col-xs-12 col-md-6">
-                    <div class="form-group">
-                        <label for="InputNombre">Nombre</label>
-                        <input type="text" name= "nombre" class="form-control" id="InputNombre"  placeholder="Ingrese su nombre..."/>
-                    </div>
-                    <div class="form-group">
-                        <label for="InputApellidoP">Apellido Paterno</label>
-                        <input type="text" name= "apellidop" class="form-control" id="InputApellidoP"  placeholder="Ingrese su apellido paterno..."/>
-                    </div>
-                    <div class="form-group">
-                        <label for="InputApellidoM">Apellido Materno</label>
-                        <input type="text" name= "apellidom"  class="form-control" id="InputApellidoM"  placeholder="Ingrese su apellido materno...">
-                    </div>
-                    <div class="form-group">
-                        <label for="InputCorreoE">Correo Electrónico</label>
-                        <input type="email" name="correoe" class="form-control" id="InputCorreoE" aria-describedby="emailHelp" placeholder="Ingrese su correo...">
-                    </div>
-                    <div class="form-group">
-                        <label for="InputDNI">DNI</label>
-                        <input type="text" name="dni" class="form-control" id="InputDNI"  placeholder="Ingrese su DNI...">
-                    </div>
+                <div class="form-group">
+                    <label for="InputApellidoP">Apellido Paterno</label>
+                    <input type="text" name= "apellidop" class="form-control" id="InputApellidoP"  placeholder="Ingrese su apellido paterno..."/>
                 </div>
-
-                <div class="col-xs-12 col-md-6">
-
-                    <div class="form-group">
-                        <label for="InputDirección">Dirección</label>
-                        <input type="text" class="form-control" id="InputDirección"  placeholder="Detalle su dirección..." name="dirección">
-                    </div>
-                    <div class="form-group">
-                        <label for="InputDistrito">Distrito</label>
-                        <input type="text" class="form-control" id="InputDistrito"  placeholder="Distrito de vivienda..." name="distrtito">
-                    </div>
-                    <div class="form-group">
-                        <label for="InputDepartamento">Departamento</label>
-                        <input type="text" class="form-control" id="InputDepartamento"  placeholder="Departamento de vivienda..." name="departamento">
-                    </div>
-                    <div class="form-group">
-                        <label for="InputComentario">Comentario</label>
-                        <textarea class="form-control" id="InputComentario" name="comentario" rows="5"></textarea>
-                    </div>
+                <div class="form-group">
+                    <label for="InputApellidoM">Apellido Materno</label>
+                    <input type="text" name= "apellidom"  class="form-control" id="InputApellidoM"  placeholder="Ingrese su apellido materno...">
                 </div>
-
-                <div class="col-md-4 col-md-offset-4 " style="padding-top: 20px">
-                    <input type="button" class = "btn btn-primary btn-block btn-lg"  value="Enviar" ng-click="redirect()">
+                <div class="form-group">
+                    <label for="InputCorreoE">Correo Electrónico</label>
+                    <input type="email" name="correoe" class="form-control" id="InputCorreoE" aria-describedby="emailHelp" placeholder="Ingrese su correo...">
+                </div>
+                <div class="form-group">
+                    <label for="InputDNI">DNI</label>
+                    <input type="text" name="dni" class="form-control" id="InputDNI"  placeholder="Ingrese su DNI...">
                 </div>
             </div>
-        </section>
 
+            <div class="col-xs-12 col-md-6">
+
+                <div class="form-group">
+                    <label for="InputDirección">Dirección</label>
+                    <input type="text" class="form-control" id="InputDirección"  placeholder="Detalle su dirección..." name="dirección">
+                </div>
+                <div class="form-group">
+                    <label for="InputDistrito">Distrito</label>
+                    <input type="text" class="form-control" id="InputDistrito"  placeholder="Distrito de vivienda..." name="distrtito">
+                </div>
+                <div class="form-group">
+                    <label for="InputDepartamento">Departamento</label>
+                    <input type="text" class="form-control" id="InputDepartamento"  placeholder="Departamento de vivienda..." name="departamento">
+                </div>
+                <div class="form-group">
+                    <label for="InputComentario">Comentario</label>
+                    <textarea class="form-control" id="InputComentario" name="comentario" rows="5"></textarea>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-md-offset-4 " style="padding-top: 10px">
+                <input type="button" class = "btn btn-primary btn-block btn-lg"  value="Enviar" ng-click="redirect()">
+                <br>
+            </div>
+
+        </div>
+    </section>
+        
+        <br><br>
         <!-- SUSCRIPCIÓN -->
+        <div>
+        <div class="col-xs-12 divTituloSeccion colAzul2">
+            <h3 style="margin-top: 0px;">Suscripción</h3> 
+        </div>
         <div class="thumbnail col-md-10 col-md-offset-1 contacto">
 
             <div class="panel-body" >
                 <div class="col-md-8 col-md-offset-2">
-                    <h2 ><b >Subscribete para conocer más de la carrera!</b></h2>
+                    <h2 ><b >Suscribete para conocer más de la carrera!</b></h2>
                 </div>
 
                 <div class="row col-md-8 col-md-offset-2">
@@ -208,12 +214,13 @@
                     </div>
 
                     <div class="col-md-4">
-                        <input type="button" class = "btn btn-primary btn-block btn-lg"  value="Regístrate" ng-click="redirect()">
+                        <input type="button" class = "btn btn-primary btn-block"  value="Regístrate" ng-click="redirect()">
                     </div>	
                 </div>
             </div>	
 
         </div>
+    </div>
         <!-- END-SUSCRIPCIÓN -->
 
         <br><br>

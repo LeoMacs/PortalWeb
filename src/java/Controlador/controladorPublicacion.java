@@ -250,7 +250,7 @@ public class controladorPublicacion {
 
         for (publicacion p : modelop.getfourPublicacionesCategoria(categoria)) {
             htmlCode = htmlCode + "<div class=\"col-md-3\">\n" +
-"              <div class=\"thumbnail  thumb-shadow s-padding\" style=\"padding: 0px; height: 250px\">\n" +
+"              <div class=\"thumbnail thumbnail-efect  thumb-shadow s-padding\" style=\"padding: 0px; height: 250px\">\n" +
 "                 <a id='btnmodificarpublicacion' href='detallePubli.jsp?id="+p.getId()+"'><img src="+servidor+"/documents/"+codDocumento+p.getImagen()+"/ "+" alt=\"\" ></a>\n" +
 "                <div class=\"caption bg3\">\n" +
 "                  <h3>"+p.getTitulo()+" </h3>\n" +
