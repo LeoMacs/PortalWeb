@@ -83,86 +83,45 @@
         </header>
 
         <!-- Slider -->
-        <br><br>
-        <br>
-        <div id="divSeparador" class="backAzul1" ></div>
-        <div id="example4" class="slider-pro">
-            <div class="sp-slides">
-                <div class="sp-slide">
-                    <div class="sp-layer sp-static sp-image-text" data-horizontal="30" data-vertical="30" data-width="350">
-                        <h3>CENTRO DE PRODUCCION</h3>
-                        <p>El CENPRO-TIC es la entidad empresarial de la Facultad de Ingeniería de Sistemas e Informática – FISI de la UNMSM, creada con la finalidad de contribuir al desarrollo integral de la facultad. Para ello, se viene consolidando como un espacio de aprendizaje, innovación y desarrollo de soluciones TIC, al servico de la comunidad académica y sociedad peruana.</p>
-                    </div>
-                    <div class="sp-layer sp-static" data-horizontal="500" data-vertical="30">
-                        <img src="imagenes/CenPro.jpg" />    
-                    </div>
+       <div class="container">
+        <h2>Carousel Example</h2>  
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
 
-                </div>
-                <div class="sp-slide">
-                    <div class="sp-layer sp-static" data-horizontal="30" data-vertical="30">
-                        <iframe width="600" height="290" src="https://www.youtube.com/embed/YthNF_ONhfQ" frameborder="0" gesture="media" allowfullscreen></iframe>
-                    </div>
-
-                    <div class="sp-layer sp-static" data-position="topRight" data-horizontal="30" data-vertical="30" data-width="240">
-                        <h3>Oportunidad Laboral para Clínica San Judas Tadeo</h3>
-                        <small>Convocatoria para 2 plazas de programador para proyecto de 9 meses:
-                            Los requisitos básicos para un postulante a programador es: <br>
-                            - Conocimientos básicos de SQL 2008 a posterior.<br>
-                            - Conocimientos de programación en C#<br>
-                            - Conocimientos de ASP .NET<br>
-                            - Conocimientos de VS 2010 a posterior<br>
-                        </small>
-                    </div>
-                </div>
-                <div class="sp-slide">
-                    <div class="sp-layer sp-static" data-position="topLeft" data-horizontal="30" data-vertical="30" data-width="430">
-                        <h3>CONVOCATORIA CENPRO-TIC</h3>
-                        <p>Se convoca a estudiantes de Computación, Sistemas y afines (a partir de 3er año), para trabajar en Proyectos TIC de avanzada. No se requiere experiencia, si capacidad de aprendizaje rápido, responsabilidad y trabajo por resultados.</p>
-                    </div>
-
-                    <div class="sp-layer sp-static" data-horizontal="500" data-vertical="30" data-width="200">
-                        <div class="sp-thumbnail-container">
-                            <a class="sp-lightbox" href="http://bqworks.com/slider-pro/images/image1_large.jpg">
-                                <img src="http://bqworks.com/slider-pro/images/image1_thumbnail.jpg"/>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="sp-layer sp-static" data-horizontal="730" data-vertical="30" data-width="200">
-                        <div class="sp-thumbnail-container">
-                            <a class="sp-lightbox" href="http://bqworks.com/slider-pro/images/image2_large.jpg">
-                                <img src="http://bqworks.com/slider-pro/images/image2_thumbnail.jpg"/>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="sp-layer sp-static" data-horizontal="500" data-vertical="190" data-width="200">
-                        <div class="sp-thumbnail-container">
-                            <a class="sp-lightbox" href="http://bqworks.com/slider-pro/images/image3_large.jpg">
-                                <img src="http://bqworks.com/slider-pro/images/image3_thumbnail.jpg"/>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="sp-layer sp-static" data-horizontal="730" data-vertical="190" data-width="200">
-                        <div class="sp-thumbnail-container">
-                            <a class="sp-lightbox" href="http://bqworks.com/slider-pro/images/image4_large.jpg">
-                                <img src="http://bqworks.com/slider-pro/images/image4_thumbnail.jpg"/>
-                            </a>
-                        </div>
-                    </div>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="http://sistemas.unmsm.edu.pe/ceups/archivos/banners/banner_web_2.jpg" alt="Los Angeles" style="width:100%;height:450px">
                 </div>
 
-                <div class="sp-slide">
-                    <div class="sp-layer sp-static">
-                        <iframe width="975" height="336" src="https://www.youtube.com/embed/Z9LNk12ndm4" frameborder="0" gesture="media" allowfullscreen></iframe>
-                    </div>
+                <div class="item">
+                    <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t1.0-9/22789103_1977145559231617_3272927609820345734_n.jpg?oh=a6a9938f82fc0351902951198b16bf7a&oe=5A68FCF0" alt="Chicago" style="width:100%;height:450px">
                 </div>
 
+                <div class="item">
+                    <img src="http://aulavirtual.sistemas.unmsm.edu.pe/cerseu/pluginfile.php/3/course/section/2/taller.jpg" alt="New york" style="width:100%;height:450px">
+                </div>
             </div>
-        </div>
-        <!-- End Slider -->
 
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <!--*********FIN-SLIDER*************-->
+   
         <section class="b3">
             <div class="wancho">
                 <div class="col-xs-12" >
@@ -216,7 +175,7 @@
                 <div class="secundarias">
                     <h1 style="text-align: center; margin-top: 0px; color:white;">Ultimas Noticias</h1> 
                     <% controladorPublicacion cp = new controladorPublicacion();%>
-                    <%= cp.getFourBlog()%>
+                    <%= cp.getFourBlog("software")%>
                 </div>
             </div>
         </section>

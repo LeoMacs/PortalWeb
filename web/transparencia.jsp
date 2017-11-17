@@ -102,9 +102,10 @@
          */ %>
         <!--TransparenciaIntro-->
         <br>
-        <br>            
+        <br><br>            
+           
         <%-- Info principal del portal de transparencia --%>
-        <div class="container">
+        <div class="container thumbnail thumbnail-efect1">
             <div class="row">
                 <center><h1 >PORTAL DE TRANSPARENCIA</h1></center><br>   
 
@@ -134,6 +135,7 @@
                     </div>
                 </div>
             </div>
+            <br>
         </div>
 
         <!--info-->

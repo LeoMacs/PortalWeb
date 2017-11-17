@@ -18,7 +18,7 @@ public class controladorPublicacion {
      String servidor="http://52.168.76.15:8080";
      String codDocumento="30243/30245/";
      String imagPrueba="http://52.168.76.15:8080/documents/30243/30245/descarga.jpg";
-    
+     String urlImagen=servidor+"/documents/"+codDocumento+"";
 
     
     public boolean crearPublicacion(publicacion p) {
@@ -120,11 +120,7 @@ public class controladorPublicacion {
                + "</div>"
                + "</div>"
                + "</div>";
-       
-       
-  
-
-        return htmlCode;
+       return htmlCode;
     }
     
     public boolean deletePublicacion(int id){
@@ -194,6 +190,8 @@ public class controladorPublicacion {
               
     }
     
+    
+    
     public boolean updateProducto(publicacion p){
     modeloPublicacion mp= new modeloPublicacion();
     return mp.updatePublicacion(p);
@@ -201,13 +199,11 @@ public class controladorPublicacion {
     
      public String getViewPublicaciones() {
         String htmlCode = "";
-
         modeloPublicacion modelop = new modeloPublicacion();
-
         for (publicacion p : modelop.getFourPublicaciones()) {
             htmlCode = htmlCode + "<div class=\"col-sm-3 col-md-3 \">\n" +
 "  \n" +
-"    			<div class=\"thumbnail thumbnail-efect\">\n" +
+"    			<div class=\"thumbnail thumbnail-efect\" style=\"height:250px \">\n" +
 "     				<a id='btnmodificarpublicacion' href='detallePubli.jsp?id="+p.getId()+"'> <img src="+servidor+"/documents/"+codDocumento+p.getImagen()+"/ "+" class=\"col-md-12 imag-producto\" ></a>\n" +
 "\n" +
 "      				<div class=\"caption\">\n" +
@@ -220,6 +216,38 @@ public class controladorPublicacion {
         }
         return htmlCode;
     }
+     
+      public String getResultBusqueda(String keyBuscar) {
+        String htmlCode = "";
+        modeloPublicacion modelop = new modeloPublicacion();
+        for (publicacion p : modelop.getAllResultBusqueda(keyBuscar)) {
+            htmlCode = htmlCode + "<section>\n" +
+"\n" +
+"                <div class=\"thumbnail col-md-10 col-md-offset-1 thumbnail-efect1\" style=\"background-color:#FFBF00\">\n" +
+"\n" +
+"                    <div class=\"col-xs-12 col-md-6\">                       \n" +
+"                        <div class=\"form-group\">\n" +
+"                            <a  id='btnmodificarpublicacion' href='detallePubli.jsp?id="+p.getId()+"'> <img src=\""+urlImagen+p.getImagen()+"\" style=\"width:70%\" ></a>\n" +
+"                        </div>\n" +
+"                    </div>\n" +
+"\n" +
+"                    <div class=\"col-xs-12 col-md-6\">\n" +
+"                        <br>\n" +
+"                        <div class=\"form-group\">\n" +
+"                            <h3 ><b >"+p.getTitulo()+"</b></h3>                      \n" +
+"                        </div>\n" +
+"                        <div class=\"form-group\">\n" +
+"                            <p>"+p.getDetalle()+"</p>                        \n" +
+"                        </div>\n" +
+"                    </div>\n" +
+"\n" +
+"\n" +
+"                </div>\n" +
+"            </section>";
+        }
+        return htmlCode;
+    }
+    
      
      public String getViewPublicacionesxCategoria(String categoria) {
         String htmlCode = "";

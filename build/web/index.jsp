@@ -52,7 +52,19 @@
                 <a href="https://alumnitosfisiunmsm.wordpress.com/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;FISI Blog</a>
                 <a href="#" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-address-book-o" aria-hidden="true"></i>&nbsp;Contacto</a>
                 <a href="transparencia.jsp" class="w3-bar-item w3-button w3-mobile"><i class="material-icons" >gavel</i>&nbsp;Transparencia</a>
-                <a href="" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><i class="fa fa-search"></i>&nbsp; Buscar</a>
+                <!--a href="" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><i class="fa fa-search"></i>&nbsp; Buscar</a-->
+                <!--*******************-->
+                <form  class="w3-bar-item w3-button w3-right  thumbnail-efect" method="post" action="resultBusqPubli.jsp">
+                    <input type="text"  value="" id="searchterm" name="term" placeholder="¿Qué estas buscando?" style="text-align:left;width: 330px"/>
+                    <!--button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px"><a href="resultBusqPubli.jsp?dato=>" ><i class="fa fa-search">&nbsp;Buscar</i></a></button-->
+                    <button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px"><a href="" ><i class="fa fa-search">&nbsp;Buscar</i></a></button>
+                </form>
+
+                <!--*******************-->
+
+
+
+                <!--***********-->
             </div>
             <nav class="navegacion">
                 <ul class="menu">
@@ -157,26 +169,33 @@
 
         </div>
 
-        <div class="thumbnail col-md-10 col-md-offset-1 contacto">
+        <!-- SUSCRIPCIÓN -->
+        <div >
+            <div class="col-xs-12 divTituloSeccion colAzul2 ">
+                <h3 style="margin-top: 0px;">Suscripción</h3> 
+            </div>
+            <div class="thumbnail col-md-10 col-md-offset-1 contacto  thumbnail-efect1">
 
-            <div class="panel-body" >
-                <div class="col-md-8 col-md-offset-2">
-                    <h2><b>¡Escríbenos cualquier consulta que tengas!</b></h2>
-                </div>
-
-                <div class="row col-md-8 col-md-offset-2">
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Ingresa tu correo electrónico"  >
+                <div class="panel-body" >
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 ><b >Suscribete para conocer más de la carrera!</b></h2>
                     </div>
 
-                    <div class="col-md-4">
-                        <input type="button" class = "btn btn-primary btn-block"  value="Regístrate" ng-click="redirect()">
-                    </div>	
-                </div>
-            </div>	
+                    <div class="row col-md-8 col-md-offset-2">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Ingresa tu correo electrónico"  >
+                        </div>
 
+                        <div class="col-md-4">
+                            <input type="button" class = "btn btn-primary btn-block"  value="Regístrate" ng-click="redirect()">
+                        </div>	
+                    </div>
+                </div>	
+
+            </div>
         </div>
 
+        <!-- END-SUSCRIPCIÓN -->
         <div class="thumbnail col-md-10 col-md-offset-1">
             <div class="row"> 
                 <div class="col-md-3 col-md-offset-5">

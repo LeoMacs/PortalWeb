@@ -86,13 +86,13 @@
             </nav>
         </header>
 
-
-        <div class="col-md-10 col-md-offset-1">
+        
+        <div class="col-md-10 col-md-offset-1 ">
             <br><br><br>
             <% controladorPublicacion cp = new controladorPublicacion();
                 int idPublicacion = Integer.parseInt(request.getParameter("id"));
             %>
-            <div class="col-md-8 ">
+            <div class="col-md-8 thumbnail thumbnail-efect1">
                 <div class="thumbnail publicacion">
                     <%=cp.getDetallePubli(idPublicacion)%>        
                 </div>

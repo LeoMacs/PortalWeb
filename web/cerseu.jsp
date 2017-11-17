@@ -103,8 +103,7 @@
     <br><br>
 
     <!---¨*******INICIO-SLIDER***********--->
-    <div class="container">
-        <h2>Carousel Example</h2>  
+    <div class="container thumbnail thumbnail-efect1">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -141,7 +140,6 @@
     </div>
 
     <!--*********FIN-SLIDER*************-->
-    <br><br>
     <!-- Slider -->
     <!--    
         <div id="divSeparador" class="backAzul1" ></div>
@@ -219,11 +217,11 @@
     <!-- End Slider -->
     <!-- Noticias -->
     <!-- noticias -->
-    <div>
+    <div thumbnail thumbnail-efect1>
         <div class="col-xs-12 divTituloSeccion colAzul2">
             <h3 style="margin-top: 0px;">Últimas Noticias</h3> 
         </div>
-        <div class="thumbnail col-md-10 col-md-offset-1 " style="background-color: royalblue">
+        <div class="thumbnail col-md-10 col-md-offset-1  thumbnail-efect1" style="background-color: royalblue">
             <br>
             <%controladorPublicacion cp = new controladorPublicacion();%>
             <%= cp.getViewPublicacionesxCategoria("eapis")%>
@@ -234,10 +232,10 @@
     <br><br>
     <!-- FORMULARIO -->
     <section>
-        <div class="col-xs-12 divTituloSeccion colAzul2">
+        <div class="col-xs-12 divTituloSeccion colAzul2 ">
             <h3 style="margin-top: 0px;">Consultas</h3> 
         </div>
-        <div class="thumbnail col-md-10 col-md-offset-1" style="background-color:#FFBF00">
+        <div class="thumbnail col-md-10 col-md-offset-1 thumbnail-efect1" style="background-color:#FFBF00">
             <div class=" col-md-8 col-md-offset-2">
                 <h2><b><center>¡Escríbenos cualquier consulta que tengas!</center></b></h2>  
             </div>
@@ -295,11 +293,11 @@
     <!-- FIN FORMULARIO -->
     <br><br>
     <!-- SUSCRIPCIÓN -->
-    <div>
-        <div class="col-xs-12 divTituloSeccion colAzul2">
+    <div >
+        <div class="col-xs-12 divTituloSeccion colAzul2 ">
             <h3 style="margin-top: 0px;">Suscripción</h3> 
         </div>
-        <div class="thumbnail col-md-10 col-md-offset-1 contacto">
+        <div class="thumbnail col-md-10 col-md-offset-1 contacto  thumbnail-efect1">
 
             <div class="panel-body" >
                 <div class="col-md-8 col-md-offset-2">
