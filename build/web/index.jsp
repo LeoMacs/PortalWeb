@@ -172,7 +172,7 @@
                 <%=cp.getViewPublicaciones()%>
 
                 <div class="col-md-1 col-md-offset-6">
-                    <a href="blog.html" >Ver más</a>
+                    <a href='blog.jsp' >Ver más</a>
                 </div>
             </div>
         </div>

@@ -152,7 +152,7 @@
                     <h1 style="color: white;">Próximos Eventos</h1>
 
                     <% controladorPublicacion cp = new controladorPublicacion();%>
-                    <%= cp.getFourBlog()%>
+                    <%= cp.getViewPublicaciones()%>
 
 
                 </div>

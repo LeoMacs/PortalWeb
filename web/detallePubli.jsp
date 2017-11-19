@@ -9,30 +9,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <title>Detalle de Publicación</title>
-          <!-- Favicon -->
-        <link rel="icon" href="http://sistemas.unmsm.edu.pe/assets/fisi/img/logo/logo-fisi.png">
-        <link rel="shortcut icon" href="http://sistemas.unmsm.edu.pe/assets/fisi/img/logo/logo-fisi.png"/>
-        <!--Icons-->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        
-        <link rel="stylesheet" href="css/estilos.css">
-        <link rel="stylesheet" href="css/estilos-home.css">
-        <link rel="stylesheet" href="css/font-awesome.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="css/estilos-blog.css">
-        <script src="js/jquery-3.2.1.js"></script>
-        <script src="js/main.js"></script>
-        <title>FISI</title>
+        	<meta  charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/estilos-blog-p.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos-p.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos-home-p.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  
+	<script type="text/javascript" src="controller/registroController.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     </head>
-    <body>
+    <body style="background: #E8E8E8;">
        <header>
             <div class="w3-bar w3-white w3-large">
                 <div id="btn" class="btn2">
@@ -92,7 +89,7 @@
             <% controladorPublicacion cp = new controladorPublicacion();
                 int idPublicacion = Integer.parseInt(request.getParameter("id"));
             %>
-            <div class="col-md-8 thumbnail thumbnail-efect1">
+            <div class="col-md-8 thumbnail ">
                 <div class="thumbnail publicacion">
                     <%=cp.getDetallePubli(idPublicacion)%>        
                 </div>
