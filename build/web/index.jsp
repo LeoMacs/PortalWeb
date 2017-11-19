@@ -9,35 +9,54 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
         <title>FISI</title>
-        <!-- Favicon -->
-        <link rel="icon" href="http://sistemas.unmsm.edu.pe/assets/fisi/img/logo/logo-fisi.png">
-        <link rel="shortcut icon" href="http://sistemas.unmsm.edu.pe/assets/fisi/img/logo/logo-fisi.png"/>
-        <!--Icons-->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!--Estilos Locales-->
-        <link rel="stylesheet" href="css/estilos.css">
-        <link rel="stylesheet" href="css/estilos-home.css">
+        <link rel="stylesheet" href="css/estilos-p.css">
+        <link rel="stylesheet" href="css/estilos-home-p.css">
         <link rel="stylesheet" href="css/font-awesome.css">
-        <!---->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/estilos-slider-p.css">
         <script src="js/jquery-3.2.1.js"></script>
         <script src="js/main.js"></script>
-        <title>FISI</title>
+
+        <link rel="stylesheet" href="css/estilos-slider.css">
+        <link rel="stylesheet" href="css/font-awesome-1.css">
+
+        <script src="js/jquery-3.1.0.min.js"></script>
+        <script src="js/main-1.js"></script>
 
         <script>
             $(document).ready(function () {
                 $("#fotoPrincipal").click(function () {
-                    $("#fotoPrincipal").animate({height: 0}, 1500);
+                    $("#fotoPrincipal").animate({height: 30}, 1500);
                 });
 
             });
+        </script> 
+
+        <script>
+            $(document).ready(function () {
+                $("#fecha").onmouseover(function () {
+                    $("#fecha").animate({height: 120}, 700);
+                });
+
+            });
+        </script> 
+
+        <script>
+            function bigImg(x) {
+                x.style.height = "100px";
+            }
+        </script>
+        <script>
+            function normalImg(x) {
+                x.style.height = "70px";
+            }
         </script>
     </head>
     <body>
@@ -107,138 +126,227 @@
             </nav>
         </header>
 
-        <div>
-            <img id="fotoPrincipal" src="imagenes/fisi_unmsm_t.jpg" class="img-responsive" alt="Responsive image" style="width: 100%; height: 100vh">
-        </div>
 
-        <div class="letras noticias">
-            <h2 >FISI NOTICIAS</h2>
-        </div>
 
-        <div class="letras noticias">
-            <h4 class="lead"><b>Entérate de las últimas noticias de la facultad</b></h4>
-        </div>
-        <div class="thumbnail col-md-10 col-md-offset-1 foto-fisi2 ">
-            <!--<img src="imagenes/doctorado.jpg" class="img-responsive" alt="Responsive image">-->
-            <div class="thumbnail thumbnail-efect col-md-4 enlace titulo2 fondo-color">
-                <h1 class="lead titulo2">Ceremonia de sustentación Tesis Doctoral</h1>
-                <p class="titulo2">El último viernes se llevó a cabo en las instalaciones de la facultad la sustentación de tesis </p>
+
+
+
+
+        <div class="slideshow" style="background-color: white;">
+            <ul class="slider">
+                <%controladorPublicacion cp = new controladorPublicacion();%>
+                <%= cp.getSlider()%>
+            </ul>
+            <div class="left">
+                <span class="fa fa-chevron-left"></span>
             </div>
 
+            <div class="right">
+                <span class="fa fa-chevron-right"></span>
+            </div>
         </div>
 
-        <div class="thumbnail col-md-10 col-md-offset-1">
-            <%controladorPublicacion cp = new controladorPublicacion();%>
-            <%= cp.getViewPublicaciones()%>
-        </div>
 
-        <div class="thumbnail col-md-10 col-md-offset-1">
+        <div class="col-md-12" style="width: 100%; background-color: white; margin-top: -10px;">
 
-            <div class="thumbnail col-md-6">
-
-
-                <h1>Eventos</h1>
-
-
-                <div class="thumbnail thumbnail-efect1 color-fondo2" style="background-color: #FFB918; " >
-                    <h1 class="lead titulo1">La FISI acreditada</h1>
-                    <p class="detalle1">Luego de un gran esfuerzo y de un proceso muy riguroso la facultad de ingeniería de sistemas logró la acreditación internacional.</p>
-
+            <div class=" col-md-6 col-md-offset-3">
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active enl-men"><a href="#"><span class="glyphicon glyphicon-globe"></span><br>Trámite online</a></li>
+                        <li class="enl-men" ><a href="#" ><span class="glyphicon glyphicon-user" ></span><br>Asistencia Docente</a></li>
+                        <li class="enl-men"><a href="#"><span class="glyphicon glyphicon-tasks"></span><br>Biblioteca Virtual</a></li>
+                        <li class="enl-men"><a href="#"><span class="glyphicon glyphicon-usd"></span><br>Verificación de deudas</a></li>
+                    </ul>
                 </div>
-
-                <div class="thumbnail thumbnail-efect1 color-fondo1" style="background-color:#273640;">
-                    <h1 class="lead titulo">Convenio internacional</h1>
-                    <p class="detalle">Desde enero del año pasado contamos con los convenios logrados en el exterior...</p>
-                </div>
-
-                <div class="thumbnail thumbnail-efect1 color-fondo2 " style="background-color: #FFB918; ">
-                    <h1 class="lead titulo1 ">La FISI acreditada</h1>
-                    <p class="detalle1">Luego de un gran esfuerzo y de un proceso muy riguroso la facultad de ingeniería de sistemas logró la acreditación internacional.</p>
-                </div>
-
-                <div class="thumbnail thumbnail-efect1 color-fondo1" style="background-color:#273640;" >
-                    <h1 class="lead titulo">Convenio internacional</h1>
-                    <p class="detalle">Desde enero del año pasado contamos con los convenios logrados en el exterior...</p>
-                </div>
-
             </div>
 
-            <div class="thumbnail col-md-6">
-                <h1>Nuestros Logros</h1>
-            </div>
+            <br>
+            <br>
+            </br>
+            </br>
 
+            <div class="thumbnail col-md-10 col-md-offset-1">
+                <h2 class="noticias" style="font-size: 40px;">FISI NOTICIAS</h2>
+                <h4 class="lead noticias" style="font-size: 30px;"><b>Entérate de las últimas noticias de la facultad</b></h4>
+
+                <%=cp.getViewPublicaciones()%>
+
+                <div class="col-md-1 col-md-offset-6">
+                    <a href="blog.html" >Ver más</a>
+                </div>
+            </div>
         </div>
+                
+         <div class=" col-md-12 lema" >
+			<h1 class="stroke">Buscamos ser un referente de excelencia y calidad en la formación profesional e investigación en las ingenierías de Sistemas, de Software y de Ciencias de la Computación</h1>
+	 </div>
+
+
 
         <!-- SUSCRIPCIÓN -->
-        <div >
-            <div class="col-xs-12 divTituloSeccion colAzul2 ">
-                <h3 style="margin-top: 0px;">Suscripción</h3> 
-            </div>
-            <div class="thumbnail col-md-10 col-md-offset-1 contacto  thumbnail-efect1">
+      <div class="col-md-12" style="width: 100%; background-color: white;">
 
-                <div class="panel-body" >
-                    <div class="col-md-8 col-md-offset-2">
-                        <h2 ><b >Suscribete para conocer más de la carrera!</b></h2>
-                    </div>
+			<div class="thumbnail col-md-10 col-md-offset-1">
+          
+			<div class="thumbnail col-md-8">
+				
+					
+				<h1 class="noticias" style="text-align: left;">Eventos</h1>
+				
+					
+				
 
-                    <div class="row col-md-8 col-md-offset-2">
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Ingresa tu correo electrónico"  >
-                        </div>
+				<div class="eventos1" >
 
-                        <div class="col-md-4">
-                            <input type="button" class = "btn btn-primary btn-block"  value="Regístrate" ng-click="redirect()">
-                        </div>	
-                    </div>
-                </div>	
+					<div class="fecha"  onmouseover="bigImg(this)" onmouseout="normalImg(this)" >
+						<span class="mes">Dic</span>
+						<span class="dia">15</span>
+					</div>
+                     
+					<div>
+						<p class="des-evento">1. Seminario de tendencias tecnologicas en el mercado peruano a cargo del Ing. Rubio</p>
+					</div>
 
-            </div>
-        </div>
+					<div class="hora lead">
+						<span >6:00 pm</span>
+					</div>
+				</div>
+
+				<div class="eventos" >
+
+					<div class="fecha1"  onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+						<span class="mes">Dic</span>
+						<span class="dia">15</span>
+					</div>
+                     
+					<div>
+						<p class="des-evento">2. Seminario de tendencias tecnologicas en el mercado peruano a cargo del Ing. Rubio</p>
+					</div>
+
+					<div class="hora lead">
+						<span >6:00 pm</span>
+					</div>
+				</div>
+
+				<div class="eventos" >
+
+					<div class="fecha1" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+						<span class="mes">Dic</span>
+						<span class="dia">15</span>
+					</div>
+                     
+					<div>
+						<p class="des-evento">3. Seminario de tendencias tecnologicas en el mercado peruano a cargo del Ing. Rubio</p>
+					</div>
+
+					<div class="hora lead">
+						<span >6:00 pm</span>
+					</div>
+				</div>
+
+				<div class="eventos1" >
+
+					<div class="fecha" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+						<span class="mes">Dic</span>
+						<span class="dia">15</span>
+					</div>
+                     
+					<div>
+						<p class="des-evento">4. Seminario de tendencias tecnologicas en el mercado peruano a cargo del Ing. Rubio</p>
+					</div>
+
+					<div class="hora lead">
+						<span >6:00 pm</span>
+					</div>
+				</div>
+
+
+				
+
+			</div>
+
+			<div class="thumbnail col-md-4">
+				<h1 class="noticias" style="text-align: left;">Nuestros logros</h1>
+				<div class="logros">
+					<div class="uno">
+						<p>
+							<span class="txt-chico">Puesto<br></span>
+							<span class="txt-grande">#10<br></span>
+							<span class="txt-chico">a nivel mundial<br><br></span>
+							<span class="txt-grande glyphicon glyphicon-globe"></span>
+						</p>
+					</div>
+					<div class="dos">
+						<p>
+							<span class="txt-chico">Fundada en<br></span>
+							<span class="txt-grande">1998<br></span>
+							<span class="txt-grande glyphicon glyphicon-dashboard"></span>
+							
+						</p>
+
+					</div>
+					<div class="tres">
+						<p> 
+							
+							<span class="txt-grande">20 000</span>
+							<span class="txt-grande glyphicon glyphicon-user"></span><br>
+							<span class="txt-chico">egresados</span>
+							
+						</p>
+					</div>
+					<div class="cuatro">
+						<p>
+							<span class="txt-grande">90%</span>
+							<span class="txt-grande glyphicon glyphicon-briefcase"><br></span><br>
+							<span class="txt-chico">de egresados trabaja en la carrera</span>
+							
+						</p>
+					</div>
+					<div class="cinco">
+						<p>
+							<span class="txt-grande">190<br></span>
+							<span class="txt-chico">publicaciones en <br>el 2016</span>
+						</p>
+					</div>
+					
+					<div class="seis">
+						<p>
+							<span class="txt-grande">190<br></span>
+							<span class="txt-chico">publicaciones en el 2016</span>
+						</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+<div class="thumbnail col-md-10 col-md-offset-1 contacto">
+		
+			<div class="panel-body" >
+		    	
+					<h2 style="text-align: center;"><b>¡Escríbenos cualquier consulta que tengas!</b></h2>
+		   		
+
+				<div class="row col-md-8 col-md-offset-3">
+  		  			<div class="col-md-6">
+  		  				<input type="text" class="form-control" placeholder="Ingresa tu correo electrónico"  >
+  		  			</div>
+
+  		  			<div class="col-md-4">
+  		  				<input type="button" class = "btn btn-primary btn-block"  value="Regístrate" ng-click="redirect()">
+  		  			</div>	
+  				</div>
+  			</div>	
+     
+	    </div>
+
+		</div>
 
         <!-- END-SUSCRIPCIÓN -->
-        <div class="thumbnail col-md-10 col-md-offset-1">
-            <div class="row"> 
-                <div class="col-md-3 col-md-offset-5">
-                    <h2 class="lead"><b>FISI APPS</b></h2>
-                </div>
-            </div>
 
-
-            <div class="row"> 
-                <div class="thumbnail thumbnail-efect col-md-5 col-md-offset-1">
-                    <div class="col-md-6 col-md-offset-4">	
-                        <h4>Asistencia Docentess</h4>
-                    </div>
-                    <img src="imagenes/asistencia.png" class="img-responsive icono" alt="Responsive image">
-                </div>
-
-                <div class="thumbnail thumbnail-efect col-md-5">
-                    <div class="col-md-6 col-md-offset-4">	
-                        <h4>Biblioteca Virtual</h4>
-                    </div>
-                    <img src="imagenes/biblioteca.png" class="img-responsive icono" alt="Responsive image">
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="thumbnail thumbnail-efect col-md-5 col-md-offset-1">
-                    <div class="col-md-8 col-md-offset-4">	
-                        <h4>Verificación de deuda</h4>
-                    </div>
-                    <img src="imagenes/deudas.png" class="img-responsive icono" alt="Responsive image">
-                </div>
-
-
-                <div class="thumbnail thumbnail-efect col-md-5">
-                    <div class="col-md-8 col-md-offset-2">	
-                        <h4>Trámite de documentos online</h4>
-                    </div>
-                    <img src="imagenes/tramite.jpg" class="img-responsive icono" alt="Responsive image">
-                </div>
-            </div>
-
-        </div>
 
     </body>
 </html>
