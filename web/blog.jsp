@@ -170,12 +170,12 @@
         <div class="thumbnail col-md-10 col-md-offset-1 contacto">
 
             <div class="panel-body" >
-                <div class="col-md-8 col-md-offset-2">
-                    <h2><b>¡Escríbenos cualquier consulta que tengas!</b></h2>
-                </div>
+               
+                    <h2 class="noticias"><b>¡Escríbenos cualquier consulta que tengas!</b></h2>
+               
 
                 <div class="row col-md-8 col-md-offset-2">
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <input type="text" class="form-control" placeholder="Ingresa tu correo electrónico"  >
                     </div>
 

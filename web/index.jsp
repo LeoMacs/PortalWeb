@@ -13,6 +13,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
         <title>FISI</title>
+        <link rel="icon" type="image/png" href="imagenes/asistencia.png" />
         <link rel="stylesheet" href="css/estilos-p.css">
         <link rel="stylesheet" href="css/estilos-home-p.css">
         <link rel="stylesheet" href="css/font-awesome.css">
@@ -327,11 +328,11 @@
 		
 			<div class="panel-body" >
 		    	
-					<h2 style="text-align: center;"><b>¡Escríbenos cualquier consulta que tengas!</b></h2>
+					<h2 class="noticias"><b>¡Escríbenos cualquier consulta que tengas!</b></h2>
 		   		
 
-				<div class="row col-md-8 col-md-offset-3">
-  		  			<div class="col-md-6">
+				<div class="row col-md-8 col-md-offset-2">
+  		  			<div class="col-md-8">
   		  				<input type="text" class="form-control" placeholder="Ingresa tu correo electrónico"  >
   		  			</div>
 
