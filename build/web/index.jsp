@@ -336,7 +336,7 @@
   		  			</div>
 
   		  			<div class="col-md-4">
-  		  				<input type="button" class = "btn btn-primary btn-block"  value="Regístrate" ng-click="redirect()">
+  		  				<input type="button" class = "btn btn-primary btn-block"  value="Regístrate" style="background-color: #273640;">
   		  			</div>	
   				</div>
   			</div>	

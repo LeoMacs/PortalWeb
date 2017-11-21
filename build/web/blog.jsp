@@ -9,12 +9,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title>Blog-FISI</title>
-        <link rel="stylesheet" href="css/estilos.css">
-        <link rel="stylesheet" href="css/estilos-blog.css">
+        <link rel="stylesheet" href="css/estilos-p.css">
+        <link rel="stylesheet" href="css/estilos-blog-p.css">
         <link rel="stylesheet" href="css/font-awesome.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -76,76 +75,74 @@
             </nav>
         </header>
 
-        <section>
+        <br>
+        <br>
+    <section>
+     <div class="container center991">
+       
+        <h2 class="noticias" style="font-size: 40px;">FISI NOTICIAS</h2>
+     
+        
+          <div class="row">
 
-            <br>
-            <br>
-            <div class="container center991">
-                <div class="letras noticias">
-                    <h1 >FISI NOTICIAS</h1>
+            <div class="col-md-8 col-sm-1 col-xs-12">
+              <div class="thumbnail  thumb-shadow s-padding" style="padding: 0px; height:  470px">
+                <img src="imagenes/doctorado.jpg" alt="" >
+                <div class="caption bg3">
+                  <h1>
+                    CEREMONÍA DE PREMIACIÓN
+                  </h1>
+                  <div class="wrap">
+                    <p >
+                      Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod.
+                      Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod.
+                    </p>
+                  
+                  </div>  
                 </div>
-
-                <div class="row">
-
-                    <div class="col-md-8 col-sm-1 col-xs-12">
-                        <div class="thumbnail  thumb-shadow s-padding" style="padding: 0px; height:  470px">
-                            <img src="imagenes/doctorado.jpg" alt="" >
-                            <div class="caption bg3">
-                                <h1>
-                                    CEREMONÍA DE PREMIACIÓN
-                                </h1>
-                                <div class="wrap">
-                                    <p >
-                                        Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod.
-                                        Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod.
-                                    </p>
-
-                                </div>  
-                            </div>
-                        </div> 
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 col-xs-6">
-
-                        <div class="thumbnail  thumb-shadow s-padding" style="padding: 0px; height: 220px">
-                            <img src="imagenes/voto_web.jpg" alt="" >
-                            <div class="caption bg2">
-                                <h3>
-                                    Votaciones Web
-                                </h3>
-                                <div class="wrap">
-                                    <p >
-                                        Se llevo a cabo las elecciones en la universidad vía web.
-                                    </p>
-
-                                </div>  
-                            </div>
-                        </div> 
-
-
-
-                        <div class="thumbnail  thumb-shadow s-padding" style="padding: 0px; height: 220px">
-                            <img src="imagenes/becas.jpg" alt="" >
-                            <div class="caption bg2">
-                                <h3>
-                                    Becas en el Extranjero
-                                </h3>
-                                <div class="wrap">
-                                    <p >
-                                        Dese el mes de octubre se podrá tener la posibilidad de ir hacia.
-                                    </p>
-
-                                </div>  
-                            </div>
-                        </div> 
-
-                    </div>
-
-
-                </div>
+              </div> 
             </div>
-        </section>
+    
+            <div class="col-md-4 col-sm-6 col-xs-6">
 
+              <div class="thumbnail  thumb-shadow s-padding" style="padding: 0px; height: 220px">
+                <img src="imagenes/voto_web.jpg" alt="" >
+                <div class="caption bg2">
+                  <h3>
+                    Votaciones Web
+                  </h3>
+                  <div class="wrap">
+                    <p >
+                      Se llevo a cabo las elecciones en la universidad vía web.
+                    </p>
+                  
+                  </div>  
+                </div>
+              </div> 
+             
+
+         
+              <div class="thumbnail  thumb-shadow s-padding" style="padding: 0px; height: 220px">
+                <img src="imagenes/becas.jpg" alt="" >
+                <div class="caption bg2">
+                  <h3>
+                    Becas en el Extranjero
+                  </h3>
+                  <div class="wrap">
+                    <p >
+                     Dese el mes de octubre se podrá tener la posibilidad de ir hacia.
+                    </p>
+                  
+                  </div>  
+                </div>
+              </div> 
+
+            </div>
+
+
+          </div>
+          </div>
+       </section>
         <section style="background-color: #363740; margin-top: 3%; margin-bottom: 3%;">
             <div class="container center991">
                 <div class="secundarias">
@@ -183,7 +180,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <input type="button" class = "btn btn-primary btn-block"  value="Regístrate" ng-click="redirect()">
+                        <input type="button" class = "btn btn-primary btn-block"  value="Regístrate" style="background-color: #273640;">
                     </div>	
                 </div>
             </div>	

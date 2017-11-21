@@ -5,8 +5,10 @@
         <group>
             <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/src/java/Controlador/controladorPublicacion.java</file>
             <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/detallePubli.jsp</file>
+            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/src/java/Conexion/Conexion.java</file>
             <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/index.jsp</file>
             <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/panelAdministracion.jsp</file>
+            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/src/java/Modelo/modeloPublicacion.java</file>
             <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/blog.jsp</file>
         </group>
     </open-files>
