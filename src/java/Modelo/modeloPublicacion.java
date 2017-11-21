@@ -60,7 +60,7 @@ public class modeloPublicacion extends Conexion {
 
         try {
             String sql ="SELECT entryId, DLFileEntry.fileEntryId, BlogsEntry.title, BlogsEntry.subtitle, BlogsEntry.description,BlogsEntry.content, DLFileEntry.fileName FROM BlogsEntry " +
-        " INNER JOIN DLFileEntry ON BlogsEntry.coverImageFileEntryId = DLFileEntry.fileEntryId ";
+        " INNER JOIN DLFileEntry ON BlogsEntry.coverImageFileEntryId = DLFileEntry.fileEntryId where BlogsEntry.status = 0  ";
             pst = getConnection().prepareCall(sql);
             rs = pst.executeQuery();
             while (rs.next()) {
@@ -133,7 +133,10 @@ public class modeloPublicacion extends Conexion {
         ResultSet rs = null;
 
         try {
-            String sql = "call selectFourPublicaciones()";
+          
+            String sql= "SELECT  BlogsEntry.entryId, DLFileEntry.fileEntryId, BlogsEntry.title, BlogsEntry.subtitle,BlogsEntry.description,BlogsEntry.content, DLFileEntry.fileName, BlogsEntry.createDate FROM BlogsEntry \n" +
+"INNER JOIN DLFileEntry ON BlogsEntry.coverImageFileEntryId = DLFileEntry.fileEntryId \n" +
+"WHERE BlogsEntry.status=0 ORDER BY BlogsEntry.createDate DESC LIMIT 4";
             pst = getConnection().prepareCall(sql);
             rs = pst.executeQuery();
 
@@ -174,7 +177,7 @@ public class modeloPublicacion extends Conexion {
                     + "INNER JOIN AssetEntry ON BlogsEntry.uuid_=AssetEntry.classUuid "
                     + "INNER JOIN AssetEntries_AssetTags ON AssetEntry.entryId=AssetEntries_AssetTags.entryId INNER JOIN AssetTag "
                     + "ON AssetEntries_AssetTags.tagId=AssetTag.tagId "
-                    + "WHERE AssetTag.name=(?) ORDER BY BlogsEntry.createDate DESC LIMIT 4";
+                    + "WHERE BlogsEntry.status=0 ORDER BY BlogsEntry.createDate DESC LIMIT 4";
 
             //String sql ="select entryId, title , subtitle, description, content, coverImageFileEntryId  from blogsentry where entryId = ?";
             pst = getConnection().prepareCall(sql);
