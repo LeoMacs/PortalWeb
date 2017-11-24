@@ -325,7 +325,7 @@ img.grande{
     overflow: hidden;
     padding: 44px 14px 32px;
     width: 50%;
-     height: : 50%;
+     height:  50%;
     background-color:#273640;
     text-align: center;
     border-right: 1px solid #fff;
@@ -337,7 +337,7 @@ img.grande{
     overflow: hidden;
     padding: 44px 14px 32px;
     width: 50%;
-     height: : 50%;
+     height:  50%;
     background-color:#FFB918; 
     text-align: center;
     border-right: 1px solid #fff;
@@ -436,7 +436,7 @@ img.grande{
 }
 
 #body{
-  background-image:  url("http://aulavirtual.sistemas.unmsm.edu.pe/posgrado/pluginfile.php/2/course/section/20/FISI.jpg");
+  background-image:  url('http://aulavirtual.sistemas.unmsm.edu.pe/posgrado/pluginfile.php/2/course/section/20/FISI.jpg');
   background-repeat: no-repeat;
   background-size: 100% ;
   background-attachment: fixed;

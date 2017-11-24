@@ -60,7 +60,7 @@
             }
         </script>
     </head>
-    <body>
+    <body id="body" >
 
         <header>
             <div class="w3-bar w3-white w3-large">
@@ -179,7 +179,7 @@
         </div>
                 
          <div class=" col-md-12 lema" >
-			<h1 class="stroke">Buscamos ser un referente de excelencia y calidad en la formación profesional e investigación en las ingenierías de Sistemas, de Software y de Ciencias de la Computación</h1>
+		<h1 class="stroke">Buscamos ser un referente de excelencia y calidad en la formación profesional e investigación en las ingenierías de Sistemas, de Software y de Ciencias de la Computación</h1>
 	 </div>
 
 
