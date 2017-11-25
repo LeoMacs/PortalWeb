@@ -37,7 +37,7 @@ public class Conexion {
             System.err.print(e.getMessage());
         }catch(SQLException esql ){
           System.err.print(esql.getMessage());
-           System.out.println("Conexion No exitosa/**");
+           System.out.println("Conexion No exitosa/**"+esql.getMessage());
         }
     }
     

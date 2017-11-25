@@ -16,18 +16,18 @@ import java.util.ArrayList;
  * @author PEDRO
  */
 public class modeloPublicacion extends Conexion {
-    
-     public ArrayList<publicacion> getAllResultBusqueda(String dato) {
+
+    public ArrayList<publicacion> getAllResultBusqueda(String dato) {
 
         ArrayList<publicacion> publicaciones = new ArrayList<>();
         PreparedStatement pst = null;
         ResultSet rs = null;
 
         try {
-            String sql ="SELECT entryId, DLFileEntry.fileEntryId, BlogsEntry.title, BlogsEntry.subtitle, BlogsEntry.description,BlogsEntry.content, DLFileEntry.fileName FROM BlogsEntry " +
-        " INNER JOIN DLFileEntry ON BlogsEntry.coverImageFileEntryId = DLFileEntry.fileEntryId "+
-        "WHERE BlogsEntry.title LIKE '%"+dato+"%'";
-           pst = getConnection().prepareCall(sql);
+            String sql = "SELECT entryId, DLFileEntry.fileEntryId, BlogsEntry.title, BlogsEntry.subtitle, BlogsEntry.description,BlogsEntry.content, DLFileEntry.fileName FROM BlogsEntry "
+                    + " INNER JOIN DLFileEntry ON BlogsEntry.coverImageFileEntryId = DLFileEntry.fileEntryId "
+                    + "WHERE BlogsEntry.title LIKE '%" + dato + "%'";
+            pst = getConnection().prepareCall(sql);
             //pst.setString(1,dato );
             rs = pst.executeQuery();
             while (rs.next()) {
@@ -50,7 +50,6 @@ public class modeloPublicacion extends Conexion {
         }
         return publicaciones;
     }
-    
 
     public ArrayList<publicacion> getAllPublicaciones() {
 
@@ -59,8 +58,8 @@ public class modeloPublicacion extends Conexion {
         ResultSet rs = null;
 
         try {
-            String sql ="SELECT entryId, DLFileEntry.fileEntryId, BlogsEntry.title, BlogsEntry.subtitle, BlogsEntry.description,BlogsEntry.content, DLFileEntry.fileName FROM BlogsEntry " +
-        " INNER JOIN DLFileEntry ON BlogsEntry.coverImageFileEntryId = DLFileEntry.fileEntryId where BlogsEntry.status = 0  ";
+            String sql = "SELECT entryId, DLFileEntry.fileEntryId, BlogsEntry.title, BlogsEntry.subtitle, BlogsEntry.description,BlogsEntry.content, DLFileEntry.fileName FROM BlogsEntry "
+                    + " INNER JOIN DLFileEntry ON BlogsEntry.coverImageFileEntryId = DLFileEntry.fileEntryId where BlogsEntry.status = 0  ";
             pst = getConnection().prepareCall(sql);
             rs = pst.executeQuery();
             while (rs.next()) {
@@ -83,8 +82,6 @@ public class modeloPublicacion extends Conexion {
         }
         return publicaciones;
     }
-    
-    
 
     /**
      * *******************************************************
@@ -133,10 +130,86 @@ public class modeloPublicacion extends Conexion {
         ResultSet rs = null;
 
         try {
-          
-            String sql= "SELECT  BlogsEntry.entryId, DLFileEntry.fileEntryId, BlogsEntry.title, BlogsEntry.subtitle,BlogsEntry.description,BlogsEntry.content, DLFileEntry.fileName, BlogsEntry.createDate FROM BlogsEntry \n" +
-"INNER JOIN DLFileEntry ON BlogsEntry.coverImageFileEntryId = DLFileEntry.fileEntryId \n" +
-"WHERE BlogsEntry.status=0 ORDER BY BlogsEntry.createDate DESC LIMIT 4";
+
+            String sql = "SELECT  BlogsEntry.entryId, DLFileEntry.fileEntryId, BlogsEntry.title, BlogsEntry.subtitle,BlogsEntry.description,BlogsEntry.content, DLFileEntry.fileName, BlogsEntry.createDate FROM BlogsEntry \n"
+                    + "INNER JOIN DLFileEntry ON BlogsEntry.coverImageFileEntryId = DLFileEntry.fileEntryId \n"
+                    + "WHERE BlogsEntry.status=0 ORDER BY BlogsEntry.createDate DESC LIMIT 4";
+            pst = getConnection().prepareCall(sql);
+            rs = pst.executeQuery();
+
+            while (rs.next()) {
+                publicacion.add(new publicacion(rs.getInt("entryId"), "", rs.getString("title"), rs.getString("description"), rs.getString("fileName")));
+
+            }
+        } catch (Exception e) {
+        } finally {
+            try {
+                if (getConnection() != null) {
+                    getConnection().close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (Exception e) {
+            }
+        }
+
+        return publicacion;
+
+    }
+
+    public ArrayList<publicacion> getPrincipal() {
+
+        ArrayList<publicacion> publicacion = new ArrayList<>();
+        PreparedStatement pst = null;
+        ResultSet rs = null;
+
+        try {
+
+            String sql = "SELECT  BlogsEntry.entryId, DLFileEntry.fileEntryId, BlogsEntry.title, BlogsEntry.subtitle,BlogsEntry.description,BlogsEntry.content, DLFileEntry.fileName, BlogsEntry.createDate FROM BlogsEntry \n"
+                    + "INNER JOIN DLFileEntry ON BlogsEntry.coverImageFileEntryId = DLFileEntry.fileEntryId \n"
+                    + "WHERE BlogsEntry.status=0 ORDER BY BlogsEntry.createDate DESC LIMIT 3";
+            pst = getConnection().prepareCall(sql);
+            rs = pst.executeQuery();
+
+            while (rs.next()) {
+                publicacion.add(new publicacion(rs.getInt("entryId"), "", rs.getString("title"), rs.getString("description"), rs.getString("fileName")));
+
+            }
+        } catch (Exception e) {
+        } finally {
+            try {
+                if (getConnection() != null) {
+                    getConnection().close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (Exception e) {
+            }
+        }
+
+        return publicacion;
+
+    }
+
+    public ArrayList<publicacion> getRelacionadas() {
+
+        ArrayList<publicacion> publicacion = new ArrayList<>();
+        PreparedStatement pst = null;
+        ResultSet rs = null;
+
+        try {
+
+            String sql = "SELECT  BlogsEntry.entryId, DLFileEntry.fileEntryId, BlogsEntry.title, BlogsEntry.subtitle,BlogsEntry.description,BlogsEntry.content, DLFileEntry.fileName, BlogsEntry.createDate FROM BlogsEntry \n"
+                    + "INNER JOIN DLFileEntry ON BlogsEntry.coverImageFileEntryId = DLFileEntry.fileEntryId \n"
+                    + "WHERE BlogsEntry.status=0 ORDER BY BlogsEntry.createDate asc LIMIT 2";
             pst = getConnection().prepareCall(sql);
             rs = pst.executeQuery();
 
@@ -184,7 +257,7 @@ public class modeloPublicacion extends Conexion {
             pst.setString(1, categoria);
             rs = pst.executeQuery();
             while (rs.next()) {
-                 publicaciones.add(new publicacion(rs.getInt("entryId"), "", rs.getString("title"), rs.getString("description"), rs.getString("fileName")));
+                publicaciones.add(new publicacion(rs.getInt("entryId"), "", rs.getString("title"), rs.getString("description"), rs.getString("fileName")));
                 System.out.println(rs.getString("title"));
             }
         } catch (Exception e) {

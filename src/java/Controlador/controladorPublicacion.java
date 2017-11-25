@@ -178,17 +178,37 @@ public class controladorPublicacion {
         modeloPublicacion mp = new modeloPublicacion();
         publicacion p=  mp.getDetalle(idPubli);
         //nombreImagen=mp.getNombreImagen(p.getidImagen());  
-        return htmlCode="<h1>"+p.getTitulo()+"</h1>"
-                + "<h3>"+p.getSubtitulo()+"</h3>"
-                + "<p>11/11/2017 - 09:16h</p>" //Ahi se puede jalar la fecha tambien 
+        return htmlCode="<h1 class='titulo-blog' style='font-family: Western,\"Times New Roman\", Georgia, Serif;'>"+p.getTitulo()+"</h1>"
+                + "<h3 class='titulo-blog' style='font-family: Western,\"Times New Roman\", Georgia, Serif;'>"+p.getSubtitulo()+"</h3>"
+
 
                 + "<img src='"+servidor+"/documents/"+codDocumento+p.getNameImagen()+"' class=\"img-rounded center-block\" alt=\"Cinque Terre\">"
                 //+ "<img src='"+imagPrueba+"' class=\"img-rounded center-block\" alt=\"Cinque Terre\">"
-
+                 + "<br><br><p>11/11/2017 - 09:16h</p>" //Ahi se puede jalar la fecha tambien 
                 + "<br>"+p.getDetalle();
                 
               
     }
+    
+    
+    public String getRelacionada(int idPubli){
+        String htmlCode="";
+        modeloPublicacion mp = new modeloPublicacion();
+       for (publicacion p : mp.getRelacionadas()) {
+        //nombreImagen=mp.getNombreImagen(p.getidImagen());  
+         htmlCode=htmlCode+" <div class=\"thumbnail  thumb-shadow s-padding\" style=\"padding: 0px;  height: 250px\">\n" +
+"                <a id='btnmodificarpublicacion' href='detallePubli.jsp?id="+p.getId()+"'> <img src="+servidor+"/documents/"+codDocumento+p.getImagen()+"/ "+" class=\"col-md-12 imag-producto\" ></a>\n" +
+"                        <div class=\"caption bg2\">\n" +
+"                            <a id='btnmodificarpublicacion' href='detallePubli.jsp?id="+p.getId()+"' ><h3>"+p.getTitulo()+
+"                            </h3></a>\n" +
+"                        </div>\n" +
+"                    </div>";
+                
+              
+    }
+       return htmlCode;
+    }
+    
     
     
     
@@ -212,6 +232,25 @@ public class controladorPublicacion {
         return htmlCode;
     }
     
+    public String getViewHome(){
+        String htmlCode="";
+        modeloPublicacion modelop = new modeloPublicacion();
+        for (publicacion p : modelop.getFourPublicaciones()) {
+            htmlCode=htmlCode+"<div class=\"col-sm-3 col-md-3 \">\n" +
+"  \n" +
+"	    		<div class=\"thumbnail thumbnail-efect \">\n" +
+"                <a id='btnmodificarpublicacion' href='detallePubli.jsp?id="+p.getId()+"'> <img src="+servidor+"/documents/"+codDocumento+p.getImagen()+"/ "+" class=\"col-md-12 imag-producto\" ></a>\n" +
+"\n" +
+"      				<div class=\"caption \">\n" +
+"       					 <h1 class=\"title\">"+p.getTitulo()+"</h1>\n" +
+"      				</div>\n" +
+"\n" +
+"    			</div>\n" +
+"			</div>";
+        }
+        
+        return htmlCode;
+    }
     
      public String getViewPublicaciones() {
         String htmlCode = "";
@@ -222,9 +261,8 @@ public class controladorPublicacion {
 "              <div class=\"thumbnail  thumb-shadow s-padding\" style=\"padding: 0px; height: 250px\">\n" +
 "                <a id='btnmodificarpublicacion' href='detallePubli.jsp?id="+p.getId()+"'> <img src="+servidor+"/documents/"+codDocumento+p.getImagen()+"/ "+" class=\"col-md-12 imag-producto\" ></a>\n" +
 "                <div class=\"caption bg3\">\n" +
-"                  <h3>"+p.getTitulo()+"</h3>\n" +
+"                  <a id='btnmodificarpublicacion' href='detallePubli.jsp?id="+p.getId()+"' ><h3>"+p.getTitulo()+"</h3></a>\n" +
 "                  <div class=\"wrap\">\n" +
-"                    <p >"+p.getDetalle()+" </p>\n" +
 "                  \n" +
 "                  </div>  \n" +
 "                </div>\n" +
@@ -235,22 +273,25 @@ public class controladorPublicacion {
         return htmlCode;
     }
      
-     public String getViewPublicacionesHome() {
+     
+     
+     public String getPrincipal() {
         String htmlCode = "";
         modeloPublicacion modelop = new modeloPublicacion();
-        for (publicacion p : modelop.getFourPublicaciones()) {
-            
-            htmlCode  = htmlCode + "<div class=\"col-sm-3 col-md-3 \">\n" +
-"  \n" +
-"	    		<div class=\"thumbnail thumbnail-efect \">\n" +
-"    	 			   <a id='btnmodificarpublicacion' href='detallePubli.jsp?id="+p.getId()+"'> <img src="+servidor+"/documents/"+codDocumento+p.getImagen()+"/ "+" class=\"col-md-12 imag-producto\" ></a>\n" +
-"\n" +
-"      				<div class=\"caption \">\n" +
-"       					 <h1 class=\"title\">"+p.getTitulo()+"</h1>\n" +
-"      				</div>\n" +
-"\n" +
-"    			</div>\n" +
-"			</div>";
+        int count = 0;
+        for (publicacion p : modelop.getRelacionadas()) {
+            if(count ==0)
+            htmlCode  = htmlCode + "<div class=\"thumbnail  thumb-shadow s-padding\" style=\"padding: 0px; height: 220px\">\n" +
+"                 <a id='btnmodificarpublicacion' href='detallePubli.jsp?id="+p.getId()+"'><img src="+servidor+"/documents/"+codDocumento+p.getImagen()+"/ "+" alt=\"\" ></a>\n" +
+"                <div class=\"caption bg2\">\n" +
+"                  <a id='btnmodificarpublicacion' href='detallePubli.jsp?id="+p.getId()+"' ><h3>"+p.getTitulo()+"</h3></a>\n" +
+"                  <div class=\"wrap\">\n" +
+"                    <p >"+p.getDetalle()+
+"                    </p>\n" +
+"                  \n" +
+"                  </div>  \n" +
+"                </div>\n" +
+"              </div> ";
         }
         return htmlCode;
     }
@@ -341,7 +382,7 @@ public class controladorPublicacion {
 "              <div class=\"thumbnail  thumb-shadow s-padding\" style=\"padding: 0px; height: 250px\">\n" +
 "                <a id='btnmodificarpublicacion' href='detallePubli.jsp?id="+p.getId()+"'><img src="+servidor+"/documents/"+codDocumento+p.getImagen()+"/ "+" alt=\"\" ></a>\n" +
 "                <div class=\"caption bg2\">\n" +
-"                  <h3>"+p.getTitulo()+" </h3> \n" +
+"                  <a id='btnmodificarpublicacion' href='detallePubli.jsp?id="+p.getId()+"' ><h3>"+p.getTitulo()+" </h3></a> \n" +
 "                  <div class=\"wrap\">\n" +
 "                    <p >"+p.getDetalle()+"</p>\n" +
 "                  \n" +

@@ -28,11 +28,24 @@
                 <div id="btn" class="btn2">
                     <a href="#" class="w3-bar-item w3-button w3-mobile" style="display: block; background: #5F6F81; color: white"><i class="fa fa-bars" aria-hidden="true"></i> &nbsp;La Facultad</a>
                 </div>
-                <a href="#" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;UNMSM</a>
-                <a href="#" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;SUM</a>
-                <a href="#" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;FISI Blog</a>
+                <a href="http://www.unmsm.edu.pe/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;UNMSM</a>
+                <a href="http://sum.unmsm.edu.pe/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;SUM</a>
+                <a href="https://alumnitosfisiunmsm.wordpress.com/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;FISI Blog</a>
                 <a href="#" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-address-book-o" aria-hidden="true"></i>&nbsp;Contacto</a>
-                <a href="" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><i class="fa fa-search"></i>&nbsp; Buscar</a>
+                <a href="transparencia.jsp" class="w3-bar-item w3-button w3-mobile"><i class="material-icons" >gavel</i>&nbsp;Transparencia</a>
+                <!--a href="" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><i class="fa fa-search"></i>&nbsp; Buscar</a-->
+                <!--*******************-->
+                <form  class="w3-bar-item w3-button w3-right  thumbnail-efect" method="post" action="resultBusqPubli.jsp">
+                    <input type="text"  value="" id="searchterm" name="term" placeholder="¿Qué estas buscando?" style="text-align:left;width: 330px"/>
+                    <!--button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px"><a href="resultBusqPubli.jsp?dato=>" ><i class="fa fa-search">&nbsp;Buscar</i></a></button-->
+                    <button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px"><a href="" ><i class="fa fa-search">&nbsp;Buscar</i></a></button>
+                </form>
+
+                <!--*******************-->
+
+
+
+                <!--***********-->
             </div>
             <nav class="navegacion">
                 <ul class="menu">
@@ -40,7 +53,7 @@
                     <li class="title-menu">FISI</li>
                     <!-- TITULAR -->
 
-                    <li><a href="#"><span class="fa fa-home icon-menu"></span>Inicio</a></li>
+                    <li><a href="index.jsp"><span class="fa fa-home icon-menu"></span>Inicio</a></li>
 
                     <li class="item-submenu" menu="1">
                         <a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;La Facultad</a>
@@ -53,8 +66,8 @@
                             <li><a href="#">&nbsp;Autoridades</a></li>
                         </ul>
                     </li>
-                    <li><a href="#"><i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;Ing de Sistemas</a></li>
-                    <li><a href="#"><i class="fa fa-code" aria-hidden="true"></i>&nbsp;Ing de Software</a></li>
+                    <li><a href="eapis.jsp"><i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;Ing de Sistemas</a></li>
+                    <li><a href="software.jsp"><i class="fa fa-code" aria-hidden="true"></i>&nbsp;Ing de Software</a></li>
                     <li class="item-submenu" menu="2">
                         <a href="#"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</a>
                         <ul class="submenu">
@@ -68,8 +81,8 @@
                     </li>
 
                     <li><a href="#"><span class="fa fa-envelope icon-menu"></span>Ins. De Investigación</a></li>
-                    <li><a href="#"><i class="fa fa-industry" aria-hidden="true"></i>&nbsp;CENPRO</a></li>
-                    <li><a href="#"><i class="fa fa-desktop" aria-hidden="true"></i>&nbsp;CERSEU</a></li>
+                    <li><a href="cenpro.jsp"><i class="fa fa-industry" aria-hidden="true"></i>&nbsp;CENPRO</a></li>
+                    <li><a href="cerseu.jsp"><i class="fa fa-desktop" aria-hidden="true"></i>&nbsp;CERSEU</a></li>
                     <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Biblioteca</a></li>
                 </ul>
             </nav>
@@ -82,7 +95,8 @@
        
         <h2 class="noticias" style="font-size: 40px;">FISI NOTICIAS</h2>
      
-        
+         <% controladorPublicacion cp = new controladorPublicacion();%>
+         
           <div class="row">
 
             <div class="col-md-8 col-sm-1 col-xs-12">
@@ -105,37 +119,9 @@
     
             <div class="col-md-4 col-sm-6 col-xs-6">
 
-              <div class="thumbnail  thumb-shadow s-padding" style="padding: 0px; height: 220px">
-                <img src="imagenes/voto_web.jpg" alt="" >
-                <div class="caption bg2">
-                  <h3>
-                    Votaciones Web
-                  </h3>
-                  <div class="wrap">
-                    <p >
-                      Se llevo a cabo las elecciones en la universidad vía web.
-                    </p>
-                  
-                  </div>  
-                </div>
-              </div> 
-             
+              
 
-         
-              <div class="thumbnail  thumb-shadow s-padding" style="padding: 0px; height: 220px">
-                <img src="imagenes/becas.jpg" alt="" >
-                <div class="caption bg2">
-                  <h3>
-                    Becas en el Extranjero
-                  </h3>
-                  <div class="wrap">
-                    <p >
-                     Dese el mes de octubre se podrá tener la posibilidad de ir hacia.
-                    </p>
-                  
-                  </div>  
-                </div>
-              </div> 
+         <%=cp.getPrincipal()%>
 
             </div>
 
@@ -148,7 +134,7 @@
                 <div class="secundarias">
                     <h1 style="color: white;">Próximos Eventos</h1>
 
-                    <% controladorPublicacion cp = new controladorPublicacion();%>
+                   
                     <%= cp.getViewPublicaciones()%>
 
 

@@ -40,7 +40,19 @@
                 <a href="https://alumnitosfisiunmsm.wordpress.com/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;FISI Blog</a>
                 <a href="#" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-address-book-o" aria-hidden="true"></i>&nbsp;Contacto</a>
                 <a href="transparencia.jsp" class="w3-bar-item w3-button w3-mobile"><i class="material-icons" >gavel</i>&nbsp;Transparencia</a>
-                <a href="" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><i class="fa fa-search"></i>&nbsp; Buscar</a>
+                <!--a href="" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><i class="fa fa-search"></i>&nbsp; Buscar</a-->
+                <!--*******************-->
+                <form  class="w3-bar-item w3-button w3-right  thumbnail-efect" method="post" action="resultBusqPubli.jsp">
+                    <input type="text"  value="" id="searchterm" name="term" placeholder="¿Qué estas buscando?" style="text-align:left;width: 330px"/>
+                    <!--button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px"><a href="resultBusqPubli.jsp?dato=>" ><i class="fa fa-search">&nbsp;Buscar</i></a></button-->
+                    <button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px"><a href="" ><i class="fa fa-search">&nbsp;Buscar</i></a></button>
+                </form>
+
+                <!--*******************-->
+
+
+
+                <!--***********-->
             </div>
             <nav class="navegacion">
                 <ul class="menu">
@@ -97,40 +109,14 @@
             </div>
 
             <div class="col-md-4">
-
+                    
+                
                 <div class="thumbnail">
-                    <h2>Relacionadas</h2>
-                    <div class="thumbnail  thumb-shadow s-padding" style="padding: 0px;  height: 250px">
-                        <img src="http://52.168.76.15:8080/documents/30243/30245/descarga.jpg
-" alt="" >
-                        <div class="caption bg2">
-                            <h3>
-                                Apertura de clases
-                            </h3>
-                            <div class="wrap">
-                                <p >
-                                    El día jueves de la próxima semana se realizará la apertura de clases
-                                </p>
-
-                            </div>  
-                        </div>
-                    </div> 
-
-
-                    <div class="thumbnail  thumb-shadow s-padding" style="padding: 0px;  height: 250px">
-                        <img src="imagenes/clases.jpg" alt="" >
-                        <div class="caption bg2">
-                            <h3>
-                                Apertura de clases
-                            </h3>
-                            <div class="wrap">
-                                <p >
-                                    El día jueves de la próxima semana se realizará la apertura de clases
-                                </p>
-
-                            </div>  
-                        </div>
-                    </div> 
+                    <h2 class="noticias" style="text-align: left;">Relacionadas</h2>
+                    
+                    <%=cp.getRelacionada(0)%>
+                    
+                 
                 </div>
             </div>
 

@@ -5,7 +5,14 @@
 .carousel{
   height: 50%;
 }
-
+.titulo-blog{
+   font-family: Western,"Times New Roman", Georgia, Serif;
+  
+}
+.titulo-blog{
+   font-family: Western,"Times New Roman", Georgia, Serif;
+  
+}
 img.pequeña{
   height: 100px;
   width: 100px;
@@ -19,6 +26,10 @@ img.pequeña{
   text-align: center;
 }
 
+.titulo{
+   font-family: Western,"Times New Roman", Georgia, Serif;
+ 
+}
 img.grande{
   height: 500px;
   width: 700px;

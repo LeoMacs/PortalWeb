@@ -170,7 +170,7 @@
                 <h2 class="noticias" style="font-size: 40px;">FISI NOTICIAS</h2>
                 <h4 class="lead noticias" style="font-size: 30px;"><b>Entérate de las últimas noticias de la facultad</b></h4>
 
-                <%=cp.getViewPublicacionesHome()%>
+               <%=cp.getViewHome()%>
 
                 <div class="col-md-1 col-md-offset-6">
                     <a href='blog.jsp' >Ver más</a>
@@ -328,7 +328,7 @@
 		
 			<div class="panel-body" >
 		    	
-					<h2 class="noticias"><b>¡Escríbenos cualquier consulta que tengas!</b></h2>
+                            <h2 class="noticias"><b>¡Escríbenos cualquier consulta que tengas!</b></h2>
 		   		
 
 				<div class="row col-md-8 col-md-offset-2">
