@@ -22,10 +22,21 @@ $(function(){
     
     $('#btnmodificarpublicacion').click(function(e){
         e.preventDefault();
+    
         var data = $('#frmmodificar').serialize();
         
         $.post("modificarPublicacion",data,function(res,est,jqXHR){
            alert(res) ;
+        });
+    });
+    
+     $('#enviarCorreo').click(function(e){
+        e.preventDefault();
+        
+        var data = $('#frmcorreo').serialize();
+        
+        $.post("enviarCorreoFisi",data,function(res,est,jqXHR){
+           alert("Correo enviado!");
         });
     });
 });

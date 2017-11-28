@@ -45,60 +45,73 @@
         });
     </script>
 </head>
-<body>
-   
-        <header>
-            <div class="w3-bar w3-white w3-large">
-                <div id="btn" class="btn2">
-                    <a href="#" class="w3-bar-item w3-button w3-mobile" style="display: block; background: #5F6F81; color: white"><i class="fa fa-bars" aria-hidden="true"></i> &nbsp;La Facultad</a>
-                </div>
-                <a href="http://www.unmsm.edu.pe/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;UNMSM</a>
-                <a href="http://sum.unmsm.edu.pe/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;SUM</a>
-                <a href="https://alumnitosfisiunmsm.wordpress.com/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;FISI Blog</a>
-                <a href="#" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-address-book-o" aria-hidden="true"></i>&nbsp;Contacto</a>
-                <a href="transparencia.jsp" class="w3-bar-item w3-button w3-mobile"><i class="material-icons" >gavel</i>&nbsp;Transparencia</a>
-                <a href="" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><i class="fa fa-search"></i>&nbsp; Buscar</a>
+<body >
+
+    <header>
+        <div class="w3-bar w3-white w3-large">
+            <div id="btn" class="btn2">
+                <a href="#" class="w3-bar-item w3-button w3-mobile" style="display: block; background: #5F6F81; color: white"><i class="fa fa-bars" aria-hidden="true"></i> &nbsp;La Facultad</a>
             </div>
-            <nav class="navegacion">
-                <ul class="menu">
-                    <!-- TITULAR -->
-                    <li class="title-menu">FISI</li>
-                    <!-- TITULAR -->
+            <a href="http://www.unmsm.edu.pe/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;UNMSM</a>
+            <a href="http://sum.unmsm.edu.pe/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;SUM</a>
+            <a href="blog.jsp" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;FISI Blog</a>
+            <a href="#" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-address-book-o" aria-hidden="true"></i>&nbsp;Contacto</a>
+            <a href="http://s01app.eastus.cloudapp.azure.com:8080/Portal_Transparencia/" class="w3-bar-item w3-button w3-mobile"><i class="material-icons" >gavel</i>&nbsp;Transparencia</a>
+            <!--a href="" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><i class="fa fa-search"></i>&nbsp; Buscar</a-->
+            <!--*******************-->
+            <form  class="w3-bar-item w3-button w3-right  thumbnail-efect" method="post" action="resultBusqPubli.jsp">
+                <input type="text"  value="" id="searchterm" name="term" placeholder="¿Qué estas buscando?" style="text-align:left;width: 330px"/>
+                <!--button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px"><a href="resultBusqPubli.jsp?dato=>" ><i class="fa fa-search">&nbsp;Buscar</i></a></button-->
+                <button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px"><a href="" ><i class="fa fa-search">&nbsp;Buscar</i></a></button>
+            </form>
 
-                    <li><a href="index.jsp"><span class="fa fa-home icon-menu"></span>Inicio</a></li>
+            <!--*******************-->
 
-                    <li class="item-submenu" menu="1">
-                        <a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;La Facultad</a>
-                        <ul class="submenu">
-                            <li class="title-menu"><span class="fa fa-suitcase icon-menu"></span>La Facultad</li>
-                            <li class="go-back">Atrás</li>
-                            <li><a href="#">&nbsp;Nosotros</a></li>
-                            <li><a href="#">&nbsp;Plana Docente</a></li>
-                            <li><a href="#">&nbsp;Gobierno</a></li>
-                            <li><a href="#">&nbsp;Autoridades</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="eapis.jsp"><i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;Ing de Sistemas</a></li>
-                    <li><a href="software.jsp"><i class="fa fa-code" aria-hidden="true"></i>&nbsp;Ing de Software</a></li>
-                    <li class="item-submenu" menu="2">
-                        <a href="#"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</a>
-                        <ul class="submenu">
-                            <li class="title-menu"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</li>
-                            <li class="go-back">Atras</li>
 
-                            <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Maestrías</a></li>
-                            <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Diplomaturas</a></li>
-                            <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Doctorados</a></li>
-                        </ul>
-                    </li>
 
-                    <li><a href="#"><span class="fa fa-envelope icon-menu"></span>Ins. De Investigación</a></li>
-                    <li><a href="cenpro.jsp"><i class="fa fa-industry" aria-hidden="true"></i>&nbsp;CENPRO</a></li>
-                    <li><a href="cerseu.jsp"><i class="fa fa-desktop" aria-hidden="true"></i>&nbsp;CERSEU</a></li>
-                    <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Biblioteca</a></li>
-                </ul>
-            </nav>
-        </header>
+            <!--***********-->
+        </div>
+        <nav class="navegacion">
+            <ul class="menu">
+                <!-- TITULAR -->
+                <li class="title-menu">FISI</li>
+                <!-- TITULAR -->
+
+                <li><a href="index.jsp"><span class="fa fa-home icon-menu"></span>Inicio</a></li>
+
+                <li class="item-submenu" menu="1">
+                    <a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;La Facultad</a>
+                    <ul class="submenu">
+                        <li class="title-menu"><span class="fa fa-suitcase icon-menu"></span>La Facultad</li>
+                        <li class="go-back">Atrás</li>
+                        <li><a href="#">&nbsp;Nosotros</a></li>
+                        <li><a href="#">&nbsp;Plana Docente</a></li>
+                        <li><a href="#">&nbsp;Gobierno</a></li>
+                        <li><a href="#">&nbsp;Autoridades</a></li>
+                    </ul>
+                </li>
+                <li><a href="eapis.jsp"><i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;Ing de Sistemas</a></li>
+                <li><a href="software.jsp"><i class="fa fa-code" aria-hidden="true"></i>&nbsp;Ing de Software</a></li>
+                <li class="item-submenu" menu="2">
+                    <a href="http://40.71.217.135:8080/UPG_2/"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</a>
+                    <ul class="submenu">
+                        <li class="title-menu"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</li>
+                        <li class="go-back">Atras</li>
+
+                        <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Maestrías</a></li>
+                        <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Diplomaturas</a></li>
+                        <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Doctorados</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#"><span class="fa fa-envelope icon-menu"></span>Ins. De Investigación</a></li>
+                <li><a href="cenpro.jsp"><i class="fa fa-industry" aria-hidden="true"></i>&nbsp;CENPRO</a></li>
+                <li><a href="cerseu.jsp"><i class="fa fa-desktop" aria-hidden="true"></i>&nbsp;CERSEU</a></li>
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Biblioteca</a></li>
+            </ul>
+        </nav>
+    </header>
+
 
     <br><br>
 
@@ -140,91 +153,18 @@
     </div>
 
     <!--*********FIN-SLIDER*************-->
-    <!-- Slider -->
-    <!--    
-        <div id="divSeparador" class="backAzul1" ></div>
-        <div id="example4" class="slider-pro">
-            <div class="sp-slides">
-                <div class="sp-slide">
-                    <div class="sp-layer sp-static" data-horizontal="30" data-vertical="30">
-                        <a class="sp-video" href="//www.youtube.com/watch?v=oaDkph9yQBs&controls=0">
-                            <img src="http://sistemas.unmsm.edu.pe/ceups/archivos/banners/banner_web_2.jpg" width="960" height="400"/>
-                        </a>
-                    </div>
-    
-                    <div class="sp-layer sp-static" data-position="topRight" data-horizontal="30" data-vertical="30" data-width="240">
-                        <h3>Lorem ipsum dolor sit amet</h3>
-                        <p>consectetur, ulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum inac blandit elit tincidunt id. Sed rhoncus, tempus ut, vehicula eu diam.</p>
-                    </div>
-                </div>
-    
-                <div class="sp-slide">
-                    <div class="sp-layer sp-static" data-position="topLeft" data-horizontal="30" data-vertical="30" data-width="430">
-                        <h3>Lorem ipsum dolor sit amet</h3>
-                        <p>Heconsectetor adipiscing elit. Nulla que tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.</p>
-                    </div>
-    
-                    <div class="sp-layer sp-static" data-horizontal="500" data-vertical="30" data-width="200">
-                        <div class="sp-thumbnail-container">
-                            <a class="sp-lightbox" href="http://bqworks.com/slider-pro/images/image1_large.jpg">
-                                <img src="http://sistemas.unmsm.edu.pe/ceups/archivos/banners/banner_web_2.jpg" width="960" height="400"/>
-    
-                            </a>
-                        </div>
-                    </div>
-    
-                    <div class="sp-layer sp-static" data-horizontal="730" data-vertical="30" data-width="200">
-                        <div class="sp-thumbnail-container">
-                            <a class="sp-lightbox" href="http://bqworks.com/slider-pro/images/image2_large.jpg">
-                                <img src="http://aulavirtual.sistemas.unmsm.edu.pe/cerseu/pluginfile.php/3/course/section/2/taller.jpg"/>
-                            </a>
-                        </div>
-                    </div>
-    
-                    <div class="sp-layer sp-static" data-horizontal="500" data-vertical="190" data-width="200">
-                        <div class="sp-thumbnail-container">
-                            <a class="sp-lightbox" href="http://bqworks.com/slider-pro/images/image3_large.jpg">
-                                <img src="http://bqworks.com/slider-pro/images/image3_thumbnail.jpg"/>
-                            </a>
-                        </div>
-                    </div>
-    
-                    <div class="sp-layer sp-static" data-horizontal="730" data-vertical="190" data-width="200">
-                        <div class="sp-thumbnail-container">
-                            <a class="sp-lightbox" href="https://scontent.flim1-2.fna.fbcdn.net/v/t1.0-9/22089240_1966988750247298_6384076535539231162_n.jpg?oh=4dc87af7dabe1bc80cdd0d1bc0f2c594&oe=5A77C93C">
-                                <img src="http://bqworks.com/slider-pro/images/image4_thumbnail.jpg"/>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="sp-slide">
-                    <div class="sp-layer sp-static">
-                        <a class="sp-video" href="//www.youtube.com/watch?v=oaDkph9yQBs">
-                            <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t1.0-9/22089240_1966988750247298_6384076535539231162_n.jpg?oh=4dc87af7dabe1bc80cdd0d1bc0f2c594&oe=5A77C93C" width="960" height="400"/>
-                        </a>
-                    </div>
-                </div>
-    
-                <div class="sp-slide">
-                    <div class="sp-layer sp-static" data-horizontal="30" data-vertical="30" data-width="900">
-                        <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t1.0-9/22789103_1977145559231617_3272927609820345734_n.jpg?oh=a6a9938f82fc0351902951198b16bf7a&oe=5A68FCF0" width="960" height="400"/>
-                    </div>
-                </div>
-            </div>
-        </div>-->
 
-    <!-- End Slider -->
-    <!-- Noticias -->
     <!-- noticias -->
     <div thumbnail thumbnail-efect1>
         <div class="col-xs-12 divTituloSeccion colAzul2">
             <h3 style="margin-top: 0px;">Últimas Noticias</h3> 
         </div>
-        <div class="thumbnail col-md-10 col-md-offset-1  thumbnail-efect1" style="background-color: royalblue">
+
+
+        <div class="thumbnail col-md-10 col-md-offset-1  thumbnail-efect1" style="background-color: #006699">
             <br>
             <%controladorPublicacion cp = new controladorPublicacion();%>
-            <%= cp.getViewPublicacionesxCategoria("eapis")%>
+            <%= cp.getViewPublicacionesxCategoria("cerseu")%>
         </div>  
     </div>
 
@@ -300,19 +240,22 @@
         <div class="thumbnail col-md-10 col-md-offset-1 contacto  thumbnail-efect1">
 
             <div class="panel-body" >
-                <div class="col-md-8 col-md-offset-2">
-                    <h2 ><b >Suscribete para conocer más de la carrera!</b></h2>
-                </div>
 
-                <div class="row col-md-8 col-md-offset-2">
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Ingresa tu correo electrónico"  >
+                <form id='frmcorreo' name='frmcorreo'>
+                    <h2 class="noticias"><b><center>Suscribete para conocer más de la carrera!</center></b></h2>
+
+
+                    <div class="row col-md-8 col-md-offset-2 ">
+                        <div class="col-md-8">
+                            <input type="text" name='mail' id='mail' class="form-control" placeholder="Ingresa tu correo electrónico"  >
+                        </div>
+
+
+                        <div class="col-md-4 ">
+                            <input type="button" class = "btn btn-primary btn-block thumbnail-efect" id='enviarCorreo' value="Regístrate" style="background-color: #243EFF;">
+                        </div>	
                     </div>
-
-                    <div class="col-md-4">
-                        <input type="button" class = "btn btn-primary btn-block"  value="Regístrate" ng-click="redirect()">
-                    </div>	
-                </div>
+                </form>
             </div>	
 
         </div>
@@ -378,28 +321,28 @@
     <script src="js/header/mainHeader.js"></script>
 
     <script type="text/javascript">
-                        $(document).ready(function ($) {
-                            $('#example4').sliderPro({
-                                width: 960,
-                                height: 400,
-                                autoHeight: true,
-                                fade: true,
-                                updateHash: true
-                            });
-
-                            // instantiate fancybox when a link is clicked
-                            $('#example4 .sp-lightbox').on('click', function (event) {
-                                event.preventDefault();
-
-                                // check if the clicked link is also used in swiping the slider
-                                // by checking if the link has the 'sp-swiping' class attached.
-                                // if the slider is not being swiped, open the lightbox programmatically,
-                                // at the correct index
-                                if ($('#example4').hasClass('sp-swiping') === false) {
-                                    $.fancybox.open(this);
-                                }
-                            });
+                    $(document).ready(function ($) {
+                        $('#example4').sliderPro({
+                            width: 960,
+                            height: 400,
+                            autoHeight: true,
+                            fade: true,
+                            updateHash: true
                         });
+
+                        // instantiate fancybox when a link is clicked
+                        $('#example4 .sp-lightbox').on('click', function (event) {
+                            event.preventDefault();
+
+                            // check if the clicked link is also used in swiping the slider
+                            // by checking if the link has the 'sp-swiping' class attached.
+                            // if the slider is not being swiped, open the lightbox programmatically,
+                            // at the correct index
+                            if ($('#example4').hasClass('sp-swiping') === false) {
+                                $.fancybox.open(this);
+                            }
+                        });
+                    });
     </script>
 
 </body>

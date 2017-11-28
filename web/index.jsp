@@ -5,6 +5,9 @@
 --%>
 
 <%@page import="Controlador.controladorPublicacion"%>
+
+
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -24,6 +27,7 @@
         <link rel="stylesheet" href="css/estilos-slider-p.css">
         <script src="js/jquery-3.2.1.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/panelAdministracion.js"></script>
 
         <link rel="stylesheet" href="css/estilos-slider.css">
         <link rel="stylesheet" href="css/font-awesome-1.css">
@@ -69,15 +73,15 @@
                 </div>
                 <a href="http://www.unmsm.edu.pe/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;UNMSM</a>
                 <a href="http://sum.unmsm.edu.pe/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;SUM</a>
-                <a href="https://alumnitosfisiunmsm.wordpress.com/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;FISI Blog</a>
+                <a href="blog.jsp" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;FISI Blog</a>
                 <a href="#" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-address-book-o" aria-hidden="true"></i>&nbsp;Contacto</a>
                 <a href="transparencia.jsp" class="w3-bar-item w3-button w3-mobile"><i class="material-icons" >gavel</i>&nbsp;Transparencia</a>
                 <!--a href="" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><i class="fa fa-search"></i>&nbsp; Buscar</a-->
                 <!--*******************-->
-                <form  class="w3-bar-item w3-button w3-right  thumbnail-efect" method="post" action="resultBusqPubli.jsp">
+                <form  class="w3-bar-item w3-button w3-right  thumbnail-efect" method="post" action="resultBusqPubli.jsp" >
                     <input type="text"  value="" id="searchterm" name="term" placeholder="¿Qué estas buscando?" style="text-align:left;width: 330px"/>
                     <!--button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px"><a href="resultBusqPubli.jsp?dato=>" ><i class="fa fa-search">&nbsp;Buscar</i></a></button-->
-                    <button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px"><a href="" ><i class="fa fa-search">&nbsp;Buscar</i></a></button>
+                    <button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px;"><a href="" ><i class="fa fa-search" style="background-color:white ">&nbsp;Buscar</i></a></button>
                 </form>
 
                 <!--*******************-->
@@ -108,7 +112,7 @@
                     <li><a href="eapis.jsp"><i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;Ing de Sistemas</a></li>
                     <li><a href="software.jsp"><i class="fa fa-code" aria-hidden="true"></i>&nbsp;Ing de Software</a></li>
                     <li class="item-submenu" menu="2">
-                        <a href="#"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</a>
+                        <a href="http://40.71.217.135:8080/UPG_2/"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</a>
                         <ul class="submenu">
                             <li class="title-menu"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</li>
                             <li class="go-back">Atras</li>
@@ -170,181 +174,183 @@
                 <h2 class="noticias" style="font-size: 40px;">FISI NOTICIAS</h2>
                 <h4 class="lead noticias" style="font-size: 30px;"><b>Entérate de las últimas noticias de la facultad</b></h4>
 
-               <%=cp.getViewHome()%>
+                <%=cp.getViewHome()%>
 
                 <div class="col-md-1 col-md-offset-6">
                     <a href='blog.jsp' >Ver más</a>
                 </div>
             </div>
         </div>
-                
-         <div class=" col-md-12 lema" >
-		<h1 class="stroke">Buscamos ser un referente de excelencia y calidad en la formación profesional e investigación en las ingenierías de Sistemas, de Software y de Ciencias de la Computación</h1>
-	 </div>
+
+        <div class=" col-md-12 lema" >
+            <h1 class="stroke">Buscamos ser un referente de excelencia y calidad en la formación profesional e investigación en las ingenierías de Sistemas, de Software y de Ciencias de la Computación</h1>
+        </div>
 
 
 
         <!-- SUSCRIPCIÓN -->
-      <div class="col-md-12" style="width: 100%; background-color: white;">
+        <div class="col-md-12" style="width: 100%; background-color: white;">
 
-			<div class="thumbnail col-md-10 col-md-offset-1">
-          
-			<div class="thumbnail col-md-8">
-				
-					
-				<h1 class="noticias" style="text-align: left;">Eventos</h1>
-				
-					
-				
+            <div class="thumbnail col-md-10 col-md-offset-1">
 
-				<div class="eventos1" >
-
-					<div class="fecha"  onmouseover="bigImg(this)" onmouseout="normalImg(this)" >
-						<span class="mes">Dic</span>
-						<span class="dia">15</span>
-					</div>
-                     
-					<div>
-						<p class="des-evento">1. Seminario de tendencias tecnologicas en el mercado peruano a cargo del Ing. Rubio</p>
-					</div>
-
-					<div class="hora lead">
-						<span >6:00 pm</span>
-					</div>
-				</div>
-
-				<div class="eventos" >
-
-					<div class="fecha1"  onmouseover="bigImg(this)" onmouseout="normalImg(this)">
-						<span class="mes">Dic</span>
-						<span class="dia">15</span>
-					</div>
-                     
-					<div>
-						<p class="des-evento">2. Seminario de tendencias tecnologicas en el mercado peruano a cargo del Ing. Rubio</p>
-					</div>
-
-					<div class="hora lead">
-						<span >6:00 pm</span>
-					</div>
-				</div>
-
-				<div class="eventos" >
-
-					<div class="fecha1" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
-						<span class="mes">Dic</span>
-						<span class="dia">15</span>
-					</div>
-                     
-					<div>
-						<p class="des-evento">3. Seminario de tendencias tecnologicas en el mercado peruano a cargo del Ing. Rubio</p>
-					</div>
-
-					<div class="hora lead">
-						<span >6:00 pm</span>
-					</div>
-				</div>
-
-				<div class="eventos1" >
-
-					<div class="fecha" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
-						<span class="mes">Dic</span>
-						<span class="dia">15</span>
-					</div>
-                     
-					<div>
-						<p class="des-evento">4. Seminario de tendencias tecnologicas en el mercado peruano a cargo del Ing. Rubio</p>
-					</div>
-
-					<div class="hora lead">
-						<span >6:00 pm</span>
-					</div>
-				</div>
+                <div class="thumbnail col-md-8">
 
 
-				
-
-			</div>
-
-			<div class="thumbnail col-md-4">
-				<h1 class="noticias" style="text-align: left;">Nuestros logros</h1>
-				<div class="logros">
-					<div class="uno">
-						<p>
-							<span class="txt-chico">Puesto<br></span>
-							<span class="txt-grande">#10<br></span>
-							<span class="txt-chico">a nivel mundial<br><br></span>
-							<span class="txt-grande glyphicon glyphicon-globe"></span>
-						</p>
-					</div>
-					<div class="dos">
-						<p>
-							<span class="txt-chico">Fundada en<br></span>
-							<span class="txt-grande">1998<br></span>
-							<span class="txt-grande glyphicon glyphicon-dashboard"></span>
-							
-						</p>
-
-					</div>
-					<div class="tres">
-						<p> 
-							
-							<span class="txt-grande">20 000</span>
-							<span class="txt-grande glyphicon glyphicon-user"></span><br>
-							<span class="txt-chico">egresados</span>
-							
-						</p>
-					</div>
-					<div class="cuatro">
-						<p>
-							<span class="txt-grande">90%</span>
-							<span class="txt-grande glyphicon glyphicon-briefcase"><br></span><br>
-							<span class="txt-chico">de egresados trabaja en la carrera</span>
-							
-						</p>
-					</div>
-					<div class="cinco">
-						<p>
-							<span class="txt-grande">190<br></span>
-							<span class="txt-chico">publicaciones en <br>el 2016</span>
-						</p>
-					</div>
-					
-					<div class="seis">
-						<p>
-							<span class="txt-grande">190<br></span>
-							<span class="txt-chico">publicaciones en el 2016</span>
-						</p>
-					</div>
-				</div>
-			</div>
-
-		</div>
+                    <h1 class="noticias" style="text-align: left;">Eventos</h1>
 
 
 
 
-<div class="thumbnail col-md-10 col-md-offset-1 contacto">
-		
-			<div class="panel-body" >
-		    	
-                            <h2 class="noticias"><b>¡Escríbenos cualquier consulta que tengas!</b></h2>
-		   		
+                    <div class="eventos1" >
 
-				<div class="row col-md-8 col-md-offset-2">
-  		  			<div class="col-md-8">
-  		  				<input type="text" class="form-control" placeholder="Ingresa tu correo electrónico"  >
-  		  			</div>
+                        <div class="fecha"  onmouseover="bigImg(this)" onmouseout="normalImg(this)" >
+                            <span class="mes">Dic</span>
+                            <span class="dia">15</span>
+                        </div>
 
-  		  			<div class="col-md-4">
-  		  				<input type="button" class = "btn btn-primary btn-block"  value="Regístrate" style="background-color: #273640;">
-  		  			</div>	
-  				</div>
-  			</div>	
-     
-	    </div>
+                        <div>
+                            <p class="des-evento">1. Seminario de tendencias tecnologicas en el mercado peruano a cargo del Ing. Rubio</p>
+                        </div>
 
-		</div>
+                        <div class="hora lead">
+                            <span >6:00 pm</span>
+                        </div>
+                    </div>
+
+                    <div class="eventos" >
+
+                        <div class="fecha1"  onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                            <span class="mes">Dic</span>
+                            <span class="dia">15</span>
+                        </div>
+
+                        <div>
+                            <p class="des-evento">2. Seminario de tendencias tecnologicas en el mercado peruano a cargo del Ing. Rubio</p>
+                        </div>
+
+                        <div class="hora lead">
+                            <span >6:00 pm</span>
+                        </div>
+                    </div>
+
+                    <div class="eventos" >
+
+                        <div class="fecha1" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                            <span class="mes">Dic</span>
+                            <span class="dia">15</span>
+                        </div>
+
+                        <div>
+                            <p class="des-evento">3. Seminario de tendencias tecnologicas en el mercado peruano a cargo del Ing. Rubio</p>
+                        </div>
+
+                        <div class="hora lead">
+                            <span >6:00 pm</span>
+                        </div>
+                    </div>
+
+                    <div class="eventos1" >
+
+                        <div class="fecha" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                            <span class="mes">Dic</span>
+                            <span class="dia">15</span>
+                        </div>
+
+                        <div>
+                            <p class="des-evento">4. Seminario de tendencias tecnologicas en el mercado peruano a cargo del Ing. Rubio</p>
+                        </div>
+
+                        <div class="hora lead">
+                            <span >6:00 pm</span>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="thumbnail col-md-4">
+                    <h1 class="noticias" style="text-align: left;">Nuestros logros</h1>
+                    <div class="logros">
+                        <div class="uno">
+                            <p>
+                                <span class="txt-chico">Puesto<br></span>
+                                <span class="txt-grande">#10<br></span>
+                                <span class="txt-chico">a nivel mundial<br><br></span>
+                                <span class="txt-grande glyphicon glyphicon-globe"></span>
+                            </p>
+                        </div>
+                        <div class="dos">
+                            <p>
+                                <span class="txt-chico">Fundada en<br></span>
+                                <span class="txt-grande">1998<br></span>
+                                <span class="txt-grande glyphicon glyphicon-dashboard"></span>
+
+                            </p>
+
+                        </div>
+                        <div class="tres">
+                            <p> 
+
+                                <span class="txt-grande">20 000</span>
+                                <span class="txt-grande glyphicon glyphicon-user"></span><br>
+                                <span class="txt-chico">egresados</span>
+
+                            </p>
+                        </div>
+                        <div class="cuatro">
+                            <p>
+                                <span class="txt-grande">90%</span>
+                                <span class="txt-grande glyphicon glyphicon-briefcase"><br></span><br>
+                                <span class="txt-chico">de egresados trabaja en la carrera</span>
+
+                            </p>
+                        </div>
+                        <div class="cinco">
+                            <p>
+                                <span class="txt-grande">190<br></span>
+                                <span class="txt-chico">publicaciones en <br>el 2016</span>
+                            </p>
+                        </div>
+
+                        <div class="seis">
+                            <p>
+                                <span class="txt-grande">190<br></span>
+                                <span class="txt-chico">publicaciones en el 2016</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="thumbnail col-md-10 col-md-offset-1 contacto thumbnail-efect1">
+
+                <div class="panel-body" >
+
+                    <form id='frmcorreo' name='frmcorreo'>
+                        <h2 class="noticias"><b>Suscribete para conocer más de la carrera!</b></h2>
+
+
+                        <div class="row col-md-8 col-md-offset-2 ">
+                            <div class="col-md-8">
+                                <input type="text" name='mail' id='mail' class="form-control" placeholder="Ingresa tu correo electrónico"  >
+                            </div>                                   
+
+                            <div class="col-md-4 ">
+                                <input type="button" class = "btn btn-primary btn-block thumbnail-efect" id='enviarCorreo' value="Regístrate" style="background-color: #243EFF;">
+                            </div>	
+                        </div>
+                    </form>
+                </div>	
+
+            </div>
+
+        </div>
 
         <!-- END-SUSCRIPCIÓN -->
 

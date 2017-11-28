@@ -4,6 +4,7 @@
     Author     : Hector
 --%>
 
+<%@page import="Controlador.controladorPublicacion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -33,17 +34,29 @@
     </head>
     <body>
         
-        <header>
+         <header>
             <div class="w3-bar w3-white w3-large">
                 <div id="btn" class="btn2">
                     <a href="#" class="w3-bar-item w3-button w3-mobile" style="display: block; background: #5F6F81; color: white"><i class="fa fa-bars" aria-hidden="true"></i> &nbsp;La Facultad</a>
                 </div>
                 <a href="http://www.unmsm.edu.pe/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;UNMSM</a>
                 <a href="http://sum.unmsm.edu.pe/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;SUM</a>
-                <a href="https://alumnitosfisiunmsm.wordpress.com/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;FISI Blog</a>
+                <a href="blog.jsp" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;FISI Blog</a>
                 <a href="#" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-address-book-o" aria-hidden="true"></i>&nbsp;Contacto</a>
-                <a href="transparencia.jsp" class="w3-bar-item w3-button w3-mobile"><i class="material-icons" >gavel</i>&nbsp;Transparencia</a>
-                <a href="" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><i class="fa fa-search"></i>&nbsp; Buscar</a>
+                <a href="http://s01app.eastus.cloudapp.azure.com:8080/Portal_Transparencia/" class="w3-bar-item w3-button w3-mobile"><i class="material-icons" >gavel</i>&nbsp;Transparencia</a>
+                <!--a href="" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><i class="fa fa-search"></i>&nbsp; Buscar</a-->
+                <!--*******************-->
+                <form  class="w3-bar-item w3-button w3-right  thumbnail-efect" method="post" action="resultBusqPubli.jsp">
+                    <input type="text"  value="" id="searchterm" name="term" placeholder="¿Qué estas buscando?" style="text-align:left;width: 330px"/>
+                    <!--button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px"><a href="resultBusqPubli.jsp?dato=>" ><i class="fa fa-search">&nbsp;Buscar</i></a></button-->
+                    <button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px"><a href="" ><i class="fa fa-search">&nbsp;Buscar</i></a></button>
+                </form>
+
+                <!--*******************-->
+
+
+
+                <!--***********-->
             </div>
             <nav class="navegacion">
                 <ul class="menu">
@@ -67,7 +80,7 @@
                     <li><a href="eapis.jsp"><i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;Ing de Sistemas</a></li>
                     <li><a href="software.jsp"><i class="fa fa-code" aria-hidden="true"></i>&nbsp;Ing de Software</a></li>
                     <li class="item-submenu" menu="2">
-                        <a href="#"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</a>
+                        <a href="http://40.71.217.135:8080/UPG_2/"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</a>
                         <ul class="submenu">
                             <li class="title-menu"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</li>
                             <li class="go-back">Atras</li>
@@ -85,6 +98,7 @@
                 </ul>
             </nav>
         </header>
+
         <!-- Slider -->
         <br><br>
         <div id="divSeparador" class="backAzul1" ></div>
@@ -182,46 +196,22 @@
         <!-- End Slider -->
         <!-- Noticias -->
         <div class="row">
+            <div thumbnail thumbnail-efect1>
+                <div class="col-xs-12 divTituloSeccion colAzul2">
+                    <h3 style="margin-top: 0px;">Últimas Noticias</h3> 
+                </div>
+                <div class="thumbnail col-md-10 col-md-offset-1  thumbnail-efect1" style="background-color: royalblue">
+                    <br>
+                   
+                </div>  
+            </div>
             <div class="col-md-7">
                 <div class="col-xs-12 divTituloSeccion colAzul2">
                     <h4 style="margin-top: 0px;">Ultimas Noticias</h4> 
                 </div>
-                <div class="row spa"> 
-                    <div class="col-md-5"> 
-                        <a href="http://sistemas.unmsm.edu.pe/fisi/adjuntos/noticias/2017-11-10_(4)_rd_436_comisiones.pdf"> 
-                            <img src="http://www.cepefodes.org.pe/Hector/img/not01.jpg" class="img-thumbnail">
-                        </a>  
-                    </div>
-                    <div class="col-md-7 divNoticiaDerecha">  
-                        <a href="salaprensa/2017/agosto/NotaPrensaN0682017.doc" target="_blank" class="aNoticiaTitulo">RATIFICACIÓN DOCENTE  </a> 
-                        <p class="pNoticiaTexto">Se adjunta la Resolución de Decanato N°D.00436-D-FISI-2017</p>
-                        <div style="text-align: right;"><a href="salaprensa/2017/agosto/NotaPrensaN0682017.doc" target="_blank" class="aNoticiaMas">[Mayor Información...]</a></div>
-                    </div>
-                </div>
-                <div class="row spa"> 
-                    <div class="col-md-5"> 
-                        <a href="salaprensa/2017/agosto/NotaPrensaN0682017.doc"> 
-                            <img src="http://www.cepefodes.org.pe/Hector/img/not02.jpg" class="img-thumbnail">
-                        </a>  
-                    </div>
-                    <div class="col-md-7 divNoticiaDerecha">  
-                        <a href="salaprensa/2017/agosto/NotaPrensaN0682017.doc" target="_blank" class="aNoticiaTitulo">REQUERIMIENTO DE PERSONAL  </a> 
-                        <p class="pNoticiaTexto">Empresa transnacional requiere un profesional con conocimiento en el sistema operativo UNIX/LINUX para laborar en el área de seguridad. <br> Enviar sus CVs: fernandocastillochavez@yahoo.es</p>                   
-                        <div style="text-align: right;"><a href="salaprensa/2017/agosto/NotaPrensaN0682017.doc" target="_blank" class="aNoticiaMas">[Mayor Información...]</a></div>
-                    </div>
-                </div>
-                <div class="row spa"> 
-                    <div class="col-md-5"> 
-                        <a href="salaprensa/2017/agosto/NotaPrensaN0682017.doc"> 
-                            <img src="http://www.cepefodes.org.pe/Hector/img/not03.jpg" class="img-thumbnail">
-                        </a>  
-                    </div>
-                    <div class="col-md-7 divNoticiaDerecha">  
-                        <a href="salaprensa/2017/agosto/NotaPrensaN0682017.doc" target="_blank" class="aNoticiaTitulo">COMUNICADO - JORNADA CURRICULAR 2017  </a> 
-                        <p class="pNoticiaTexto">Seminario taller del día miércoles 08 de noviembre se ha suspendido por motivo de fuerza mayor</p>
-                        <div style="text-align: right;"><a href="salaprensa/2017/agosto/NotaPrensaN0682017.doc" target="_blank" class="aNoticiaMas">[Mayor Información...]</a></div>
-                    </div>
-                </div>
+                    <%controladorPublicacion cp = new controladorPublicacion();%>
+                    <%= cp.getViewPublicacionesxCategoriaSoft("eapis")%>
+                
             </div>
             <div class="col-md-5">
                 <div class="col-xs-12 divTituloSeccion colAzul2">
