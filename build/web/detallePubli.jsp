@@ -15,7 +15,8 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	
+	        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 	<link rel="stylesheet" type="text/css" href="css/estilos-blog-p.css">
 	<link rel="stylesheet" type="text/css" href="css/estilos-p.css">
 	<link rel="stylesheet" type="text/css" href="css/estilos-home-p.css">

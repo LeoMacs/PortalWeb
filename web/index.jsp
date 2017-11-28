@@ -16,6 +16,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
         <title>FISI</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="icon" type="image/png" href="imagenes/asistencia.png" />
         <link rel="stylesheet" href="css/estilos-p.css">
         <link rel="stylesheet" href="css/estilos-home-p.css">
@@ -64,6 +65,7 @@
             }
         </script>
     </head>
+    
     <body id="body" >
 
         <header>
@@ -81,7 +83,7 @@
                 <form  class="w3-bar-item w3-button w3-right  thumbnail-efect" method="post" action="resultBusqPubli.jsp" >
                     <input type="text"  value="" id="searchterm" name="term" placeholder="¿Qué estas buscando?" style="text-align:left;width: 330px"/>
                     <!--button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px"><a href="resultBusqPubli.jsp?dato=>" ><i class="fa fa-search">&nbsp;Buscar</i></a></button-->
-                    <button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px;"><a href="" ><i class="fa fa-search" style="background-color:white ">&nbsp;Buscar</i></a></button>
+                    <button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px;"><a href="" ><i class="fa fa-search" >&nbsp;Buscar</i></a></button>
                 </form>
 
                 <!--*******************-->

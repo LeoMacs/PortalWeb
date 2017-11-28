@@ -24,7 +24,7 @@ import jdk.nashorn.internal.objects.NativeString;
 public class controladorPublicacion {
 
     String servidor = "http://52.168.76.15:8080";
-    String codDocumento = "30243/30245/";
+    String codDocumento = "30243/30245/";//RepositoryID/FolderID/->DLFileEntry
     String imagPrueba = "http://52.168.76.15:8080/documents/30243/30245/descarga.jpg";
     String urlImagen = servidor + "/documents/" + codDocumento + "";
 

@@ -9,30 +9,58 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <title>CERSEU</title>
-        <!-- Favicon -->
-        <link rel="icon" href="http://sistemas.unmsm.edu.pe/assets/fisi/img/logo/logo-fisi.png">
-        <link rel="shortcut icon" href="http://sistemas.unmsm.edu.pe/assets/fisi/img/logo/logo-fisi.png"/>
-        <!--Icons-->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="css/estilos.css">
-        <link rel="stylesheet" href="css/estilos-home.css">
+
+        <title>FISI</title>
+        <link rel="icon" type="image/png" href="imagenes/asistencia.png" />
+        <link rel="stylesheet" href="css/estilos-p.css">
+        <link rel="stylesheet" href="css/estilos-home-p.css">
         <link rel="stylesheet" href="css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="http://www2.trabajo.gob.pe/wp-content/themes/mitraTheme/css/bootstrap.min.css">
-        <link rel="stylesheet" href="http://www2.trabajo.gob.pe/wp-content/themes/mitraTheme/css/owl.carousel.css">
-        <link rel="stylesheet" href="http://www2.trabajo.gob.pe/wp-content/themes/mitraTheme/css/admin.css">
-        <link rel="stylesheet" type="text/css" href="http://www.cepefodes.org.pe/Hector/css/hector.css">
+        <link rel="stylesheet" href="css/estilos-slider-p.css">
         <script src="js/jquery-3.2.1.js"></script>
         <script src="js/main.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/panelAdministracion.js"></script>
+
+        <link rel="stylesheet" href="css/estilos-slider.css">
+        <link rel="stylesheet" href="css/font-awesome-1.css">
+
+        <script src="js/jquery-3.1.0.min.js"></script>
+        <script src="js/main-1.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $("#fotoPrincipal").click(function () {
+                    $("#fotoPrincipal").animate({height: 30}, 1500);
+                });
+
+            });
+        </script> 
+
+        <script>
+            $(document).ready(function () {
+                $("#fecha").onmouseover(function () {
+                    $("#fecha").animate({height: 120}, 700);
+                });
+
+            });
+        </script> 
+
+        <script>
+            function bigImg(x) {
+                x.style.height = "100px";
+            }
+        </script>
+        <script>
+            function normalImg(x) {
+                x.style.height = "70px";
+            }
+        </script>
     </head>
     <title>FISI</title>
 
