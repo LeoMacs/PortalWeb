@@ -144,42 +144,19 @@
     <br><br>
 
     <!---¨*******INICIO-SLIDER***********--->
-    <div class="container thumbnail thumbnail-efect1">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img src="http://sistemas.unmsm.edu.pe/ceups/archivos/banners/banner_web_2.jpg" alt="Los Angeles" style="width:100%;height:450px">
-                </div>
-
-                <div class="item">
-                    <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t1.0-9/22789103_1977145559231617_3272927609820345734_n.jpg?oh=a6a9938f82fc0351902951198b16bf7a&oe=5A68FCF0" alt="Chicago" style="width:100%;height:450px">
-                </div>
-
-                <div class="item">
-                    <img src="http://aulavirtual.sistemas.unmsm.edu.pe/cerseu/pluginfile.php/3/course/section/2/taller.jpg" alt="New york" style="width:100%;height:450px">
-                </div>
+    <div class="slideshow" style="background-color :#9AD7FF;">
+            <ul class="slider">
+                <%controladorPublicacion cp1 = new controladorPublicacion();%>
+                <%= cp1.getSlider()%>
+            </ul>
+            <div class="left">
+                <span class="fa fa-chevron-left"></span>
             </div>
 
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <div class="right">
+                <span class="fa fa-chevron-right"></span>
+            </div>
         </div>
-    </div>
-
     <!--*********FIN-SLIDER*************-->
 
     <!-- noticias -->
@@ -205,7 +182,7 @@
         </div>
         <div class="thumbnail col-md-10 col-md-offset-1 thumbnail-efect1" style="background-color:#FFBF00">
             <div class=" col-md-8 col-md-offset-2">
-                <h2><b><center>¡Escríbenos cualquier consulta que tengas!</center></b></h2>  
+                <h2 class="noticias"><b><center>¡Escríbenos cualquier consulta que tengas!</center></b></h2>  
             </div>
 
             <div class="col-xs-12 col-md-6">
@@ -265,7 +242,7 @@
         <div class="col-xs-12 divTituloSeccion colAzul2 ">
             <h3 style="margin-top: 0px;">Suscripción</h3> 
         </div>
-        <div class="thumbnail col-md-10 col-md-offset-1 contacto  thumbnail-efect1">
+        <div class="thumbnail col-md-10 col-md-offset-1 contacto  thumbnail-efect">
 
             <div class="panel-body" >
 
@@ -280,7 +257,7 @@
 
 
                         <div class="col-md-4 ">
-                            <input type="button" class = "btn btn-primary btn-block thumbnail-efect" id='enviarCorreo' value="Regístrate" style="background-color: #243EFF;">
+                            <input type="button" class = "btn btn-primary btn-block thumbnail-efect1" id='enviarCorreo' value="Regístrate" style="background-color: #243EFF;">
                         </div>	
                     </div>
                 </form>

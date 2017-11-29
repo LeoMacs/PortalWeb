@@ -236,7 +236,7 @@ public class controladorPublicacion {
         modeloPublicacion modelop = new modeloPublicacion();
         for (publicacion p : modelop.getFourPublicaciones()) {
             htmlCode = htmlCode + "<li>\n"
-                    + "				<a id='btnmodificarpublicacion' href='detallePubli.jsp?id=" + p.getId() + "'> <img style = 'height: 70%;' src=" + servidor + "/documents/" + codDocumento + p.getImagen() + "/ ></a>\n"
+                    + "				<a id='btnmodificarpublicacion' href='detallePubli.jsp?id=" + p.getId() + "'> <img style = 'height: 50%;' src=" + servidor + "/documents/" + codDocumento + p.getImagen() + "/ ></a>\n"
                     + "				<section class='caption '>\n"
                     + "					<h1 class='str' style='font-size:46px;font-family: impact;' >" + p.getTitulo() + "</h1>\n"
                     + "				</section>\n"
