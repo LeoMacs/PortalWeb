@@ -20,6 +20,7 @@
         <link rel="icon" type="image/png" href="imagenes/asistencia.png" />
         <link rel="stylesheet" href="css/estilos-p.css">
         <link rel="stylesheet" href="css/estilos-home-p.css">
+        <link rel="stylesheet" href="css/estilos-blog-p.css">
         <link rel="stylesheet" href="css/font-awesome.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -172,7 +173,7 @@
             </br>
             </br>
 
-            <div class="thumbnail col-md-10 col-md-offset-1">
+            <div class="thumbnail col-md-12 ">
                 <h2 class="noticias" style="font-size: 40px;">FISI NOTICIAS</h2>
                 <h4 class="lead noticias" style="font-size: 30px;"><b>Entérate de las últimas noticias de la facultad</b></h4>
 
@@ -191,7 +192,7 @@
 
 
         <!-- SUSCRIPCIÓN -->
-<<<<<<< HEAD
+
       <div class="col-md-12" style="width: 100%; background-color: white;">
 
 			<div class="thumbnail col-md-10 col-md-offset-1">
@@ -352,170 +353,8 @@
 	    </div>
 
 		</div>
-=======
-        <div class="col-md-12" style="width: 100%; background-color: white;">
+       
 
-            <div class="thumbnail col-md-10 col-md-offset-1">
-
-                <div class="thumbnail col-md-8">
-
-
-                    <h1 class="noticias" style="text-align: left;">Eventos</h1>
-
-
-
-
-                    <div class="eventos1" >
-
-                        <div class="fecha"  onmouseover="bigImg(this)" onmouseout="normalImg(this)" >
-                            <span class="mes">Dic</span>
-                            <span class="dia">15</span>
-                        </div>
-
-                        <div>
-                            <p class="des-evento">1. Seminario de tendencias tecnologicas en el mercado peruano a cargo del Ing. Rubio</p>
-                        </div>
-
-                        <div class="hora lead">
-                            <span >6:00 pm</span>
-                        </div>
-                    </div>
-
-                    <div class="eventos" >
-
-                        <div class="fecha1"  onmouseover="bigImg(this)" onmouseout="normalImg(this)">
-                            <span class="mes">Dic</span>
-                            <span class="dia">15</span>
-                        </div>
-
-                        <div>
-                            <p class="des-evento">2. Seminario de tendencias tecnologicas en el mercado peruano a cargo del Ing. Rubio</p>
-                        </div>
-
-                        <div class="hora lead">
-                            <span >6:00 pm</span>
-                        </div>
-                    </div>
-
-                    <div class="eventos" >
-
-                        <div class="fecha1" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
-                            <span class="mes">Dic</span>
-                            <span class="dia">15</span>
-                        </div>
-
-                        <div>
-                            <p class="des-evento">3. Seminario de tendencias tecnologicas en el mercado peruano a cargo del Ing. Rubio</p>
-                        </div>
-
-                        <div class="hora lead">
-                            <span >6:00 pm</span>
-                        </div>
-                    </div>
-
-                    <div class="eventos1" >
-
-                        <div class="fecha" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
-                            <span class="mes">Dic</span>
-                            <span class="dia">15</span>
-                        </div>
-
-                        <div>
-                            <p class="des-evento">4. Seminario de tendencias tecnologicas en el mercado peruano a cargo del Ing. Rubio</p>
-                        </div>
-
-                        <div class="hora lead">
-                            <span >6:00 pm</span>
-                        </div>
-                    </div>
-
-
-
-
-                </div>
-
-                <div class="thumbnail col-md-4">
-                    <h1 class="noticias" style="text-align: left;">Nuestros logros</h1>
-                    <div class="logros">
-                        <div class="uno">
-                            <p>
-                                <span class="txt-chico">Puesto<br></span>
-                                <span class="txt-grande">#10<br></span>
-                                <span class="txt-chico">a nivel mundial<br><br></span>
-                                <span class="txt-grande glyphicon glyphicon-globe"></span>
-                            </p>
-                        </div>
-                        <div class="dos">
-                            <p>
-                                <span class="txt-chico">Fundada en<br></span>
-                                <span class="txt-grande">1998<br></span>
-                                <span class="txt-grande glyphicon glyphicon-dashboard"></span>
-
-                            </p>
-
-                        </div>
-                        <div class="tres">
-                            <p> 
-
-                                <span class="txt-grande">20 000</span>
-                                <span class="txt-grande glyphicon glyphicon-user"></span><br>
-                                <span class="txt-chico">egresados</span>
-
-                            </p>
-                        </div>
-                        <div class="cuatro">
-                            <p>
-                                <span class="txt-grande">90%</span>
-                                <span class="txt-grande glyphicon glyphicon-briefcase"><br></span><br>
-                                <span class="txt-chico">de egresados trabaja en la carrera</span>
-
-                            </p>
-                        </div>
-                        <div class="cinco">
-                            <p>
-                                <span class="txt-grande">190<br></span>
-                                <span class="txt-chico">publicaciones en <br>el 2016</span>
-                            </p>
-                        </div>
-
-                        <div class="seis">
-                            <p>
-                                <span class="txt-grande">190<br></span>
-                                <span class="txt-chico">publicaciones en el 2016</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-
-            <div class="thumbnail col-md-10 col-md-offset-1 contacto thumbnail-efect1">
-
-                <div class="panel-body" >
-
-                    <form id='frmcorreo' name='frmcorreo'>
-                        <h2 class="noticias"><b>Suscribete para conocer más de la carrera!</b></h2>
-
-
-                        <div class="row col-md-8 col-md-offset-2 ">
-                            <div class="col-md-8">
-                                <input type="text" name='mail' id='mail' class="form-control" placeholder="Ingresa tu correo electrónico"  >
-                            </div>                                   
-
-                            <div class="col-md-4 ">
-                                <input type="button" class = "btn btn-primary btn-block thumbnail-efect" id='enviarCorreo' value="Regístrate" style="background-color: #243EFF;">
-                            </div>	
-                        </div>
-                    </form>
-                </div>	
-
-            </div>
-
-        </div>
->>>>>>> aec1d5fb0777edaedda1b3f87caa72976e905600
 
         <!-- END-SUSCRIPCIÓN -->
 

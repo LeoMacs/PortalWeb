@@ -249,17 +249,21 @@ public class controladorPublicacion {
         String htmlCode = "";
         modeloPublicacion modelop = new modeloPublicacion();
         for (publicacion p : modelop.getFourPublicaciones()) {
-            htmlCode = htmlCode + "<div class=\"col-sm-3 col-md-3 \">\n"
-                    + "  \n"
-                    + "	    		<div class=\"thumbnail thumbnail-efect \">\n"
-                    + "                <a id='btnmodificarpublicacion' href='detallePubli.jsp?id=" + p.getId() + "'> <img src=" + servidor + "/documents/" + codDocumento + p.getImagen() + "/ " + " class=\"col-md-12 imag-producto\" ></a>\n"
-                    + "\n"
-                    + "      				<div class=\"caption \">\n"
-                    + "       					 <h1 class=\"title\">" + p.getTitulo() + "</h1>\n"
-                    + "      				</div>\n"
-                    + "\n"
-                    + "    			</div>\n"
-                    + "			</div>";
+            htmlCode = htmlCode + " <div class=\"col-md-3\">\n" +
+"\n" +
+"              <div class=\"thumbnail  thumb-shadow s-padding\" style=\"padding: 0px;  height: 250px\"> \n" +
+"                <img src=\"imagenes/congreso-sistemas.jpg\" alt=\"\" >\n" +
+"                <div class=\"caption bg2\">\n" +
+"                  <h3>\n" +
+"                    Congreso de Sistemas\n" +
+"                  </h3>\n" +
+"                  <div class=\"wrap\">\n" +
+"                    <p >"+p.getTitulo()+"</p>\n" +
+"                  \n" +
+"                  </div>  \n" +
+"                </div>\n" +
+"              </div> \n" +
+"              </div>";
         }
 
         return htmlCode;
