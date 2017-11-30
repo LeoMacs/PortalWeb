@@ -9,28 +9,58 @@
 <!DOCTYPE html>
 <html>
     <head>
-        	<meta  charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	
-	<link rel="stylesheet" type="text/css" href="css/estilos-blog-p.css">
-	<link rel="stylesheet" type="text/css" href="css/estilos-p.css">
-	<link rel="stylesheet" type="text/css" href="css/estilos-home-p.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-  
-	<script type="text/javascript" src="controller/registroController.js"></script>
+        <meta  charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="css/estilos-blog-p.css">
+        <link rel="stylesheet" type="text/css" href="css/estilos-p.css">
+        <link rel="stylesheet" type="text/css" href="css/estilos-home-p.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+        <script type="text/javascript" src="controller/registroController.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <script>
+            $(document).ready(function () {
+                $("#fotoPrincipal").click(function () {
+                    $("#fotoPrincipal").animate({height: 30}, 1500);
+                });
+
+            });
+        </script> 
+
+        <script>
+            $(document).ready(function () {
+                $("#fecha").onmouseover(function () {
+                    $("#fecha").animate({height: 120}, 700);
+                });
+
+            });
+        </script> 
+
+        <script>
+            function bigImg(x) {
+                x.style.height = "100px";
+            }
+        </script>
+        <script>
+            function normalImg(x) {
+                x.style.height = "70px";
+            }
+        </script>
     </head>
     <body style="background: #E8E8E8;">
-       <header>
+        <header>
             <div class="w3-bar w3-white w3-large">
                 <div id="btn" class="btn2">
                     <a href="#" class="w3-bar-item w3-button w3-mobile" style="display: block; background: #5F6F81; color: white"><i class="fa fa-bars" aria-hidden="true"></i> &nbsp;La Facultad</a>
@@ -95,7 +125,7 @@
             </nav>
         </header>
 
-        
+
         <div class="col-md-10 col-md-offset-1 ">
             <br><br><br>
             <% controladorPublicacion cp = new controladorPublicacion();
@@ -109,14 +139,14 @@
             </div>
 
             <div class="col-md-4">
-                    
-                
+
+
                 <div class="thumbnail">
                     <h2 class="noticias" style="text-align: left;">Relacionadas</h2>
-                    
+
                     <%=cp.getRelacionada(0)%>
-                    
-                 
+
+
                 </div>
             </div>
 

@@ -245,16 +245,16 @@ public class modeloPublicacion extends Conexion {
         System.out.println("getfourPublicacionesCategoria");
         System.out.println("*****************************");
         try {
-            String sql = "SELECT BlogsEntry.entryId, DLFileEntry.fileEntryId, BlogsEntry.title, BlogsEntry.subtitle,BlogsEntry.description,BlogsEntry.content, DLFileEntry.fileName, BlogsEntry.createDate, AssetTag.name FROM BlogsEntry "
-                    + "INNER JOIN DLFileEntry ON BlogsEntry.coverImageFileEntryId = DLFileEntry.fileEntryId "
-                    + "INNER JOIN AssetEntry ON BlogsEntry.uuid_=AssetEntry.classUuid "
-                    + "INNER JOIN AssetEntries_AssetTags ON AssetEntry.entryId=AssetEntries_AssetTags.entryId INNER JOIN AssetTag "
-                    + "ON AssetEntries_AssetTags.tagId=AssetTag.tagId "
-                    + "WHERE BlogsEntry.status=0 ORDER BY BlogsEntry.createDate DESC LIMIT 4";
+            String sql = "SELECT BlogsEntry.entryId, DLFileEntry.fileEntryId, BlogsEntry.title, BlogsEntry.subtitle,BlogsEntry.description,BlogsEntry.content, DLFileEntry.fileName, BlogsEntry.createDate, AssetTag.name FROM BlogsEntry INNER JOIN DLFileEntry ON BlogsEntry.coverImageFileEntryId = DLFileEntry.fileEntryId\n" +
+"                 INNER JOIN AssetEntry ON BlogsEntry.uuid_=AssetEntry.classUuid \n" +
+"                 INNER JOIN AssetEntries_AssetTags ON AssetEntry.entryId=AssetEntries_AssetTags.entryId INNER JOIN AssetTag \n" +
+"                 \n" +
+"                    ON AssetEntries_AssetTags.tagId=AssetTag.tagId \n" +
+"                    WHERE AssetTag.name='"+categoria+"' and BlogsEntry.status=0 ORDER BY BlogsEntry.createDate DESC LIMIT 4;";
 
             //String sql ="select entryId, title , subtitle, description, content, coverImageFileEntryId  from blogsentry where entryId = ?";
             pst = getConnection().prepareCall(sql);
-            pst.setString(1, categoria);
+            //pst.setString(1, categoria);
             rs = pst.executeQuery();
             while (rs.next()) {
                 publicaciones.add(new publicacion(rs.getInt("entryId"), "", rs.getString("title"), rs.getString("description"), rs.getString("fileName")));

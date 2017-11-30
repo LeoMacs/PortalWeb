@@ -12,6 +12,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title>Blog-FISI</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
         <link rel="stylesheet" href="css/estilos-p.css">
         <link rel="stylesheet" href="css/estilos-blog-p.css">
         <link rel="stylesheet" href="css/font-awesome.css">
@@ -90,51 +92,51 @@
 
         <br>
         <br>
-    <section>
-     <div class="container center991">
-       
-        <h2 class="noticias" style="font-size: 40px;">FISI NOTICIAS</h2>
-     
-         <% controladorPublicacion cp = new controladorPublicacion();%>
-         
-          <div class="row">
+        <section>
+            <div class="container center991">
 
-            <div class="col-md-8 col-sm-1 col-xs-12">
-              <div class="thumbnail  thumb-shadow s-padding" style="padding: 0px; height:  470px">
-                <img src="imagenes/doctorado.jpg" alt="" >
-                <div class="caption bg3">
-                  <h1>
-                    CEREMONÍA DE PREMIACIÓN
-                  </h1>
-                  <div class="wrap">
-                    <p >
-                      Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod.
-                      Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod.
-                    </p>
-                  
-                  </div>  
+                <h2 class="noticias" style="font-size: 40px;">FISI NOTICIAS</h2>
+
+                <% controladorPublicacion cp = new controladorPublicacion();%>
+
+                <div class="row">
+
+                    <div class="col-md-8 col-sm-1 col-xs-12">
+                        <div class="thumbnail  thumb-shadow s-padding" style="padding: 0px; height:  470px">
+                            <img src="imagenes/doctorado.jpg" alt="" >
+                            <div class="caption bg3">
+                                <h1>
+                                    CEREMONÍA DE PREMIACIÓN
+                                </h1>
+                                <div class="wrap">
+                                    <p >
+                                        Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod.
+                                        Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod.
+                                    </p>
+
+                                </div>  
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-6">
+
+
+
+                        <%=cp.getPrincipal()%>
+
+                    </div>
+
+
                 </div>
-              </div> 
             </div>
-    
-            <div class="col-md-4 col-sm-6 col-xs-6">
-
-              
-
-         <%=cp.getPrincipal()%>
-
-            </div>
-
-
-          </div>
-          </div>
-       </section>
+        </section>
         <section style="background-color: #363740; margin-top: 3%; margin-bottom: 3%;">
             <div class="container center991">
                 <div class="secundarias">
                     <h1 style="color: white;">Próximos Eventos</h1>
 
-                   
+
                     <%= cp.getViewPublicaciones()%>
 
 
@@ -156,9 +158,9 @@
         <div class="thumbnail col-md-10 col-md-offset-1 contacto">
 
             <div class="panel-body" >
-               
-                    <h2 class="noticias"><b>¡Escríbenos cualquier consulta que tengas!</b></h2>
-               
+
+                <h2 class="noticias"><b>¡Escríbenos cualquier consulta que tengas!</b></h2>
+
 
                 <div class="row col-md-8 col-md-offset-2">
                     <div class="col-md-8">

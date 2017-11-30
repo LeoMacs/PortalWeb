@@ -16,6 +16,10 @@
         <servlet-name>modificarPublicacion</servlet-name>
         <servlet-class>Servlet.modificarPublicacion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>enviarCorreoFisi</servlet-name>
+        <servlet-class>Servlet.enviarCorreoFisi</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>nuevaPublicacion</servlet-name>
         <url-pattern>/nuevaPublicacion</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>modificarPublicacion</servlet-name>
         <url-pattern>/modificarPublicacion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>enviarCorreoFisi</servlet-name>
+        <url-pattern>/enviarCorreoFisi</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
