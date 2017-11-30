@@ -176,15 +176,19 @@ header #button-menu{
 	padding: 50px 0px 50px;
 	font-size: 17px;
 	text-align: center;
-	color: #295097;
-background-color: white;
+	/*color: #295097;
+        background-color: white;*/
+}
 
+.enl-men a{
+  background-color:#273640;
+color:#FFB918;  
 }
 
 .nav .enl-men a:hover{
 	
-	background-color:#273640;
-color:#FFB918;
+    background-color:#DFFFE8;
+    color: #295097;
 }
 
 
