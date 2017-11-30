@@ -324,7 +324,7 @@
 
 
 
-<div class="thumbnail col-md-10 col-md-offset-1 contacto">
+<div class="thumbnail col-md-12  contacto">
 		
 			<div class="panel-body" >
 		    	

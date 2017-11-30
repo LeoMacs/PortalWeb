@@ -161,6 +161,12 @@ top: 0;
   border-style: solid;
  border-color: gray;
  padding: 30px !important;
+ width: 100%;
+ padding-left:  0px;
+ padding-right: 0px;
+ 
+ 
+ 
 }
 
 .noticias{
