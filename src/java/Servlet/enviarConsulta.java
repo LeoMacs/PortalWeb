@@ -5,10 +5,12 @@
  */
 package Servlet;
 
-import Controlador.controladorPublicacion;
+import Controlador.ControladorEmail;
+import include.Consultor;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,7 +19,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author User
  */
-public class enviarCorreoFisi extends HttpServlet {
+@WebServlet(name = "enviarConsulta", urlPatterns = {"/enviarConsulta"})
+public class enviarConsulta extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,10 +35,21 @@ public class enviarCorreoFisi extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            String nom=request.getParameter("nombre");
+            String apm=request.getParameter("apellidom");
+            String app=request.getParameter("apellidop");
+            String email=request.getParameter("correoe");
+            String dni=request.getParameter("dni");
+            String dir=request.getParameter("direccion");
+            String dist=request.getParameter("distrito");
+            String dep=request.getParameter("departamento");
+            String comentario=request.getParameter("comentario");
             
-            String correo = request.getParameter("mail");
-            controladorPublicacion cp= new controladorPublicacion();
-            cp.suscripcion(correo);
+            Consultor con=new Consultor(nom, app, apm, email, dni, dir, dist,dep, comentario);
+            //System.out.println("Persona:"+nom+" "+app+" "+apm);
+            ControladorEmail cp= new ControladorEmail();
+            cp.consultar(con);
         }
     }
 

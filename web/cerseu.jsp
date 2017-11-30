@@ -23,6 +23,13 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/estilos-slider-p.css">
+       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+       <!--stilosfooter-->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+         <link rel="stylesheet" href="css/estilos_upg.css">
+        <link rel="stylesheet" href="css/style_upg.css">
+        <!--finstilos-footer-->
         <script src="js/jquery-3.2.1.js"></script>
         <script src="js/main.js"></script>
         <script src="js/panelAdministracion.js"></script>
@@ -56,12 +63,14 @@
                 x.style.height = "100px";
             }
         </script>
+        
         <script>
             function normalImg(x) {
                 x.style.height = "70px";
             }
         </script>
     </head>
+    
     <title>FISI</title>
 
     <script>
@@ -88,8 +97,7 @@
             <!--a href="" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><i class="fa fa-search"></i>&nbsp; Buscar</a-->
             <!--*******************-->
             <form  class="w3-bar-item w3-button w3-right  thumbnail-efect" method="post" action="resultBusqPubli.jsp">
-                <input type="text"  value="" id="searchterm" name="term" placeholder="¿Qué estas buscando?" style="text-align:left;width: 330px"/>
-                <!--button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px"><a href="resultBusqPubli.jsp?dato=>" ><i class="fa fa-search">&nbsp;Buscar</i></a></button-->
+                <input type="text"  value="" id="searchterm" name="term" placeholder="¿Qué estas buscando?" style="text-align:left;width: 330px" required="true"/>
                 <button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px"><a href="" ><i class="fa fa-search">&nbsp;Buscar</i></a></button>
             </form>
 
@@ -140,6 +148,15 @@
         </nav>
     </header>
 
+  <div class="social" style="float: right">
+        <ul>
+            <li><a href="http://wwww." class="icon-facebook"></a></li>
+            <li><a href="http://wwww." class="icon-google-plus"></a></li>
+            <li><a href="http://wwww." class="icon-twitter"></a></li>
+            <li><a href="http://wwww." class="icon-youtube"></a></li>
+        </ul>
+    </div>
+      
 
     <br><br>
 
@@ -172,15 +189,16 @@
             <%= cp.getViewPublicacionesxCategoria("cerseu")%>
         </div>  
     </div>
-
     <!-- end-Noticias -->
+    
     <br><br>
+    
     <!-- FORMULARIO -->
     <section>
         <div class="col-xs-12 divTituloSeccion colAzul2 ">
             <h3 style="margin-top: 0px;">Consultas</h3> 
         </div>
-        <div class="thumbnail col-md-10 col-md-offset-1 thumbnail-efect1" style="background-color:#FFBF00">
+        <form id='frmconsulta' name='frmconsulta' class="thumbnail col-md-10 col-md-offset-1 thumbnail-efect1" style="background-color:#FFBF00">
             <div class=" col-md-8 col-md-offset-2">
                 <h2 class="noticias"><b><center>¡Escríbenos cualquier consulta que tengas!</center></b></h2>  
             </div>
@@ -188,23 +206,23 @@
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
                     <label for="InputNombre">Nombre</label>
-                    <input type="text" name= "nombre" class="form-control" id="InputNombre"  placeholder="Ingrese su nombre..."/>
+                    <input type="text" name= "nombre" class="form-control" id='nombre' placeholder="Ingrese su nombre..." required="true"/>
                 </div>
                 <div class="form-group">
                     <label for="InputApellidoP">Apellido Paterno</label>
-                    <input type="text" name= "apellidop" class="form-control" id="InputApellidoP"  placeholder="Ingrese su apellido paterno..."/>
+                    <input type="text" name= "apellidop" class="form-control" id='apellidop'  placeholder="Ingrese su apellido paterno..." required="true"/>
                 </div>
                 <div class="form-group">
                     <label for="InputApellidoM">Apellido Materno</label>
-                    <input type="text" name= "apellidom"  class="form-control" id="InputApellidoM"  placeholder="Ingrese su apellido materno...">
+                    <input type="text" name= "apellidom"  class="form-control" id='apellidom'  placeholder="Ingrese su apellido materno..." required="true"/>
                 </div>
                 <div class="form-group">
                     <label for="InputCorreoE">Correo Electrónico</label>
-                    <input type="email" name="correoe" class="form-control" id="InputCorreoE" aria-describedby="emailHelp" placeholder="Ingrese su correo...">
+                    <input type="email" name="correoe" class="form-control" id='correoe' aria-describedby="emailHelp" placeholder="Ingrese su correo..." required="true"/>
                 </div>
                 <div class="form-group">
                     <label for="InputDNI">DNI</label>
-                    <input type="text" name="dni" class="form-control" id="InputDNI"  placeholder="Ingrese su DNI...">
+                    <input type="text" name="dni" class="form-control" id='dni'  placeholder="Ingrese su DNI..." required="true"/>
                 </div>
             </div>
 
@@ -212,31 +230,34 @@
 
                 <div class="form-group">
                     <label for="InputDirección">Dirección</label>
-                    <input type="text" class="form-control" id="InputDirección"  placeholder="Detalle su dirección..." name="dirección">
+                    <input type="text" class="form-control" id='direccion'  placeholder="Detalle su dirección..." name="direccion"required="true"/>
                 </div>
                 <div class="form-group">
                     <label for="InputDistrito">Distrito</label>
-                    <input type="text" class="form-control" id="InputDistrito"  placeholder="Distrito de vivienda..." name="distrtito">
+                    <input type="text" class="form-control" id='distrito'  placeholder="Distrito de vivienda..." name="distrito" required="true"/>
                 </div>
                 <div class="form-group">
                     <label for="InputDepartamento">Departamento</label>
-                    <input type="text" class="form-control" id="InputDepartamento"  placeholder="Departamento de vivienda..." name="departamento">
+                    <input type="text" class="form-control" id='departamento'  placeholder="Departamento de vivienda..." name="departamento" required="true"/>
                 </div>
                 <div class="form-group">
                     <label for="InputComentario">Comentario</label>
-                    <textarea class="form-control" id="InputComentario" name="comentario" rows="5"></textarea>
+                    <textarea class="form-control" id='comentario' name="comentario" required="true"rows="5"></textarea>
                 </div>
             </div>
 
             <div class="col-md-4 col-md-offset-4 " style="padding-top: 10px">
-                <input type="button" class = "btn btn-primary btn-block btn-lg"  value="Enviar" ng-click="redirect()">
+                <input type="button" class = "btn btn-primary btn-block btn-lg" id='enviarConsulta' value="Enviar" />
+
                 <br>
             </div>
 
-        </div>
+        </form>
     </section>
     <!-- FIN FORMULARIO -->
+    
     <br><br>
+    
     <!-- SUSCRIPCIÓN -->
     <div >
         <div class="col-xs-12 divTituloSeccion colAzul2 ">
@@ -249,15 +270,13 @@
                 <form id='frmcorreo' name='frmcorreo'>
                     <h2 class="noticias"><b><center>Suscribete para conocer más de la carrera!</center></b></h2>
 
-
                     <div class="row col-md-8 col-md-offset-2 ">
                         <div class="col-md-8">
-                            <input type="text" name='mail' id='mail' class="form-control" placeholder="Ingresa tu correo electrónico"  >
+                            <input type="text" name='mail' id='mail' class="form-control" placeholder="Ingresa tu correo electrónico" required="true" >
                         </div>
-
-
+                        
                         <div class="col-md-4 ">
-                            <input type="button" class = "btn btn-primary btn-block thumbnail-efect1" id='enviarCorreo' value="Regístrate" style="background-color: #243EFF;">
+                            <input type="button" class = "btn btn-primary btn-block thumbnail-efect1" id='enviarCorreo' value="Regístrate" style="background-color: #243EFF;"/>
                         </div>	
                     </div>
                 </form>
@@ -265,7 +284,6 @@
 
         </div>
     </div>
-
     <!-- END-SUSCRIPCIÓN -->
 
 
@@ -318,6 +336,58 @@
         <!--FINCOMPAÑIASASOCIADAS-->
         <br><br>
     </div>
+    <!--FOOTER-->
+    <footer id="myFooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h5>FISI-UNMSM</h5>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Ing de Sistemas</a></li>
+                            <li><a href="#">Ing de Software</a></li>
+                            <li><a href="#">Postgrado</a></li>
+                            <li><a href="#">Centro de Producción</a></li>
+                            <li><a href="#">CERSEU</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h5>SERVICIOS UNIVERSITARIOS</h5>
+                        <ul>
+                            <li><a href="#">Sistema de Bibliotecas</a></li>
+                            <li><a href="#">Calidad Académica OCCA</a></li>
+                            <li><a href="#">Clínica Universitaria</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h5>SERVICIOS AL ESTUDIANTE</h5>
+                        <ul>
+                            <li><a href="#">UNAYOE</a></li>
+                            <li><a href="#">Unidad de Bienestar</a></li>
+                            <li><a href="#">Bolsa de Trabajo</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 info">
+                        <h5>Información</h5>
+                        <p> Ciudad Universitaria - Av. Germán Amézaga</p>
+                        <p> Teléfono: 619 - 7000 Anexo 3632</p>
+                        <p> informatica.fisi@unmsm.edu.pe</p>
+                    </div>
+                </div>
+            </div>
+            <div class="second-bar">
+                <div class="container">
+                    
+                    <div class="social-icons">
+                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <!--fin-Footer-->
+
     <br><br>
 
     <script type="text/javascript" src="http://www.cepefodes.org.pe/Hector/libs/jquery-1.11.0.min.js"></script>

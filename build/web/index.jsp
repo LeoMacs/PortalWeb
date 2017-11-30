@@ -81,7 +81,7 @@
                 <!--a href="" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><i class="fa fa-search"></i>&nbsp; Buscar</a-->
                 <!--*******************-->
                 <form  class="w3-bar-item w3-button w3-right  thumbnail-efect" method="post" action="resultBusqPubli.jsp" >
-                    <input type="text"  value="" id="searchterm" name="term" placeholder="¿Qué estas buscando?" style="text-align:left;width: 330px"/>
+                    <input type="text"  value="" id="searchterm" name="term" placeholder="¿Qué estas buscando?" style="text-align:left;width: 330px" required="true"/>
                     <!--button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px"><a href="resultBusqPubli.jsp?dato=>" ><i class="fa fa-search">&nbsp;Buscar</i></a></button-->
                     <button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px;"><a href="" ><i class="fa fa-search" >&nbsp;Buscar</i></a></button>
                 </form>
@@ -192,17 +192,11 @@
 
         <!-- SUSCRIPCIÓN -->
         <div class="col-md-12" style="width: 100%; background-color: white;">
-
             <div class="thumbnail col-md-10 col-md-offset-1">
 
                 <div class="thumbnail col-md-8">
 
-
                     <h1 class="noticias" style="text-align: left;">Eventos</h1>
-
-
-
-
                     <div class="eventos1" >
 
                         <div class="fecha"  onmouseover="bigImg(this)" onmouseout="normalImg(this)" >
@@ -266,10 +260,6 @@
                             <span >6:00 pm</span>
                         </div>
                     </div>
-
-
-
-
                 </div>
 
                 <div class="thumbnail col-md-4">
@@ -294,7 +284,6 @@
                         </div>
                         <div class="tres">
                             <p> 
-
                                 <span class="txt-grande">20 000</span>
                                 <span class="txt-grande glyphicon glyphicon-user"></span><br>
                                 <span class="txt-chico">egresados</span>

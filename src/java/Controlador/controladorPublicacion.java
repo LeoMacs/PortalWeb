@@ -27,11 +27,8 @@ public class controladorPublicacion {
     String codDocumento = "30243/30245/";//RepositoryID/FolderID/->DLFileEntry
     String imagPrueba = "http://52.168.76.15:8080/documents/30243/30245/descarga.jpg";
     String urlImagen = servidor + "/documents/" + codDocumento + "";
-
-    public void suscripcion(String correo) {
-        ControladorEmail ce = new ControladorEmail();
-        ce.enviarConGMail(correo);
-    }
+    
+   
 
     public boolean crearPublicacion(publicacion p) {
 
