@@ -29,7 +29,7 @@
             sta=c.getConnection().createStatement();
             sta.executeUpdate("delete from Files where idFiles='"+id_pdf+"'");
             //request.getRequestDispatcher("../Vistas/vistaCategoria.jsp").forward(request, response);
-            response.sendRedirect("adminSubirArchivo.jsp");
+            response.sendRedirect("AdminTrans.jsp");
                
         }catch(Exception e){out.print(e+"");}
 
