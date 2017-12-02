@@ -326,18 +326,7 @@ img.grande{
     line-height: 1.5;
 }
 
-.eventos{
-    float: left;
-    overflow: hidden;
-    padding: 44px 14px 32px;
-    width: 50%;
-     height:  50%;
-    background-color:#273640;
-    text-align: center;
-    border-right: 1px solid #fff;
-    color:#D4FBFF;
-    opacity: 0.8;
-}
+
 .eventos1{
     float: left;
     overflow: hidden;
@@ -355,10 +344,14 @@ img.grande{
   background-color: #273640;
   width: 20%;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  float: left;
-  transition-timing-function: linear;
+  padding:  10px 0px 10px;
+  margin-top: 0px;
+  float: right;
+  font-weight: bolder;
+      display: block;
+    font-weight: 600;
+    font-size: 1.25em;
+    margin-bottom: 0;
 }
 
 .dia{
@@ -394,8 +387,8 @@ img.grande{
 }
 
 .fecha1{
-  color: #402E06;
-  background-color: #FFB918;
+  color: #111;
+  background-color: #FC4C00;
   width: 20%;
   text-align: center;
   padding-top: 10px;
@@ -404,7 +397,8 @@ img.grande{
  
 }
 
-/*.eventos1:hover .fecha{
+/*.
+1:hover .fecha{
 
  padding-bottom: 60px;
  padding-top: 30px;
@@ -418,10 +412,6 @@ img.grande{
 
 }*/
 
-.eventos:hover .hora{
-   text-align: right;
-
-}
 
 .eventos1:hover .hora{
    text-align: right;
@@ -442,7 +432,7 @@ img.grande{
 }
 
 #body{
-  background-image:  url('http://aulavirtual.sistemas.unmsm.edu.pe/posgrado/pluginfile.php/2/course/section/20/FISI.jpg');
+  background-image:  url('https://cyomas.com/wp-content/uploads/2014/12/sistemas.jpg');
   background-repeat: no-repeat;
   background-size: 100% ;
   background-attachment: fixed;
@@ -476,11 +466,16 @@ img.grande{
 .stroke {
 text-align: center;
 color: #FCDB00;
-font-family: impact;
+font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
+font-weight: 600;
+    line-height: 1.25em;
+    text-align: center;
+    letter-spacing: -.25px;  
 font-size: 46px;
 text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000;
 -webkit-text-fill-color: white;
 -webkit-text-stroke: 2px black;
+padding-bottom: 100px;
 }
 
 .str{ 
