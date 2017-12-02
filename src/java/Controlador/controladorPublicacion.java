@@ -403,5 +403,99 @@ public class controladorPublicacion {
         }
         return htmlCode;
     }
+    
+    public String getSliderXcategoria(String categoria) {
+        String htmlCode = "";
+        modeloPublicacion modelop = new modeloPublicacion();
+        for (publicacion p : modelop.getfourPublicacionesCategoria(categoria)) {
+            htmlCode = htmlCode + "<li>\n"
+                    + "				<a id='btnmodificarpublicacion' href='detallePubli.jsp?id=" + p.getId() + "'> <img style = 'height: 50%;' src=" + servidor + "/documents/" + codDocumento + p.getImagen() + "/ ></a>\n"
+                    + "				<section class='caption '>\n"
+                    + "					<h1 class='str' style='font-size:46px;font-family: impact;' >" + p.getTitulo() + "</h1>\n"
+                    + "				</section>\n"
+                    + "			</li>";
+        }
+        return htmlCode;
+    }
+
+    public String getAllPubliXcategoria(String categoria) {
+        String htmlCode = "";
+        modeloPublicacion modelop = new modeloPublicacion();
+
+        for (publicacion p : modelop.getAllPublicacionesXcategoria(categoria)) {
+            htmlCode = htmlCode + "<div class=\"col-md-4\">\n"
+                    + "              <div class=\"thumbnail  thumb-shadow s-padding\" style=\"padding: 0px; height: 280px\">\n"
+                    + "<a id='btnmodificarpublicacion' href='detallePubli.jsp?id=" + p.getId() + "' ><h3 class='noticias'><center><strong>" + p.getTitulo() + "</strong></center> </h3></a> \n"
+                    + "                <a id='btnmodificarpublicacion' href='detallePubli.jsp?id=" + p.getId() + "'><img src=" + servidor + "/documents/" + codDocumento + p.getImagen() + "/ " + " alt=\"\" ></a>\n"
+                    + "<br>"
+                    + "                <div class=\"caption bg2\">\n"
+                    + "                  <div class=\"wrap\">\n"
+                    + "                    <p >" + p.getDetalle() + "</p>\n"
+                    + "                  \n"
+                    + "                  </div>  \n"
+                    + "                </div>\n"
+                    + "              </div> \n"
+                    + "\n"
+                    + "            </div> ";
+        }
+        return htmlCode;
+    }
+
+    public String getFourCursos(String categoria) {
+        String htmlCode = "<br>";
+        modeloPublicacion modelop = new modeloPublicacion();
+
+        for (publicacion p : modelop.getfourPublicacionesCategoria(categoria)) {
+            htmlCode = htmlCode + "<div class=\"col-md-3\">\n"
+                    + "              <div class=\"thumbnail thumbnail-efect  thumb-shadow s-padding\" style=\"padding: 0px; height: 250px\">\n"
+                    + "                <div class=\"caption bg3\">\n"
+                    + "                  <h3 class='noticias'><strong>" + p.getTitulo() + " </strong></h3>\n"
+                    + "                 <a id='btnmodificarpublicacion' href='detalleCurso.jsp?id=" + p.getId() + "'><img src=" + servidor + "/documents/" + codDocumento + p.getImagen() + "/ " + " alt=\"\" ></a>\n"
+                    + "                </div>\n"
+                    + "              </div> \n"
+                    + "\n"
+                    + "            </div>";
+        }
+        return htmlCode;
+    }
+    
+    public String getAllCursos() {
+        String htmlCode = "";
+        modeloPublicacion modelop = new modeloPublicacion();
+
+        for (publicacion p : modelop.getAllPublicacionesXcategoria("cursos")) {
+            htmlCode = htmlCode + "<div class=\"col-md-4\">\n"
+                    + "              <div class=\"thumbnail  thumb-shadow s-padding\" style=\"padding: 0px; height: 280px\">\n"
+                    + "<a id='btnmodificarpublicacion' href='detallePubli.jsp?id=" + p.getId() + "' ><h3 class='noticias'><center><strong>" + p.getTitulo() + "</strong></center> </h3></a> \n"
+                    + "                <a id='btnmodificarpublicacion' href='detallePubli.jsp?id=" + p.getId() + "'><img src=" + servidor + "/documents/" + codDocumento + p.getImagen() + "/ " + " alt=\"\" ></a>\n"
+                    + "<br>"
+                    + "                <div class=\"caption bg2\">\n"
+                    + "                  <div class=\"wrap\">\n"
+                    + "                    <p >" + p.getDetalle() + "</p>\n"
+                    + "                  \n"
+                    + "                  </div>  \n"
+                    + "                </div>\n"
+                    + "              </div> \n"
+                    + "\n"
+                    + "            </div> ";
+        }
+        return htmlCode;
+    }
+    
+    public String getDetalleCurso(int idPubli) {
+        String htmlCode = "";
+        modeloPublicacion mp = new modeloPublicacion();
+        publicacion p = mp.getDetalle(idPubli);
+        //nombreImagen=mp.getNombreImagen(p.getidImagen());  
+        return htmlCode = "<h1 class='titulo-blog' style='font-family: Western,\"Times New Roman\", Georgia, Serif;'>" + p.getTitulo() + "</h1>"
+                + "<h3 class='titulo-blog' style='font-family: Western,\"Times New Roman\", Georgia, Serif;'>" + p.getSubtitulo() + "</h3>"
+                + "<img src='" + servidor + "/documents/" + codDocumento + p.getNameImagen() + "' class=\"img-rounded center-block\" alt=\"Cinque Terre\">"
+                //+ "<img src='"+imagPrueba+"' class=\"img-rounded center-block\" alt=\"Cinque Terre\">"
+                + "<br><br><p>11/11/2017 - 09:16h</p>" //Ahi se puede jalar la fecha tambien 
+                + "<br>" + p.getDetalle();
+
+    }
+
+
 
 }

@@ -438,5 +438,43 @@ public class modeloPublicacion extends Conexion {
         return publicacion;
 
     }
+    
+    public ArrayList<publicacion> getAllPublicacionesXcategoria(String categoria) {
+
+        ArrayList<publicacion> publicaciones = new ArrayList<>();
+        PreparedStatement pst = null;
+        ResultSet rs = null;
+
+        try {
+              String sql = "SELECT BlogsEntry.entryId, DLFileEntry.fileEntryId, BlogsEntry.title, BlogsEntry.subtitle,BlogsEntry.description,BlogsEntry.content, DLFileEntry.fileName, BlogsEntry.createDate, AssetTag.name FROM BlogsEntry INNER JOIN DLFileEntry ON BlogsEntry.coverImageFileEntryId = DLFileEntry.fileEntryId\n" +
+"                 INNER JOIN AssetEntry ON BlogsEntry.uuid_=AssetEntry.classUuid \n" +
+"                 INNER JOIN AssetEntries_AssetTags ON AssetEntry.entryId=AssetEntries_AssetTags.entryId INNER JOIN AssetTag \n" +
+"                 \n" +
+"                    ON AssetEntries_AssetTags.tagId=AssetTag.tagId \n" +
+"                    WHERE AssetTag.name='"+categoria+"' and BlogsEntry.status=0 ORDER BY BlogsEntry.createDate;";
+
+            
+            pst = getConnection().prepareCall(sql);
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                publicaciones.add(new publicacion(rs.getInt("entryId"), "", rs.getString("title"), rs.getString("description"), rs.getString("fileName")));
+            }
+        } catch (Exception e) {
+        } finally {
+            try {
+                if (getConnection() != null) {
+                    getConnection().close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (Exception e) {
+            }
+        }
+        return publicaciones;
+    }
 
 }
