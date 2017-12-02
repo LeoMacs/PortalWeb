@@ -5,6 +5,9 @@
     Author     : PAULO
 --%>
 
+<%@page import="java.sql.ResultSet"%>
+<%@ page import= "Conexion.Conexion" %>
+<%@page import="java.sql.Statement"%>
 <%@page import="Controlador.controladorPublicacion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -150,173 +153,55 @@
 
    <!--1fila-->
     <div class="row highlights">
-
+        
+        
+        <%  
+            Conexion c = new Conexion();
+            c.getConnection();
+            ResultSet rs=null;
+            
+               try{
+                   
+                   Statement st = c.getConnection().createStatement();
+                   rs = st.executeQuery("select *from Files");
+                   
+                   
+                   while(rs.next()){
+                       
+                   
+        %>
+        
             <div class="col-md-3">
                 <div class="hl-circle">
-                    <a class="hl-icon2" href="/transparencia/procesos">PRESUPUESTO INSTITUCIONAL 2016</a>
+                    <a class="hl-icon2" href="pdfver.jsp?nombre_pdf=<%=rs.getString("nombre")%>">PRESUPUESTO INSTITUCIONAL 2016</a>
                 </div>
-
+                
                 <div class="highlights-content clearfix">
-                    <h5>PRESUPUESTO INSTITUCIONAL 2016</h5>
-                    <a class="btn-small btn-hl" href="/transparencia/procesos">
+                    <h5><%=rs.getString("titulo").toUpperCase()%></h5>
+                    <a class="btn-small btn-hl" href="pdfver.jsp?nombre_pdf=<%=rs.getString("nombre")%>">
                         <col-md->Ver más</col-md->
                     </a><!-- button small end -->
                 </div>
             </div>
             
-        
-            <div class="col-md-3">
-                <div class="hl-circle">
-                    <a class="hl-icon2" href="/transparencia/resoluciones">EJECUCION PRESUPUESTAL 2016</a>
-                </div>
-                <div class="highlights-content clearfix">
-                    <h5>EJECUCION PRESUPUESTAL 2016</h5>
-                    <a class="btn-small btn-hl" href="/transparencia/resoluciones">
-                        <col-md->Ver más</col-md->
-                    </a><!-- button small end -->
-                </div>
-            </div>
+        <%
+            }
+            
+             }catch(Exception e){
+                   
+               }
+            %>
                
         
-            <div class="col-md-3">
-                <div class="hl-circle">
-                    <a class="hl-icon2" href="http://www.unmsm.edu.pe/destacados/listar">PRESUPUESTO INSTITUCIONAL 2017</a>
-                </div>
-                <div class="highlights-content clearfix">
-                    <h5>PRESUPUESTO INSTITUCIONAL 2017</h5>
-                    <a class="btn-small btn-hl" href="/transparencia/comunicados">
-                        <col-md->Ver más</col-md->
-                    </a><!-- button small end -->
-                </div>
-            </div>
-
-
-            <div class="col-md-3">
-                <div class="hl-circle">
-                    <a class="hl-icon2" href="/transparencia/directivas">EJECUCION PRESUPUESTAL 2017</a>
-                </div>      
-                <div class="highlights-content clearfix">
-                    <h5>EJECUCION PRESUPUESTAL 2017</h5>
-                    <a class="btn-small btn-hl" href="/transparencia/directivas">
-                        <col-md->Ver más</col-md->
-                    </a><!-- button small end -->
-                </div>
-            </div>
+        
 
     </div>
   
     <!--2fila-->
-    <div class="row highlights">
 
-            <div class="col-md-3">
-                <div class="hl-circle">
-                    <a class="hl-icon2" href="/transparencia/procesos">POSTULANTES E INGRESANTES 2016-2017</a>
-                </div>
-                <div class="highlights-content clearfix">
-                    <h5>POSTULANTES E INGRESANTES 2016-2017</h5>
-                    <a class="btn-small btn-hl" href="/transparencia/procesos">
-                        <col-md->Ver más</col-md->
-                    </a><!-- button small end -->
-                </div>
-            </div>
-            
-        
-        
-            <div class="col-md-3">
-                <div class="hl-circle">
-                    <a class="hl-icon2" href="/transparencia/resoluciones">EGRESADOS DE PREGRADO 2016-2017</a>
-                </div>
-                <div class="highlights-content clearfix">
-                    <h5>EGRESADOS DE PREGRADO 2016-2017</h5>
-                    <a class="btn-small btn-hl" href="/transparencia/resoluciones">
-                        <col-md->Ver más</col-md->
-                    </a><!-- button small end -->
-                </div>
-            </div>
-        
-        
-            <div class="col-md-3">
-                <div class="hl-circle">
-                    <a class="hl-icon2" href="http://www.unmsm.edu.pe/destacados/listar">MATRICULADOS DE PREGRADO 2016-2017</a>
-                </div>
-                <div class="highlights-content clearfix">
-                    <h5>MATRICULADOS DE PREGRADO 2016-2017</h5>
-                    <a class="btn-small btn-hl" href="/transparencia/comunicados">
-                        <col-md->Ver más</col-md->
-                    </a><!-- button small end -->
-                </div>
-            </div>
-
-
-            <div class="col-md-3">
-                <div class="hl-circle">
-                    <a class="hl-icon2" href="https://drive.google.com/open?id=11H-tmenx0AEfPqvAmrj4VHFGWF2wfQVq">PLAN ESTRATEGICO FISI 2013-2017</a>
-                </div>      
-                <div class="highlights-content clearfix">
-                    <h5>PLAN ESTRATEGICO FISI 2013-2017</h5>
-                    <a class="btn-small btn-hl" href="https://drive.google.com/open?id=11H-tmenx0AEfPqvAmrj4VHFGWF2wfQVq">
-                        <col-md->Ver más</col-md->
-                    </a><!-- button small end -->
-                </div>
-            </div>
-
-    </div>
   
     <!--3fila-->
-    <div class="row highlights">
 
-            <div class="col-md-3">
-                <div class="hl-circle">
-                    <a class="hl-icon2" href="/transparencia/procesos">DOCENTES 2016</a>
-                </div>
-                <div class="highlights-content clearfix">
-                    <h5>DOCENTES 2016</h5>
-                    <a class="btn-small btn-hl" href="/transparencia/procesos">
-                        <col-md->Ver más</col-md->
-                    </a><!-- button small end -->
-                </div>
-            </div>
-            
-        
-            <div class="col-md-3">
-                <div class="hl-circle">
-                    <a class="hl-icon2" href="/transparencia/resoluciones">DOCENTES 2017</a>
-                </div>
-                <div class="highlights-content clearfix">
-                    <h5>DOCENTES 2017</h5>
-                    <a class="btn-small btn-hl" href="/transparencia/resoluciones">
-                        <col-md->Ver más</col-md->
-                    </a><!-- button small end -->
-                </div>
-            </div>
-           
-        
-                <div class="col-md-3">
-                <div class="hl-circle">
-                    <a class="hl-icon2" href="/transparencia/procesos">PLAN OPERATIVO 2017</a>
-                </div>
-                <div class="highlights-content clearfix">
-                    <h5>PLAN OPERATIVO 2017</h5>
-                    <a class="btn-small btn-hl" href="/transparencia/procesos">
-                        <col-md->Ver más</col-md->
-                    </a><!-- button small end -->
-                </div>
-            </div>
-        
-        
-               <div class="col-md-3">
-                <div class="hl-circle">
-                    <a class="hl-icon2" href="/transparencia/procesos">MAPRO 2017</a>
-                </div>
-                <div class="highlights-content clearfix">
-                    <h5>MAPRO 2017</h5>
-                    <a class="btn-small btn-hl" href="/transparencia/procesos">
-                        <col-md->Ver más</col-md->
-                    </a><!-- button small end -->
-                </div>
-            </div>
-
-    </div>
   
 </div>
 
