@@ -18,12 +18,12 @@ public class Conexion {
     
     private String username = "root";
     private String password ="root";
-    private String hostname ="52.168.7.80";
+    private String hostname ="52.168.69.246";
     private String port ="3306";
     private String database ="fisi";
     private String className ="com.mysql.jdbc.Driver";
     private String url = "jdbc:mysql://"+hostname+":"+port+"/"+database;
-    private Connection  con;
+    public static Connection  con;
     
       
     public Conexion(){
