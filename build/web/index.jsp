@@ -64,7 +64,7 @@
             }
         </script>
     </head>
-    
+
     <body id="body" >
 
         <header>
@@ -144,7 +144,7 @@
                 <%= cp.getSlider()%>
             </ul>
             <div class="left">
-                <span class="fa fa-chevron-left"></span>
+                <span class="fa fa-chevron-left" ></span>
             </div>
 
             <div class="right">
@@ -171,187 +171,279 @@
             </br>
             </br>
 
-            <div class="thumbnail col-md-12 ">
-                <h2 class="noticias" style="font-size: 40px;">FISI NOTICIAS</h2>
-                <h4 class="lead noticias" style="font-size: 30px;"><b>Entérate de las últimas noticias de la facultad</b></h4>
-
+            <div class="thumbnail col-md-12 " style="padding-left: 10px; margin-bottom: 0px;" >
+                <div style="margin-bottom: 60px;text-align: center;">
+		    <h1 style="font-size:50px; font-weight: bolder; margin-bottom: 30px;color: #2D3E4A;">FISI Noticias</h1>
+		    <h3 class="lead" style="color: #273640;text-align: center;line-height: 1 ;margin-bottom: 20px; font-size: 30px; font-size: bold;">Entérate de las útlimas noticas de la facultad</h3>
+		</div>
+                
                 <%=cp.getViewHome()%>
+                
+                  
+                   
+                
+                <div class="col-md-2 col-md-offset-5" style="margin-top: 70px;margin-bottom: 100px;">
+  		  				<input style="height: 45px;font-size: 20px;background-color: #273640;" type="button" class = "btn btn-primary btn-block" href="blog.html" value="Ver más" style="">
+  		  	</div>
 
-                <div class="col-md-1 col-md-offset-6">
-                    <a href='blog.jsp' >Ver más</a>
-                </div>
+  		  			<br>
+  		  			<br>
+  		  			<br>
+  		  			<br>
+  		  			<br>
+
+  		  			<p>.</p>
+  		  			<br>
             </div>
         </div>
 
         <div class=" col-md-12 lema" >
-            <h1 class="stroke">Buscamos ser un referente de excelencia y calidad en la formación profesional e investigación en las ingenierías de Sistemas, de Software y de Ciencias de la Computación</h1>
-        </div>
+			<h1 class="stroke">Buscamos ser un referente de excelencia y calidad en la formación profesional e investigación en las ingenierías de Sistemas, de Software y de Ciencias de la Computación</h1>
+		</div>
 
 
 
         <!-- SUSCRIPCIÓN -->
 
-      <div class="col-md-12" style="width: 100%; background-color: white;">
+        <div class="thumbnail col-md-12  ">
 
-			<div class="thumbnail col-md-10 col-md-offset-1">
-          
-			<div class="thumbnail col-md-8">
-				
-					
-				<h1 class="noticias" style="text-align: left;">Eventos</h1>
-				
-					
-				
+			<div style="padding: 40px 100px 40px;color: #273640;">
 
-				<div class="eventos1" >
+			<div style="margin-bottom: 60px;">
+		    <h1 style="font-size:50px; font-weight: bolder; margin-bottom: 30px;">+ Nuestros logros</h1>
+		    <h3 class="lead" style="line-height: 1 ;margin-bottom: 20px; font-size: 30px; font-size: bold;">Nuestra facultad cree en el poder del conocimiento para innovar y crear historias que mejoren el mundo, tu mundo.</h3>
+		   </div>
 
-					<div class="fecha"  onmouseover="bigImg(this)" onmouseout="normalImg(this)" >
-						<span class="mes">Dic</span>
-						<span class="dia">15</span>
-					</div>
-                     
-					<div>
-						<p class="des-evento">1. Seminario de tendencias tecnologicas en el mercado peruano a cargo del Ing. Rubio</p>
-					</div>
+		    <div class="row">
+		     <div class="col-md-4">
+		     	<h1 class="lead" style="font-size: 35px;text-align: center;font-weight: 400;">Acreditación</h1>
+		     	 <p class="lead" style=" font-size: 22px;">La UNMSM tiene 4 acreditaciones internacionales otorgadas por la Red Internacional de Evaluadores (RIEV) y el Consejo Nacional de Acreditación (CNA) de Colombia. Actualmente, varias carreras están en este proceso de acreditación. Entérate cuáles son.</p>
+		     	 <a style="color:#8c8c8c;font-size: 20px;">Ver más»</a>
 
-					<div class="hora lead">
-						<span >6:00 pm</span>
-					</div>
-				</div>
+		     </div>
 
-				<div class="eventos" >
+		     <div class="col-md-4">
+		     	<h3 class="lead" style="font-size: 35px; text-align: center;font-weight: 400;">América Economía</h3>
+		     	 <p class="lead" style=" font-size: 22px;">La UNMSM se ubica entre las 5 mejores universidades del Perú según el ranking 2016 de América Economía Internacional. Conoce todo sobre este importante logro</p>
+		     	 <a style="color:#8c8c8c;font-size: 20px;">Ver más»</a>
 
-					<div class="fecha1"  onmouseover="bigImg(this)" onmouseout="normalImg(this)">
-						<span class="mes">Dic</span>
-						<span class="dia">15</span>
-					</div>
-                     
-					<div>
-						<p class="des-evento">2. Seminario de tendencias tecnologicas en el mercado peruano a cargo del Ing. Rubio</p>
-					</div>
+		     </div>
 
-					<div class="hora lead">
-						<span >6:00 pm</span>
-					</div>
-				</div>
+		     <div class="col-md-4">
+		     	<h3 class="lead" style="font-size: 35px;text-align: center;font-weight: 400;">ANECA</h3>
+		     	 <p class="lead" style=" font-size: 22px;">Somos la primera universidad en Latinoamérica que logró acreditar el diseño del Sistema de Garantía Interna de Calidad por la Agencia Nacional de Evaluación de la Calidad y Acreditación (ANECA) de España. Entérate más aquí.</p>
+		     	 <a style="color:#8c8c8c;font-size: 22px;">Ver más»</a>
 
-				<div class="eventos" >
+		     </div>
+		     </div>
 
-					<div class="fecha1" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
-						<span class="mes">Dic</span>
-						<span class="dia">15</span>
-					</div>
-                     
-					<div>
-						<p class="des-evento">3. Seminario de tendencias tecnologicas en el mercado peruano a cargo del Ing. Rubio</p>
-					</div>
+		     <div class="row">
+		     <div class="col-md-4">
+		     	<h3 class="lead" style="font-size: 35px;text-align: center;font-weight: 400;">Certificación ISO 9001</h3>
+		     	 <p class="lead" style=" font-size: 22px;">La certificadora Bureau Veritas de Inglaterra otorgó este reconocimiento a la Universidad Continental por cumplir procesos con estándares internacionales. Lee más sobre este importante logro.</p>
+		     	 <a style="color:#8c8c8c;font-size: 20px;">Ver más»</a>
 
-					<div class="hora lead">
-						<span >6:00 pm</span>
-					</div>
-				</div>
+		     </div>
 
-				<div class="eventos1" >
+		     <div class="col-md-4">
+		     	<h3 class="lead" style="font-size: 35px; text-align: center;font-weight: 400;">Emprendimiento</h3>
+		     	 <p class="lead" style=" font-size: 22px;">Desde su fundación, en 2002, el Centro de Emprendimiento Continental ha logrado formar 274 empresas exitosas. Gracias a ello, la Universidad Continental es tricampeón en el concurso nacional Para Quitarse el Sombrero. Revisa más de estos logros.</p>
+		     	 <a style="color:#8c8c8c;font-size: 20px;">Ver más»</a>
 
-					<div class="fecha" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
-						<span class="mes">Dic</span>
-						<span class="dia">15</span>
-					</div>
-                     
-					<div>
-						<p class="des-evento">4. Seminario de tendencias tecnologicas en el mercado peruano a cargo del Ing. Rubio</p>
-					</div>
+		     </div>
 
-					<div class="hora lead">
-						<span >6:00 pm</span>
-					</div>
-				</div>
+		     <div class="col-md-4">
+		     	<h3 class="lead" style="font-size: 35px;text-align: center;font-weight: 400;">ANECA</h3>
+		     	 <p class="lead" style=" font-size: 22px;">La Universidad Continental se ubica entre las 13 mejores universidades del Perú según el ranking 2016 de América Economía Internacional. Conoce todo sobre este importante logro</p>
+		     	 <a style="color:#8c8c8c;font-size: 20px;">Ver más»</a>
 
+		     </div>
+		 	</div>
 
-				
 
 			</div>
+			<br>
+			<br>
+			<br>
 
-			<div class="thumbnail col-md-4">
-				<h1 class="noticias" style="text-align: left;">Nuestros logros</h1>
-				<div class="logros">
-					<div class="uno">
-						<p>
-							<span class="txt-chico">Puesto<br></span>
-							<span class="txt-grande">#10<br></span>
-							<span class="txt-chico">a nivel mundial<br><br></span>
-							<span class="txt-grande glyphicon glyphicon-globe"></span>
-						</p>
-					</div>
-					<div class="dos">
-						<p>
-							<span class="txt-chico">Fundada en<br></span>
-							<span class="txt-grande">1998<br></span>
-							<span class="txt-grande glyphicon glyphicon-dashboard"></span>
-							
-						</p>
-
-					</div>
-					<div class="tres">
-						<p> 
-							
-							<span class="txt-grande">20 000</span>
-							<span class="txt-grande glyphicon glyphicon-user"></span><br>
-							<span class="txt-chico">egresados</span>
-							
-						</p>
-					</div>
-					<div class="cuatro">
-						<p>
-							<span class="txt-grande">90%</span>
-							<span class="txt-grande glyphicon glyphicon-briefcase"><br></span><br>
-							<span class="txt-chico">de egresados trabaja en la carrera</span>
-							
-						</p>
-					</div>
-					<div class="cinco">
-						<p>
-							<span class="txt-grande">190<br></span>
-							<span class="txt-chico">publicaciones en <br>el 2016</span>
-						</p>
-					</div>
-					
-					<div class="seis">
-						<p>
-							<span class="txt-grande">190<br></span>
-							<span class="txt-chico">publicaciones en el 2016</span>
-						</p>
-					</div>
-				</div>
-			</div>
-
-		</div>
-
-
-
-
-<div class="thumbnail col-md-12  contacto">
-		
-			<div class="panel-body" >
+                        <form id='frmcorreo' name='frmcorreo'> 
+			<div class="col-md-12 col-md-offset-1" style="margin-top: 50px; padding-left: 60px;" >
 		    	
-                            <h2 class="noticias"><b>¡Escríbenos cualquier consulta que tengas!</b></h2>
-		   		
+		    <div class="row">
+		    	<div class="col-md-4" style="padding-top: 0px;margin-top: 0px;">
+					<p class="lead" style="font-size: 25px;">¡Ingresa tu correo para estar al tanto de las actividades de la FISI!</p>
+		   		</div>
 
-				<div class="row col-md-8 col-md-offset-2">
-  		  			<div class="col-md-8">
-  		  				<input type="text" class="form-control" placeholder="Ingresa tu correo electrónico"  >
+			
+  		  			<div class="col-md-4">
+  		  				<input style="height: 45px;font-size: 20px;" type="text" class="form-control" name='mail' id='mail' placeholder="Ingresa tu correo electrónico"  >
   		  			</div>
 
-  		  			<div class="col-md-4">
-  		  				<input type="button" class = "btn btn-primary btn-block"  value="Regístrate" style="background-color: #273640;">
+  		  			<div class="col-md-2">
+  		  				<input style="height: 45px;font-size: 20px;background-color: #2D3E4A;" id='enviarCorreo'  type="button" class = "btn btn-primary btn-block"  value="Suscríbete" style="">
   		  			</div>	
-  				</div>
-  			</div>	
-     
-	    </div>
 
-		</div>
-       
+  				
+  				</div>
+  			</div>
+                            </form>
+                        
+          <br>
+			<br>
+	       <br>
+			<br>
+			<br>
+			<br>
+	       <br>
+	       <br>
+			<br>
+	       <br>
+			<p>.</p>		
+	      </div>
+            
+        <div class="col-md-12" style="background-color: #332424; width: 100%; height:  100vh;margin-top: -20px;">
+	<h1 style="text-align: center;font-weight: 900;
+    line-height: 1.25em;
+    text-align: center;
+    letter-spacing: -.25px;  font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;color: white; padding-top: 20px;">Próximos eventos en la FISI</h1>
+    <h4 style="text-align: center;color: white;font-weight: 300; font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;padding-bottom: 20px;">Enteráte y participa de los eventos de la facultad!</h4>
+<div class="col-md-3" >
+
+     <div   class="eventos" >
+              
+             
+                <img  style="width: 100%;height: 150px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYCyBI1YvmTfYdZ-__n2zzlZtYpB1rgd0pJx_ArKt7mW1Z6TlLIA" alt="" >
+                
+                <div class ="cuerpo">
+                  <div class="fecha">
+                            <span class="mes">Dic</span>
+                            <span class="dia">15</span>
+                      </div>
+                  <span class="titulo-pe1" >Arquitectura Computadoras</span>
+                  <br>
+                  <h3 class="titulo-prin">
+                   Exposiciones de arquitectura de computadoras en el aula magna
+                  </h3>
+                  <div class="wrap">
+                    <p class="deta" >
+                      El día jueves de la próxima semana se realizará la apertura de clases
+                    </p>
+
+                    
+                  
+                  </div>  
+                </div>
+      </div>
+</div>
+
+                <div class="col-md-3" >
+
+     <div   class="eventos" >
+              
+              
+                <img  style="width: 100%;" src="https://cdn.techinasia.com/wp-content/uploads/2016/11/hackathon.jpg" alt="" >
+                
+                <div class ="cuerpo">
+                  <div class="fecha">
+                            <span class="mes">Ene</span>
+                            <span class="dia">28</span>
+                      </div>
+                  <span class="titulo-pe1" >Hackaton</span>
+                  <br>
+                  <h3 class="titulo-prin">
+                   Concurso de programación se dará en las instalaciones de la facultad.
+                  </h3>
+                  <div class="wrap">
+                    <p class="deta" >
+                      El día jueves de la próxima semana se realizará la apertura de clases
+                    </p>
+
+                    
+                  
+                  </div>  
+                </div>
+      </div>
+</div>
+
+
+
+<div class="col-md-3" >
+
+     <div   class="eventos" >
+              
+              
+                <img  style="width: 100%;" src="http://images6.fanpop.com/image/photos/39400000/Concert-concerts-39454867-1920-1080.jpg" alt="" >
+                
+                <div class ="cuerpo">
+                  <div class="fecha">
+                            <span class="mes">Dic</span>
+                            <span class="dia">7</span>
+                      </div>
+                  <span class="titulo-pe1" >Aniversario FISI</span>
+                  <br>
+                  <h3 class="titulo-prin">
+                   Verbena por el aniversario de la facultad 
+                  </h3>
+                  <div class="wrap">
+                    <p class="deta" >
+                      El día jueves de la próxima semana se realizará la apertura de clases
+                    </p>
+
+                    
+                  
+                  </div>  
+                </div>
+      </div>
+</div>
+
+<div class="col-md-3" >
+
+     <div   class="eventos" >
+              
+              
+                <img  style="width: 100%;" src="http://www.asolidaridad.org/wp-content/uploads/2017/08/IMG-20170720-WA0037.jpg" alt="" >
+                
+                <div class ="cuerpo">
+                  <div class="fecha">
+                            <span class="mes">Dic</span>
+                            <span class="dia">4</span>
+                      </div>
+                  <span class="titulo-pe1" >Evento de caridad</span>
+                  <br>
+                  <h3 class="titulo-prin">
+                  Rifa para ayudar a los niños por navidad
+                  </h3>
+                  <div class="wrap">
+                    <p class="deta" >
+                      El día jueves de la próxima semana se realizará la apertura de clases
+                    </p>
+
+                    
+                  
+                  </div>  
+                </div>
+      </div>
+</div>
+    <br>
+    <br>
+    <br>
+    <p>.</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
 
 
         <!-- END-SUSCRIPCIÓN -->

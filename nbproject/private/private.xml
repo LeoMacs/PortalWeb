@@ -2,11 +2,33 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group>
             <file>file:/C:/Users/jlliuyav/Documents/GitHub/PortalWeb/web/adminTrans.jsp</file>
             <file>file:/C:/Users/jlliuyav/Documents/GitHub/PortalWeb/web/pdfver.jsp</file>
             <file>file:/C:/Users/jlliuyav/Documents/GitHub/PortalWeb/web/uploadfile.jsp</file>
             <file>file:/C:/Users/jlliuyav/Documents/GitHub/PortalWeb/web/eliminarFile.jsp</file>
         </group>
+=======
+<<<<<<< HEAD
+        <group>
+            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/detallePubli.jsp</file>
+            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/css/estilos-blog-p.css</file>
+            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/index.jsp</file>
+            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/css/estilos-home-p.css</file>
+            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/blog.jsp</file>
+            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/css/estilos.css</file>
+            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/css/estilos-home.css</file>
+            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/eapis.jsp</file>
+            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/src/java/Controlador/controladorPublicacion.java</file>
+            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/src/java/Conexion/Conexion.java</file>
+            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/css/estilos-p.css</file>
+            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/software.jsp</file>
+            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/src/java/Modelo/modeloPublicacion.java</file>
+        </group>
+=======
+        <group/>
+>>>>>>> 5c081c0069c5b086c2529dd55b14951f881ba796
+>>>>>>> 9ff7f0784a731da49a8c6f909e80b3cd65d336d4
     </open-files>
 </project-private>
