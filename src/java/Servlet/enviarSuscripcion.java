@@ -5,10 +5,13 @@
  */
 package Servlet;
 
+import Controlador.ControladorEmail;
 import Controlador.controladorPublicacion;
+import include.Consultor;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,7 +20,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author User
  */
-public class enviarCorreoFisi extends HttpServlet {
+@WebServlet(name = "enviarSuscripcion", urlPatterns = {"/enviarSuscripcion"})
+public class enviarSuscripcion extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,11 +38,12 @@ public class enviarCorreoFisi extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             
             String correo = request.getParameter("mail");
-            controladorPublicacion cp= new controladorPublicacion();
+            ControladorEmail cp= new ControladorEmail();
             cp.suscripcion(correo);
         }
     }
-
+    
+   
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

@@ -23,7 +23,7 @@ public class Conexion {
     private String database ="fisi";
     private String className ="com.mysql.jdbc.Driver";
     private String url = "jdbc:mysql://"+hostname+":"+port+"/"+database;
-    private Connection  con;
+    public static Connection  con;
     
       
     public Conexion(){

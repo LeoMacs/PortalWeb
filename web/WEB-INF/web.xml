@@ -18,7 +18,7 @@
     </servlet>
     <servlet>
         <servlet-name>enviarCorreoFisi</servlet-name>
-        <servlet-class>Servlet.enviarCorreoFisi</servlet-class>
+        <servlet-class>Servlet.enviarSuscripcion</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>nuevaPublicacion</servlet-name>
