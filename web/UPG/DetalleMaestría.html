@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+        <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Unidad de Postgrado - FISI</title>
+        <link rel="stylesheet" href="css/estilos_upg.css">
+        <link rel="stylesheet" href="css/style_upg.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="js/text-slider.js"></script>
+        <script src="js/main.js"></script>
+        <style>
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    border-radius: 10px 10px 0px 0px;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0px 0px 10px 10px;
+}
+        </style>
+    </head>
+    
+    <header>
+        <div class="w3-bar w3-white w3-large " style="box-shadow: 0px 10px 9px -2px rgba(0,0,0,0.44);">
+            <div id="btn" class="btn2">
+                <a href="#" class="w3-bar-item w3-button w3-mobile" style="display: block; background: #5F6F81; color: white"><i class="fa fa-bars" aria-hidden="true"></i> &nbsp;Postgrado</a>
+            </div>
+            <a href="#" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;UNMSM</a>
+            <a href="#" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;SUM</a>
+            <a href="#" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;FISI Blog</a>
+            <a href="#" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-address-book-o" aria-hidden="true"></i>&nbsp;Contacto</a>
+            <a href="" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><i class="fa fa-search"></i>&nbsp; Buscar</a>
+        </div>
+        <nav class="navegacion">
+            <ul class="menu">
+                <!-- TITULAR -->
+                <li class="title-menu">FISI</li>
+                <!-- TITULAR -->
+
+                <li class="item-submenu" menu="1">
+                    <a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;La Facultad</a>
+                    <ul class="submenu">
+                        <li class="title-menu"><span class="fa fa-suitcase icon-menu"></span>La Facultad</li>
+                        <li class="go-back">Atrás</li>
+                        <li><a href="#">&nbsp;Nosotros</a></li>
+                        <li><a href="#">&nbsp;Plana Docente</a></li>
+                        <li><a href="#">&nbsp;Gobierno</a></li>
+                        <li><a href="#">&nbsp;Autoridades</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;Ing de Sistemas</a></li>
+                <li><a href="#"><i class="fa fa-code" aria-hidden="true"></i>&nbsp;Ing de Software</a></li>
+                <li class="item-submenu" menu="2">
+                    <a href="#"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</a>
+                    <ul class="submenu">
+                        <li class="title-menu"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</li>
+                        <li class="go-back">Atras</li>
+
+                        <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Maestrías</a></li>
+                        <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Diplomaturas</a></li>
+                        <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Doctorados</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><span class="fa fa-envelope icon-menu"></span>Ins. De Investigación</a></li>
+                <li><a href="#"><i class="fa fa-industry" aria-hidden="true"></i>&nbsp;CENPRO</a></li>
+                <li><a href="#"><i class="fa fa-desktop" aria-hidden="true"></i>&nbsp;CERSEU</a></li>
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Biblioteca</a></li>
+            </ul>
+        </nav>
+    </header>
+       
+    <div class="social" style="float: right">
+        <ul>
+            <li><a href="http://wwww." class="icon-facebook"></a></li>
+            <li><a href="http://wwww." class="icon-google-plus"></a></li>
+            <li><a href="http://wwww." class="icon-twitter"></a></li>
+            <li><a href="http://wwww." class="icon-youtube"></a></li>
+        </ul>
+    </div>
+    
+    <div class="container" style="z-index: 190; width: 100%; padding: 0 0" >
+            <div class="jumbotron" id ="banner" style="background: url('img/slider-1.jpg'); height: 70vh">
+                <div class="slide col-md-12" style="color: white">
+                    <div class="slider-item">
+                        <h1 class="col-md-6" style="text-align: center; padding-top: 1em">Maestría en Gestión de la Información y del Conocimiento</h1>
+                        <form class="form-horizontal col-md-6" style="padding-top: 3em">
+                            <h2 style="text-align: center"> Recibe más información </h2>
+                            <div class="form-group">
+                                <label class="control-label col-xs-3">Email:</label>
+                                <div class="col-xs-9">
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-3">Nombre:</label>
+                                <div class="col-xs-9">
+                                    <input type="text" class="form-control" placeholder="Nombre">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-3">Apellido:</label>
+                                <div class="col-xs-9">
+                                    <input type="text" class="form-control" placeholder="Apellido">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-3" >Telefono:</label>
+                                <div class="col-xs-9">
+                                    <input type="tel" class="form-control" placeholder="Telefono">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <div class="col-xs-offset-3 col-xs-9" style="text-align: center">
+                                    <input type="submit" class="btn btn-primary btn-lg" value="Enviar">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <div class="container" style=" margin-bottom: 2em " >
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'presentacion')">Presentación</button>
+            <button class="tablinks" onclick="openCity(event, 'objetivo')">Objetivo</button>
+            <button class="tablinks" onclick="openCity(event, 'perfil')">Perfil del Egresado</button>
+            <button class="tablinks" onclick="openCity(event, 'grados')">Grados</button>
+            <button class="tablinks" onclick="openCity(event, 'plan')">Plan de Estudios</button>
+            <button class="tablinks" onclick="openCity(event, 'duración')">Duración</button>
+            <button class="tablinks" onclick="openCity(event, 'plana')">Plana Docente</button>
+            <button class="tablinks" onclick="openCity(event, 'inversion')">Inversión</button>
+        </div>
+
+        <div id="presentacion" class="active tabcontent">
+            <p style="text-align: center; padding-top: 2em "><a class="btn btn-lg btn-success" href="#" role="button">Presentación de la Maestría</a></p>				
+            <p style="text-align: justify; padding-left: 1em; padding-right: 1em; padding-top: 2em" >Brindar una formación teórico-práctica especializada en la gestión de la información y documentación digital, generando competencias en el uso de las nuevas tecnologías para la búsqueda, consulta, archivo, organización y representación de la información y del conocimiento.
+Generar las competencias necesarias para la planificación y gestión estratégica de unidades de información, formando profesionales idóneos en la toma de decisiones, con base en los sistemas de información, el establecimiento de objetivos y estrategias de servicios.</p>
+            
+        </div>
+        
+        <div id="objetivo" class="tabcontent">
+            <p style="text-align: center; padding-top: 2em "><a class="btn btn-lg btn-success" href="#" role="button">Objetivos Generales</a></p>				
+            <p style="text-align: justify; padding-left: 1em; padding-right: 1em; padding-top: 2em" >Formar a los estudiantes en actividades en plena evolución (técnico y estratégica) de la documentación, de la información, gestión del conocimiento e innovación en las empresas y/o instituciones. La Maestría en Gestión de la Información y del Conocimiento se plantea alcanzar este objetivo abordando todos los elementos de la cadena documental (creación, tratamiento, análisis, difusión y archivo de documentos en soporte papel y electrónico) según un enfoque sistémico que acentúa el contexto, el marco y las interacciones (redes, documentos colaborativos), y la gestión de la información y del conocimiento e innovación.</p>
+        </div>
+        
+        <div id="perfil" class="active tabcontent">
+            <p style="text-align: center; padding-top: 2em "><a class="btn btn-lg btn-success" href="#" role="button">Perfil del egresado</a></p>				
+            <p>El egresado estará en la capacidad de:</p>
+            <ul style="text-align: justify; padding-left: 2em; padding-right: 2em; padding-top: 1em" >
+                <li>Crear y/o transformar modelos negocios con tecnologías de información documental y Gestión del Conocimiento e innovación, que forman parte sustantiva de la reflexión sobre la sociedad de la información y su impacto en el tratamiento de la documentación.</li>
+                <li>Encontrar y difundir la información pertinente a las necesidades de información, en un marco adecuado de uso y arquitectura de la información.</li>
+                <li>Conocer y utilizar las diversas técnicas documentales para el documento formal e intelectual de documentos, facilitando su organización e indexación con lenguajes documentales apropiados.</li>
+                <li>Producir documentos digitales fiables en diferentes formatos y soportes.</li>
+                <li>Tener conocimientos de los últimos avances en materia de gestión del conocimiento e innovación y sus contenidos.</li>
+                <li>Liderar la formación, transformación y/o sostenimiento de organizaciones mediante la adopción y uso de tecnologías de información documental y Gestión del Conocimiento.</li>
+            </ul>
+        </div>
+        
+        <div id="grados" class="active tabcontent">
+            <p style="text-align: center; padding-top: 2em "><a class="btn btn-lg btn-success" href="#" role="button">Grado a obtener</a></p>				
+            <p style="text-align: justify; padding-left: 2em; padding-right: 2em; padding-top: 1em" >Magister en Gestión de la Información y del Conocimiento.</p>
+        </div>
+        
+        <div id="plan" class="active tabcontent">
+            <p style="text-align: center; padding-top: 2em "><a class="btn btn-lg btn-success" href="#" role="button">Malla Curricular</a></p>				
+            <img src="img/malla.png" alt=""/>
+        </div>
+        
+        <div id="duración" class="active tabcontent">
+            <p>Dos años académicos (cuatro semestres académicos).</p>
+        </div>
+
+        <div id="plana" class="active tabcontent col-md-12">
+            <p style="text-align: center; padding-top: 2em "><a class="btn btn-lg btn-success" href="#" role="button">Plana Docente</a></p>				
+            <div class="col-sm-12 col-md-3">
+                <div class="thumbnail">
+                    <img src="img/fisi.jpg" alt="...">
+                    <div class="caption">
+                        <h3 style="text-align: center">Mg. Celso Alva Bravo</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="thumbnail">
+                    <img src="img/fisi.jpg" alt="...">
+                    <div class="caption">
+                        <h3 style="text-align: center">Mg. Virginia Vera Pomalaza</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="thumbnail">
+                    <img src="img/fisi.jpg" alt="...">
+                    <div class="caption">
+                        <h3 style="text-align: center">Mg. Marlene Reyes Huamán</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="thumbnail">
+                    <img src="img/fisi.jpg" alt="...">
+                    <div class="caption">
+                        <h3 style="text-align: center">Mg. Sergio Valcarcel Ascencios</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="thumbnail">
+                    <img src="img/fisi.jpg" alt="...">
+                    <div class="caption">
+                        <h3 style="text-align: center">Mg. Victor Miranda Vargas</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="thumbnail">
+                    <img src="img/fisi.jpg" alt="...">
+                    <div class="caption">
+                        <h3 style="text-align: center">Mg. Zoraida Mamani Rodriguez</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="thumbnail">
+                    <img src="img/fisi.jpg" alt="...">
+                    <div class="caption">
+                        <h3 style="text-align: center">Mg. Yessica Oliveira Bardales</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="thumbnail">
+                    <img src="img/fisi.jpg" alt="...">
+                    <div class="caption">
+                        <h3 style="text-align: center">Mg. Amador Izarra Foronda</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="inversion" class="tabcontent">
+            <p>COSTO TOTAL MAESTRÍA: S/. 15,208.00 NUEVOS SOLES</p>
+            <p style="text-align: center; padding-top: 2em "><a class="btn btn-lg btn-success" href="#" role="button">Presupuesto Detallado</a></p>							
+            <iframe src="http://docs.google.com/gview?url=http://sistemas.unmsm.edu.pe/posgrado/adjuntos/carreras/PRESUPUESTO-MAESTRIA-GIC.pdf&embedded=true" style="width:100%; height:600px;" frameborder="0"></iframe>  
+        </div>
+    </div>
+    
+    <footer id="myFooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h5>FISI-UNMSM</h5>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Ing de Sistemas</a></li>
+                            <li><a href="#">Ing de Software</a></li>
+                            <li><a href="#">Postgrado</a></li>
+                            <li><a href="#">Centro de Producción</a></li>
+                            <li><a href="#">CERSEU</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h5>SERVICIOS UNIVERSITARIOS</h5>
+                        <ul>
+                            <li><a href="#">Sistema de Bibliotecas</a></li>
+                            <li><a href="#">Calidad Académica OCCA</a></li>
+                            <li><a href="#">Clínica Universitaria</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h5>SERVICIOS AL ESTUDIANTE</h5>
+                        <ul>
+                            <li><a href="#">UNAYOE</a></li>
+                            <li><a href="#">Unidad de Bienestar</a></li>
+                            <li><a href="#">Bolsa de Trabajo</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 info">
+                        <h5>Información</h5>
+                        <p> Ciudad Universitaria - Av. Germán Amézaga</p>
+                        <p> Teléfono: 619 - 7000 Anexo 3632</p>
+                        <p> informatica.fisi@unmsm.edu.pe</p>
+                    </div>
+                </div>
+            </div>
+            <div class="second-bar">
+                <div class="container">
+                    
+                    <div class="social-icons">
+                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>

@@ -2,25 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/User/Desktop/FisiPortal/web/js/panelAdministracion.js</file>
-            <file>file:/C:/Users/User/Desktop/FisiPortal/src/java/Controlador/ControladorEmail.java</file>
-            <file>file:/C:/Users/User/Desktop/FisiPortal/web/cerseu.jsp</file>
-            <file>file:/C:/Users/User/Desktop/FisiPortal/src/java/Controlador/controladorPublicacion.java</file>
-=======
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/css/estilos.css</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/css/estilos-home.css</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/detallePubli.jsp</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/src/java/Controlador/controladorPublicacion.java</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/src/java/Conexion/Conexion.java</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/css/estilos-blog-p.css</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/index.jsp</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/css/estilos-home-p.css</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/css/estilos-p.css</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/src/java/Modelo/modeloPublicacion.java</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/blog.jsp</file>
->>>>>>> origin/master
-        </group>
+        <group/>
     </open-files>
 </project-private>
