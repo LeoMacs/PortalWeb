@@ -133,7 +133,7 @@ public class modeloPublicacion extends Conexion {
 
             String sql = "SELECT  BlogsEntry.entryId, DLFileEntry.fileEntryId, BlogsEntry.title, BlogsEntry.subtitle,BlogsEntry.description,BlogsEntry.content, DLFileEntry.fileName, BlogsEntry.createDate FROM BlogsEntry \n"
                     + "INNER JOIN DLFileEntry ON BlogsEntry.coverImageFileEntryId = DLFileEntry.fileEntryId \n"
-                    + "WHERE BlogsEntry.status=0 and  BlogsEntry.entryId in (30643,30593,30448,30426)ORDER BY BlogsEntry.createDate DESC LIMIT 8";
+                    + "WHERE BlogsEntry.status=0    ORDER BY BlogsEntry.createDate DESC LIMIT 6";
             pst = getConnection().prepareCall(sql);
             rs = pst.executeQuery();
 

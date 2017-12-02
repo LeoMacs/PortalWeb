@@ -23,7 +23,7 @@ import jdk.nashorn.internal.objects.NativeString;
  */
 public class controladorPublicacion {
 
-    String servidor = "http://52.168.76.15:8080";
+    String servidor = "http://52.168.71.59:8080";
     String codDocumento = "30243/30245/";//RepositoryID/FolderID/->DLFileEntry
     String imagPrueba = "http://52.168.76.15:8080/documents/30243/30245/descarga.jpg";
     String urlImagen = servidor + "/documents/" + codDocumento + "";
@@ -246,10 +246,10 @@ public class controladorPublicacion {
         String htmlCode = "";
         modeloPublicacion modelop = new modeloPublicacion();
         for (publicacion p : modelop.getFourPublicaciones()) {
-            htmlCode = htmlCode + " <div class=\"col-md-4\" style=\"padding-left: 0px;margin-top: 10px;\" >\n" +
-" 	  			<div class=\"noti-eve thumb-shadow\" style=\"width: 100%;\">\n" +
+            htmlCode = htmlCode + "<div class=\"col-md-4 \" style=\"padding-left: 0px;margin-top: 10px;\">\n" +
+" 	  			<div class=\"noti-eve thumb-shadow\" style=\"width: 100%; \">\n" +
 "             <div class=\"thumbnail   s-padding\" style=\"padding: 0px;  \"> \n" +
-                     "                <a id='btnmodificarpublicacion' href='detallePubli.jsp?id=" + p.getId() + "'> <img style=\"width: 100%;\" src=" + servidor + "/documents/" + codDocumento + p.getImagen() + "/ " + " class=\"col-md-12 imag-producto\" ></a>\n"+
+"				<a id='btnmodificarpublicacion' href='detallePubli.jsp?id=" + p.getId() + "'> <img style = 'height: 270px;' src=" + servidor + "/documents/" + codDocumento + p.getImagen() + "/ ></a>\n"+
 "                <div class=\"caption bg2\">\n" +
 "                 <h3>"+p.getTitulo()+"</h3>\n" +
 "                  <div class=\\\"wrap\\\">\n" +
@@ -257,7 +257,7 @@ public class controladorPublicacion {
 "                 </div>  \n" +
 "               </div>\n" +
 "             </div> \n" +
-"         	</div>\n" +
+"         </div>\n" +
 "             </div>";
         }
 

@@ -179,7 +179,7 @@
                 
                 <%=cp.getViewHome()%>
                 
-                  
+                 
                    
                 
                 <div class="col-md-2 col-md-offset-5" style="margin-top: 70px;margin-bottom: 100px;">
@@ -197,9 +197,9 @@
             </div>
         </div>
 
-        <div class=" col-md-12 lema" >
+        <div class="col-md-12 lema" id="vacio" >
 			<h1 class="stroke">Buscamos ser un referente de excelencia y calidad en la formación profesional e investigación en las ingenierías de Sistemas, de Software y de Ciencias de la Computación</h1>
-		</div>
+	</div>
 
 
 
@@ -425,26 +425,74 @@
       </div>
 </div>
     <br>
-    <br>
-    <br>
-    <p>.</p>
-
+  
+   
+		
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
+        
+         <div class="col-md-12" style="margin: 0px;padding: 0px;">
+<footer id="myFooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h5>FISI-UNMSM</h5>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Ing de Sistemas</a></li>
+                            <li><a href="#">Ing de Software</a></li>
+                            <li><a href="#">Postgrado</a></li>
+                            <li><a href="#">Centro de Producción</a></li>
+                            <li><a href="#">CERSEU</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h5>SERVICIOS UNIVERSITARIOS</h5>
+                        <ul>
+                            <li><a href="#">Sistema de Bibliotecas</a></li>
+                            <li><a href="#">Calidad Académica OCCA</a></li>
+                            <li><a href="#">Clínica Universitaria</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h5>SERVICIOS AL ESTUDIANTE</h5>
+                        <ul>
+                            <li><a href="#">UNAYOE</a></li>
+                            <li><a href="#">Unidad de Bienestar</a></li>
+                            <li><a href="#">Bolsa de Trabajo</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 info">
+                        <h5>Información</h5>
+                        <p> Ciudad Universitaria - Av. Germán Amézaga</p>
+                        <p> Teléfono: 619 - 7000 Anexo 3632</p>
+                        <p> informatica.fisi@unmsm.edu.pe</p>
+                    </div>
+                </div>
+            </div>
+            <div class="second-bar">
+                <div class="container">
+                    
+                    <div class="social-icons">
+                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
         </div>
 
 
+
+<script>
+			$(document).ready(function () {
+				$('.slide').textSlider();
+			});
+		</script>
+
+
+        
 
         <!-- END-SUSCRIPCIÓN -->
 
