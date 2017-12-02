@@ -29,7 +29,7 @@
            
             
             
-            String url_base="C:/Users/admin/Desktop/pazuremysql/web/files/";
+            String url_base="/home/transparencia/";
             
             DiskFileItemFactory factory = new DiskFileItemFactory(); 
 
@@ -80,7 +80,7 @@
                                   
                 st.executeUpdate(q);
                 out.println("<h2>Archivo Correctamente Subido</h2>");
-                response.sendRedirect("adminSubirArchivo.jsp");
+                response.sendRedirect("AdminTrans.jsp");
             }catch(Exception e){
                 
                 out.print("Exception: "+e.getMessage());

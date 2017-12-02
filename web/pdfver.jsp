@@ -12,7 +12,7 @@
 //CODIGO JSP 
     String pdf = request.getParameter("nombre_pdf");
      
-    FileInputStream ficheroInput = new FileInputStream("C:\\Users\\admin\\Desktop\\pazuremysql\\web\\files\\"+pdf);
+    FileInputStream ficheroInput = new FileInputStream("//home//transparencia//"+pdf);
 int tamanoInput = ficheroInput.available();
 byte[] datosPDF = new byte[tamanoInput];
 ficheroInput.read( datosPDF, 0, tamanoInput);
