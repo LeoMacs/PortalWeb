@@ -6,6 +6,7 @@
 package Modelo;
 
 import Conexion.Conexion;
+import include.Info_site;
 import include.publicacion;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,6 +17,11 @@ import java.util.ArrayList;
  * @author PEDRO
  */
 public class modeloPublicacion extends Conexion {
+    
+    public int getcanPublic(String categoria){
+        //implmenta esta función 
+        return 1;
+    }
 
     public ArrayList<publicacion> getAllResultBusqueda(String dato) {
 
