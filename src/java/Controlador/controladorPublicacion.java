@@ -6,6 +6,7 @@
 package Controlador;
 
 import Modelo.modeloPublicacion;
+import include.Info_site;
 import include.publicacion;
 import java.util.ArrayList;
 import java.util.Properties;
@@ -122,7 +123,53 @@ public class controladorPublicacion {
                 + "</div>";
         return htmlCode;
     }
-
+    //brian
+    public String getMision_Vision_Perfil(){
+        String htmlCode="";
+        try{        
+        modeloPublicacion modelop = new modeloPublicacion();
+        Info_site p = modelop.getUltMision_Vision_Perfil();
+        htmlCode = htmlCode + 
+"           <div class=\"col-xs-12 col-md-6\">\n" +
+"                <h1 style=\"color:#013ADF; text-align:center\">Misión</h1>\n" +
+"                <p align=\"justify\">\n"+p.getMision()+"</p>\n" +
+"            </div>\n" +
+"            <div class=\"col-xs-12 col-md-6\">\n" +
+"                <h1 style=\"color:#013ADF; text-align:center\">Visión</h1>\n" +
+"                <p align=\"justify\">\n"+p.getVision()+"</p>\n" +
+"            </div>\n" +
+"            <div class=\"col-xs-12\">\n" +
+"                <h1 style=\"color:#013ADF; text-align:center\">Perfil del Estudiante</h1>\n" +
+"                <p align=\"justify\">\n"+p.getPerfil()+"</p>\n" +
+"            </div>";
+        }
+        catch(Exception e){
+            System.out.println("Error:"+e);
+        }
+        return htmlCode;
+    } 
+    //brian end
+    //hector
+    public int getcanSlider(String categoria){
+       int can = 0;
+       modeloPublicacion modelop = new modeloPublicacion();
+       can = modelop.getcanPublic(categoria);
+        return can;
+    }
+    public String getViewSliderSoft(String categoria) {
+      String htmlCode = "";
+      modeloPublicacion modelop = new modeloPublicacion();
+      for (publicacion p : modelop.getfourPublicacionesCategoria(categoria)) {
+            htmlCode = htmlCode + "<div class=\"item\">\n" +
+"                    <img src=" + servidor + "/documents/" + codDocumento + p.getImagen() + "/" + " class=\"img-thumbnail\">\n"+
+"                      <div class=\"carousel-caption\">\n" +
+"                        <h3>"+p.getTitulo()+"</h3>\n" +
+"                      </div>\n" +
+"                    </div> ";
+        }
+        return htmlCode;
+    }
+    //hector end
     public String getViewPublicacionesxCategoriaSoft(String categoria) {
         String htmlCode = "";
 

@@ -6,6 +6,7 @@
 package Modelo;
 
 import Conexion.Conexion;
+import include.Info_site;
 import include.publicacion;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,6 +17,11 @@ import java.util.ArrayList;
  * @author PEDRO
  */
 public class modeloPublicacion extends Conexion {
+    
+    public int getcanPublic(String categoria){
+        //implmenta esta función 
+        return 1;
+    }
 
     public ArrayList<publicacion> getAllResultBusqueda(String dato) {
 
@@ -50,7 +56,34 @@ public class modeloPublicacion extends Conexion {
         }
         return publicaciones;
     }
-
+    //brian
+     public Info_site getUltMision_Vision_Perfil(){
+        
+        Info_site Info_Site = null;
+        PreparedStatement pst = null;
+        ResultSet rs =  null;
+                
+        try {
+            String sql ="select * from info_site order by id_info desc limit 1 ";
+            pst = getConnection().prepareCall(sql);
+            rs= pst.executeQuery();
+            
+            while(rs.next()){
+                Info_Site = new Info_site(rs.getInt("id_info"),rs.getString("mision"),rs.getString("vision"),rs.getString("perfil"));
+            }
+            
+        } catch (Exception e) {
+        }finally{
+             try {
+                 if(getConnection() !=null) getConnection().close();
+                 if(pst!=null) pst.close();
+                 if(rs!=null) rs.close();
+             } catch (Exception e) {
+             }
+         }
+        return Info_Site;    
+    }
+    // brian end
     public ArrayList<publicacion> getAllPublicaciones() {
 
         ArrayList<publicacion> publicaciones = new ArrayList<>();
