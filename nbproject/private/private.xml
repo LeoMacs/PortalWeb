@@ -3,28 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/detallePubli.jsp</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/css/estilos-blog-p.css</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/src/java/Servlet/eliminarPublicacion.java</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/index.jsp</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/css/estilos-home-p.css</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/blog.jsp</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/transparencia.jsp</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/css/estilos.css</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/css/estilos-home.css</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/eapis.jsp</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/src/java/Controlador/controladorPublicacion.java</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/UPG/index.html</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/src/java/Conexion/Conexion.java</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/UPG/css/estilos_upg.css</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/css/estilos-p.css</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/web/software.jsp</file>
-            <file>file:/C:/Users/PEDRO/Documents/GitHub/PortalWeb/src/java/Modelo/modeloPublicacion.java</file>
-=======
+            <file>file:/C:/Users/jlliuyav/Documents/GitHub/PortalWeb/web/resultBusqPubli.jsp</file>
             <file>file:/C:/Users/jlliuyav/Documents/GitHub/PortalWeb/web/index.jsp</file>
-            <file>file:/C:/Users/jlliuyav/Documents/GitHub/PortalWeb/web/pdfver.jsp</file>
->>>>>>> 6cb4c0132323e2ab13f861c36b80386fa844c8d2
+            <file>file:/C:/Users/jlliuyav/Documents/GitHub/PortalWeb/web/css/estilos.css</file>
+            <file>file:/C:/Users/jlliuyav/Documents/GitHub/PortalWeb/web/transparencia.jsp</file>
         </group>
     </open-files>
 </project-private>
