@@ -158,10 +158,11 @@ public class controladorPublicacion {
     }
     public String getViewSliderSoft(String categoria) {
       String htmlCode = "";
+      String cod = "32435/32437/";
       modeloPublicacion modelop = new modeloPublicacion();
       for (publicacion p : modelop.getfourPublicacionesCategoria(categoria)) {
             htmlCode = htmlCode + "<div class=\"item\">\n" +
-"                    <img src=" + servidor + "/documents/" + codDocumento + p.getImagen() + "/" + " class=\"img-thumbnail\">\n"+
+"                    <img src=" + servidor + "/documents/" + cod + p.getImagen() + "/" + " class=\"img-thumbnail\">\n"+
 "                      <div class=\"carousel-caption\">\n" +
 "                        <h3>"+p.getTitulo()+"</h3>\n" +
 "                      </div>\n" +
@@ -172,14 +173,14 @@ public class controladorPublicacion {
     //hector end
     public String getViewPublicacionesxCategoriaSoft(String categoria) {
         String htmlCode = "";
-
+        String cod = "32435/32437/";
         modeloPublicacion modelop = new modeloPublicacion();
 
         for (publicacion p : modelop.getfourPublicacionesCategoria(categoria)) {
             htmlCode = htmlCode + "<div class=\"row spa\"> \n"
                     + "                    <div class=\"col-md-5\"> \n"
                     + "                        <a href='detallePubli.jsp?id=" + p.getId() + "'> \n"
-                    + "                            <img src=" + servidor + "/documents/" + codDocumento + p.getImagen() + "/" + " class=\"img-thumbnail\">\n"
+                    + "                            <img src=" + servidor + "/documents/" + cod + p.getImagen() + "/" + " class=\"img-thumbnail\">\n"
                     + "                        </a>  \n"
                     + "                    </div>\n"
                     + "                    <div class=\"col-md-7 divNoticiaDerecha\">  \n"
