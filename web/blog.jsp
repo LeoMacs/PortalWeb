@@ -137,7 +137,7 @@
                     <h1 style="color: white;">Próximos Eventos</h1>
 
 
-                    <%= cp.getViewPublicaciones()%>
+                    <%= cp.getFourBlog()%>
 
 
                 </div>

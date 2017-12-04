@@ -166,6 +166,44 @@ public class modeloPublicacion extends Conexion {
 
             String sql = "SELECT  BlogsEntry.entryId, DLFileEntry.fileEntryId, BlogsEntry.title, BlogsEntry.subtitle,BlogsEntry.description,BlogsEntry.content, DLFileEntry.fileName, BlogsEntry.createDate FROM BlogsEntry \n"
                     + "INNER JOIN DLFileEntry ON BlogsEntry.coverImageFileEntryId = DLFileEntry.fileEntryId \n"
+                    + "WHERE BlogsEntry.status=0    ORDER BY BlogsEntry.createDate DESC LIMIT 4";
+            pst = getConnection().prepareCall(sql);
+            rs = pst.executeQuery();
+
+            while (rs.next()) {
+                publicacion.add(new publicacion(rs.getInt("entryId"), "", rs.getString("title"), rs.getString("description"), rs.getString("fileName")));
+
+            }
+        } catch (Exception e) {
+        } finally {
+            try {
+                if (getConnection() != null) {
+                    getConnection().close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (Exception e) {
+            }
+        }
+
+        return publicacion;
+
+    }
+    
+    public ArrayList<publicacion> getSixPublicaciones() {
+
+        ArrayList<publicacion> publicacion = new ArrayList<>();
+        PreparedStatement pst = null;
+        ResultSet rs = null;
+
+        try {
+
+            String sql = "SELECT  BlogsEntry.entryId, DLFileEntry.fileEntryId, BlogsEntry.title, BlogsEntry.subtitle,BlogsEntry.description,BlogsEntry.content, DLFileEntry.fileName, BlogsEntry.createDate FROM BlogsEntry \n"
+                    + "INNER JOIN DLFileEntry ON BlogsEntry.coverImageFileEntryId = DLFileEntry.fileEntryId \n"
                     + "WHERE BlogsEntry.status=0    ORDER BY BlogsEntry.createDate DESC LIMIT 6";
             pst = getConnection().prepareCall(sql);
             rs = pst.executeQuery();

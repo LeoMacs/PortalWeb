@@ -293,7 +293,7 @@ public class controladorPublicacion {
     public String getViewHome() {
         String htmlCode = "";
         modeloPublicacion modelop = new modeloPublicacion();
-        for (publicacion p : modelop.getFourPublicaciones()) {
+        for (publicacion p : modelop.getSixPublicaciones()) {
             htmlCode = htmlCode + "<div class=\"col-md-4 \" style=\"padding-left: 0px;margin-top: 10px;\">\n" +
 " 	  			<div class=\"noti-eve thumb-shadow\" style=\"width: 100%; \">\n" +
 "             <div class=\"thumbnail   s-padding\" style=\"padding: 0px;  \"> \n" +
@@ -542,6 +542,24 @@ public class controladorPublicacion {
                 + "<br><br><p>11/11/2017 - 09:16h</p>" //Ahi se puede jalar la fecha tambien 
                 + "<br>" + p.getDetalle();
 
+    }
+    
+    public String getFourBlog() {
+        String htmlCode = "<br>";
+        modeloPublicacion modelop = new modeloPublicacion();
+
+        for (publicacion p : modelop.getFourPublicaciones()) {
+            htmlCode = htmlCode + "<div class=\"col-md-3\">\n"
+                    + "              <div class=\"thumbnail thumbnail-efect  thumb-shadow s-padding\" style=\"padding: 0px; height: 250px\">\n"
+                    + "                <div class=\"caption bg3\">\n"
+                    + "                  <h3 class='noticias'><strong>" + p.getTitulo() + " </strong></h3>\n"
+                    + "                 <a id='btnmodificarpublicacion' href='detalleCurso.jsp?id=" + p.getId() + "'><img src=" + servidor + "/documents/" + codDocumento + p.getImagen() + "/ " + " alt=\"\" ></a>\n"
+                    + "                </div>\n"
+                    + "              </div> \n"
+                    + "\n"
+                    + "            </div>";
+        }
+        return htmlCode;
     }
 
 
