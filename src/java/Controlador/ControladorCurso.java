@@ -35,7 +35,7 @@ public class ControladorCurso extends Conexion {
             pst = getConnection().prepareCall(sql);
             rs = pst.executeQuery();
             while (rs.next()) {
-                 curso=new Curso(rs.getInt("id"), rs.getString("titulo"), rs.getString("fechaInicio"), rs.getString("fechaFin"), rs.getString("descripcion"), rs.getString("urlImagen"));
+                 curso=new Curso(rs.getInt("id"), rs.getString("titulo"), rs.getString("fechaInicio"), rs.getString("fechaFin"), rs.getString("descripcion"), rs.getString("url"));
                 //(rs.getInt("entryId"), "", rs.getString("title"), rs.getString("description"), rs.getString("fileName"))
             }
         } catch (Exception e) {
@@ -67,7 +67,7 @@ public class ControladorCurso extends Conexion {
             pst = getConnection().prepareCall(sql);
             rs = pst.executeQuery();
             while (rs.next()) {
-                cursos.add(new Curso(rs.getInt("id"), rs.getString("titulo"), rs.getString("fechaInicio"), rs.getString("fechaFin"), rs.getString("descripcion"), rs.getString("urlImagen")));
+                cursos.add(new Curso(rs.getInt("id"), rs.getString("titulo"), rs.getString("fechaInicio"), rs.getString("fechaFin"), rs.getString("descripcion"), rs.getString("url")));
                 //(rs.getInt("entryId"), "", rs.getString("title"), rs.getString("description"), rs.getString("fileName"))
             }
         } catch (Exception e) {
@@ -126,11 +126,12 @@ public class ControladorCurso extends Conexion {
         PreparedStatement pst = null;
         boolean flag = false;
         try {
-            String sql = "insert into Curso(titulo,fechaInicio,fechaFin,descripcion) VALUES"
+            String sql = "insert into Curso(titulo,fechaInicio,fechaFin,descripcion,url) VALUES"
                     + "('"+curso.getTitulo()+"',"
                     + "'"+curso.getFechai()+"',"
                     + "'"+curso.getFechaf()+"',"
-                    + "'"+curso.getDescripcion()+"');";
+                    + "'"+curso.getDescripcion()+"',"
+                    + "'"+curso.getUrlImagen()+"');";
             pst = getConnection().prepareStatement(sql);
             if (pst.executeUpdate() == 1) {
                 flag = true;

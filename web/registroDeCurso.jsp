@@ -63,8 +63,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="imagenc">Imagen</label>
-                            <input type="file" class="form-control" id="imagenc" name="imagenc" accept=".png, .jpg, .jpeg" required="true">
+                            <label for="urli">UrlImagen</label>
+                            <input type="text" class="form-control" id="urli" name="urli"  required="true">
                         </div>
 
                         <br />

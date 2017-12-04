@@ -24,7 +24,7 @@
         <script src="js/main.js"></script>
         <script src="js/main-1.js"></script>
 
-        <!---->
+        <!--dfd-->
 
     </head>
 
@@ -36,12 +36,15 @@
                         String fechai = request.getParameter("fechai");
                         String fechaf = request.getParameter("fechaf");
                         String descripcion = request.getParameter("descripcion");
+                        String urlImagen=request.getParameter("urli");
+                        System.out.println("url: "+urlImagen);
                         if (titulo != null) {
                             Curso curs = new Curso();
                             curs.setTitulo(titulo);
                             curs.setFechai(fechai);
                             curs.setFechaf(fechaf);
                             curs.setDescripcion(descripcion);
+                            curs.setUrlImagen(urlImagen);
 
                             ControladorCurso cc = new ControladorCurso();
                             cc.agregarCurso(curs);
@@ -85,7 +88,7 @@
 
                                 %>
                             <td>
-                                <button   class="btn btn-info" ><a href="detalleCurso.jsp?idCurso=<%=curso.getId()%>"><i class="glyphicon glyphicon-eye-open" ></i></a></button>
+                                <button   class="btn btn-info" ><a href="detalleCursoPanel.jsp?idCurso=<%=curso.getId()%>"><i class="glyphicon glyphicon-eye-open" ></i></a></button>
                             </td>
                             <td> 
                                 <button   class="btn btn-info" ><a href="editarCurso.jsp?id=<%=curso.getId()%>" ><i class="glyphicon glyphicon-pencil" ></i></a></button>
