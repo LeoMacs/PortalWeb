@@ -67,75 +67,52 @@
 
     <body id="body" >
 
-        <header style="font-family: sans-serif" >
-            <div class="w3-bar w3-white w3-large">
-                <div id="btn" class="btn2">
-                    <a href="#" class="w3-bar-item w3-button w3-mobile" style="display: block; background: #5F6F81; color: white"><i class="fa fa-bars" aria-hidden="true"></i> &nbsp;La Facultad</a>
-                </div>
-                <a href="http://www.unmsm.edu.pe/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;UNMSM</a>
-                <a href="http://sum.unmsm.edu.pe/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;SUM</a>
-                <a href="blog.jsp" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;FISI Blog</a>
-                <a href="#" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-address-book-o" aria-hidden="true"></i>&nbsp;Contacto</a>
-                <a href="transparencia.jsp" class="w3-bar-item w3-button w3-mobile"><i class="material-icons" >gavel</i>&nbsp;Transparencia</a>
-                <!--a href="" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><i class="fa fa-search"></i>&nbsp; Buscar</a-->
-                <!--*******************-->
-                <form  class="w3-bar-item w3-button w3-right  thumbnail-efect" method="post" action="resultBusqPubli.jsp" >
-                    <input type="text"  class="form-control" id="searchterm" name="term" placeholder="¿Qué estas buscando?" style="text-align:left;width: 330px"/>
-                    <!--button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px"><a href="resultBusqPubli.jsp?dato=>" ><i class="fa fa-search">&nbsp;Buscar</i></a></button-->
-                    <button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px;"><a href="" ><i class="fa fa-search" >&nbsp;Buscar</i></a></button>
-                </form>
-
-                <!--*******************-->
-
-
-
-                <!--***********-->
+            <header style="font-family: sans-serif" >
+        <div class="w3-bar w3-white w3-large " style="box-shadow: 0px 10px 9px -2px rgba(0,0,0,0.44);">
+            <div id="btn" class="btn2">
+                <a href="#" class="w3-bar-item w3-button w3-mobile" style="display: block; background: #5F6F81; color: white"><i class="fa fa-bars" aria-hidden="true"></i> &nbsp;La Facultad</a>
             </div>
-            <nav class="navegacion">
-                <ul class="menu">
-                    <!-- TITULAR -->
-                    <li class="title-menu">FISI</li>
-                    <!-- TITULAR -->
+            <a href="unmsm.edu.pe" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;UNMSM</a>
+            <a href="sum.unmsm.edu.pe" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;SUM</a>
+            <a href="blog.jsp" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;FISI Blog</a>
+            <a href="transparencia.jsp" class="w3-bar-item w3-button w3-mobile"><i class="fa fa fa-gavel" aria-hidden="true"></i>&nbsp;Transparencia</a>
+            <a href="resultBusqPubli.jsp" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><i class="fa fa-search"></i>&nbsp; Buscar</a>
+        </div>
+        <nav class="navegacion">
+            <ul class="menu">
+                <!-- TITULAR -->
+                <li class="title-menu">FISI</li>
+                <!-- TITULAR -->
 
-                    <li><a href="index.jsp"><span class="fa fa-home icon-menu"></span>Inicio</a></li>
-
-                    <li class="item-submenu" menu="1">
-                        <a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;La Facultad</a>
-                        <ul class="submenu">
-                            <li class="title-menu"><span class="fa fa-suitcase icon-menu"></span>La Facultad</li>
-                            <li class="go-back">Atrás</li>
-                            <li><a href="#">&nbsp;Nosotros</a></li>
-                            <li><a href="#">&nbsp;Plana Docente</a></li>
-                            <li><a href="#">&nbsp;Gobierno</a></li>
-                            <li><a href="#">&nbsp;Autoridades</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="eapis.jsp"><i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;Ing de Sistemas</a></li>
-                    <li><a href="software.jsp"><i class="fa fa-code" aria-hidden="true"></i>&nbsp;Ing de Software</a></li>
-                    <li class="item-submenu" menu="2">
-                        <a href="UPG/index.html"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</a>
-                        <ul class="submenu">
-                            <li class="title-menu"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</li>
-                            <li class="go-back">Atras</li>
-
-                            <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Maestrías</a></li>
-                            <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Diplomaturas</a></li>
-                            <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Doctorados</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="#"><span class="fa fa-envelope icon-menu"></span>Ins. De Investigación</a></li>
-                    <li><a href="cenpro.jsp"><i class="fa fa-industry" aria-hidden="true"></i>&nbsp;CENPRO</a></li>
-                    <li><a href="cerseu.jsp"><i class="fa fa-desktop" aria-hidden="true"></i>&nbsp;CERSEU</a></li>
-                    <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Biblioteca</a></li>
-                </ul>
-            </nav>
-        </header>
-
-
-
-
-
+                <li class="item-submenu" menu="1">
+                    <a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;La Facultad</a>
+                    <ul class="submenu">
+                        <li class="title-menu"><span class="fa fa-suitcase icon-menu"></span>La Facultad</li>
+                        <li class="go-back">Atrás</li>
+                        <li><a href="#">&nbsp;Nosotros</a></li>
+                        <li><a href="#">&nbsp;Plana Docente</a></li>
+                        <li><a href="#">&nbsp;Gobierno</a></li>
+                        <li><a href="#">&nbsp;Autoridades</a></li>
+                    </ul>
+                </li>
+                <li><a href="eapis.jsp"><i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;Ing de Sistemas</a></li>
+                <li><a href="eapis.jsp"><i class="fa fa-code" aria-hidden="true"></i>&nbsp;Ing de Software</a></li>
+                <li class="item-submenu" menu="2">
+                    <a href="UPG/index.html"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</a>
+                    <ul class="submenu">
+                        <li class="title-menu"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</li>
+                        <li class="go-back">Atras</li>
+                        <li><a href="UPG/Maestrías.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Maestrías</a></li>
+                        <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Diplomaturas</a></li>
+                        <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Doctorados</a></li>
+                    </ul>
+                </li>
+                <li><a href="cenpro.jsp"><i class="fa fa-industry" aria-hidden="true"></i>&nbsp;CENPRO</a></li>
+                <li><a href="cerseu.jsp"><i class="fa fa-desktop" aria-hidden="true"></i>&nbsp;CERSEU</a></li>
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Biblioteca</a></li>
+            </ul>
+        </nav>
+    </header>
 
 
         <div class="slideshow" style="background-color: white;">
@@ -155,13 +132,13 @@
 
         <div class="col-md-12" style="width: 100%; background-color: white; margin-top: -10px;">
 
-            <div class=" col-md-6 col-md-offset-3">
+            <div class=" col-md-12" style="font-family: sans-serif">
                 <div>
                     <ul class="nav navbar-nav">
-                        <li class="active enl-men"><a href="#"><span class="glyphicon glyphicon-globe"></span><br>Trámite online</a></li>
-                        <li class="enl-men" ><a href="#" ><span class="glyphicon glyphicon-user" ></span><br>Asistencia Docente</a></li>
-                        <li class="enl-men"><a href="#"><span class="glyphicon glyphicon-tasks"></span><br>Biblioteca Virtual</a></li>
-                        <li class="enl-men"><a href="#"><span class="glyphicon glyphicon-usd"></span><br>Verificación de deudas</a></li>
+                        <li class="active enl-men col-md-3"><a href="#"><span class="glyphicon glyphicon-globe"></span><br>Trámite online</a></li>
+                        <li class="enl-men col-md-3"><a href="#" ><span class="glyphicon glyphicon-user" ></span><br>Asistencia Docente</a></li>
+                        <li class="enl-men col-md-3"><a href="#"><span class="glyphicon glyphicon-tasks"></span><br>Biblioteca Virtual</a></li>
+                        <li class="enl-men col-md-3"><a href="#"><span class="glyphicon glyphicon-usd"></span><br>Verificación de deudas</a></li>
                     </ul>
                 </div>
             </div>
@@ -206,59 +183,66 @@
         <!-- SUSCRIPCIÓN -->
 
         <div class="thumbnail col-md-12  ">
+            <div style="padding: 40px 100px 40px; color: #273640;">
 
-			<div style="padding: 40px 100px 40px;color: #273640;">
+                <div style="margin-bottom: 60px;">
+                    <h1 style="font-size:50px; font-weight: bolder; margin-bottom: 30px;">+ Nuestros logros</h1>
+                    <h3 class="lead" style="line-height: 1 ;margin-bottom: 20px; font-size: 30px; font-size: bold;">Nuestra facultad cree en el poder del conocimiento para innovar y crear historias que mejoren el mundo, tu mundo.</h3>
+                </div>
 
-			<div style="margin-bottom: 60px;">
-		    <h1 style="font-size:50px; font-weight: bolder; margin-bottom: 30px;">+ Nuestros logros</h1>
-		    <h3 class="lead" style="line-height: 1 ;margin-bottom: 20px; font-size: 30px; font-size: bold;">Nuestra facultad cree en el poder del conocimiento para innovar y crear historias que mejoren el mundo, tu mundo.</h3>
-		   </div>
+                <div class="col-md-12" >
+                    <div class="panel panel-primary col-md-4">
+                        <div class="panel-heading" style="margin: 0">
+                            <h3 class="panel-title" style="font-size: 35px; text-align: center;font-weight: 400;" >Acreditación</h3>
+                        </div>
+                        <div class="panel-body" style=" font-size: 22px; font-family: sans-serif" >
+                            La UNMSM tiene 4 acreditaciones internacionales otorgadas por la Red Internacional de Evaluadores (RIEV) y el Consejo Nacional de Acreditación (CNA) de Colombia. Actualmente, varias carreras están en este proceso de acreditación. Entérate cuáles son.
+                        </div>
+                    </div>
+                    <div class="panel panel-primary col-md-4">
+                        <div class="panel-heading" style="margin: 0">
+                            <h3 class="panel-title" style="font-size: 35px; text-align: center;font-weight: 400;" >ANECA</h3>
+                        </div>
+                        <div class="panel-body" style=" font-size: 22px; font-family: sans-serif" >
+                            La UNMSM se ubica entre las 5 mejores universidades del Perú según el ranking 2016 de América Economía Internacional. Conoce todo sobre este importante logro
+                        </div>
+                    </div>
+                    <div class="panel panel-primary col-md-4">
+                        <div class="panel-heading" style="margin: 0">
+                            <h3 class="panel-title" style="font-size: 35px; text-align: center;font-weight: 400;" >ANECA</h3>
+                        </div>  
+                        <div class="panel-body" style=" font-size: 22px; font-family: sans-serif" >
+                            Somos la primera universidad en Latinoamérica que logró acreditar el diseño del Sistema de Garantía Interna de Calidad por la Agencia Nacional de Evaluación de la Calidad y Acreditación (ANECA) de España. Entérate más aquí.
+                        </div>
+                    </div>
+                </div>
 
-		    <div class="row">
-		     <div class="col-md-4">
-		     	<h1 class="lead" style="font-size: 35px;text-align: center;font-weight: 400;">Acreditación</h1>
-		     	 <p class="lead" style=" font-size: 22px;">La UNMSM tiene 4 acreditaciones internacionales otorgadas por la Red Internacional de Evaluadores (RIEV) y el Consejo Nacional de Acreditación (CNA) de Colombia. Actualmente, varias carreras están en este proceso de acreditación. Entérate cuáles son.</p>
-		     	 <a style="color:#8c8c8c;font-size: 20px;">Ver más»</a>
-
-		     </div>
-
-		     <div class="col-md-4">
-		     	<h3 class="lead" style="font-size: 35px; text-align: center;font-weight: 400;">América Economía</h3>
-		     	 <p class="lead" style=" font-size: 22px;">La UNMSM se ubica entre las 5 mejores universidades del Perú según el ranking 2016 de América Economía Internacional. Conoce todo sobre este importante logro</p>
-		     	 <a style="color:#8c8c8c;font-size: 20px;">Ver más»</a>
-
-		     </div>
-
-		     <div class="col-md-4">
-		     	<h3 class="lead" style="font-size: 35px;text-align: center;font-weight: 400;">ANECA</h3>
-		     	 <p class="lead" style=" font-size: 22px;">Somos la primera universidad en Latinoamérica que logró acreditar el diseño del Sistema de Garantía Interna de Calidad por la Agencia Nacional de Evaluación de la Calidad y Acreditación (ANECA) de España. Entérate más aquí.</p>
-		     	 <a style="color:#8c8c8c;font-size: 22px;">Ver más»</a>
-
-		     </div>
-		     </div>
-
-		     <div class="row">
-		     <div class="col-md-4">
-		     	<h3 class="lead" style="font-size: 35px;text-align: center;font-weight: 400;">Certificación ISO 9001</h3>
-		     	 <p class="lead" style=" font-size: 22px;">La certificadora Bureau Veritas de Inglaterra otorgó este reconocimiento a la Universidad Continental por cumplir procesos con estándares internacionales. Lee más sobre este importante logro.</p>
-		     	 <a style="color:#8c8c8c;font-size: 20px;">Ver más»</a>
-
-		     </div>
-
-		     <div class="col-md-4">
-		     	<h3 class="lead" style="font-size: 35px; text-align: center;font-weight: 400;">Emprendimiento</h3>
-		     	 <p class="lead" style=" font-size: 22px;">Desde su fundación, en 2002, el Centro de Emprendimiento Continental ha logrado formar 274 empresas exitosas. Gracias a ello, la Universidad Continental es tricampeón en el concurso nacional Para Quitarse el Sombrero. Revisa más de estos logros.</p>
-		     	 <a style="color:#8c8c8c;font-size: 20px;">Ver más»</a>
-
-		     </div>
-
-		     <div class="col-md-4">
-		     	<h3 class="lead" style="font-size: 35px;text-align: center;font-weight: 400;">ANECA</h3>
-		     	 <p class="lead" style=" font-size: 22px;">La Universidad Continental se ubica entre las 13 mejores universidades del Perú según el ranking 2016 de América Economía Internacional. Conoce todo sobre este importante logro</p>
-		     	 <a style="color:#8c8c8c;font-size: 20px;">Ver más»</a>
-
-		     </div>
-		 	</div>
+                <div class="col-md-12" >
+                    <div class="panel panel-primary col-md-4">
+                        <div class="panel-heading" style="margin: 0">
+                            <h3 class="panel-title" style="font-size: 35px; text-align: center;font-weight: 400;" >Certificación ISO 9001</h3>
+                        </div>
+                        <div class="panel-body" style=" font-size: 22px; font-family: sans-serif" >
+                            La certificadora Bureau Veritas de Inglaterra otorgó este reconocimiento a la Universidad Continental por cumplir procesos con estándares internacionales. Lee más sobre este importante logro.
+                        </div>
+                    </div>
+                    <div class="panel panel-primary col-md-4">
+                        <div class="panel-heading" style="margin: 0">
+                            <h3 class="panel-title" style="font-size: 35px; text-align: center;font-weight: 400;" >Emprendimiento</h3>
+                        </div>
+                        <div class="panel-body" style=" font-size: 22px; font-family: sans-serif" >
+                            Desde su fundación, en 2002, el Centro de Emprendimiento Continental ha logrado formar 274 empresas exitosas. Gracias a ello, la Universidad Continental es tricampeón en el concurso nacional Para Quitarse el Sombrero. Revisa más de estos logros.
+                        </div>
+                    </div>
+                    <div class="panel panel-primary col-md-4">
+                        <div class="panel-heading" style="margin: 0">
+                            <h3 class="panel-title" style="font-size: 35px; text-align: center;font-weight: 400;" >ANECA</h3>
+                        </div>
+                        <div class="panel-body" style=" font-size: 22px; font-family: sans-serif" >
+                            La Universidad Continental se ubica entre las 13 mejores universidades del Perú según el ranking 2016 de América Economía Internacional. Conoce todo sobre este importante logro
+                        </div>
+                    </div>
+                </div>
 
 
 			</div>
@@ -266,28 +250,23 @@
 			<br>
 			<br>
 
-                        <form id='frmcorreo' name='frmcorreo'> 
-			<div class="col-md-12 col-md-offset-1" style="margin-top: 50px; padding-left: 60px;" >
-		    	
-		    <div class="row">
-		    	<div class="col-md-4" style="padding-top: 0px;margin-top: 0px;">
-					<p class="lead" style="font-size: 25px;">¡Ingresa tu correo para estar al tanto de las actividades de la FISI!</p>
-		   		</div>
-
-			
-  		  			<div class="col-md-4">
-  		  				<input style="height: 45px;font-size: 20px;" type="text" class="form-control" name='mail' id='mail' placeholder="Ingresa tu correo electrónico"  >
-  		  			</div>
-
-  		  			<div class="col-md-2">
-  		  				<input style="height: 45px;font-size: 20px;background-color: #2D3E4A;" id='enviarCorreo'  type="button" class = "btn btn-primary btn-block"  value="Suscríbete" style="">
-  		  			</div>	
-
-  				
-  				</div>
-  			</div>
-                            </form>
-                        
+                         <div >
+        <div class="thumbnail col-md-12" style="padding-top: 1em; padding-bottom: 1em; margin: 0; background: #414752; color:white" >
+            <div >
+                <form id='frmcorreo' name='frmcorreo' style="padding-top: 1em; padding-bottom: 1em" >
+                    <h2 class="" style="font-family: sans-serif" ><b><center><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Entérate de nuestros cursos</center></b></h2>
+                    <div class="row col-md-8 col-md-offset-2 ">
+                        <div class="col-md-8">
+                            <input type="text" name='mail' id='mail' class="form-control" placeholder="Ingresa tu correo electrónico" required="true" >
+                        </div>
+                        <div class="col-md-4 ">
+                            <input type="button" class = "btn btn-primary btn-block thumbnail-efect1" id='enviarCorreo' value="Regístrate" style="background-color: #78a239; color: white"/>
+                        </div>	
+                    </div>
+                </form>
+            </div>	
+        </div>
+    </div>                      
           <br>
 			<br>
 	       <br>

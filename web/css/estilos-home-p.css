@@ -156,17 +156,13 @@ top: 0;
 }
 
 .contacto{
-  height: 200px;
-  background-color:  #FFBF00 !important;
-  border-style: solid;
- border-color: gray;
- padding: 30px !important;
- width: 100%;
- padding-left:  0px;
- padding-right: 0px;
- 
- 
- 
+    height: 200px;
+    background-color:  #445;
+    border-style: solid;
+    border-color: gray;
+    width: 100%;
+    padding-left:  0px;
+    padding-right: 0px;
 }
 
 .noticias{
