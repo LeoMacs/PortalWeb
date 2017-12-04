@@ -97,7 +97,7 @@
             <!--a href="" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><i class="fa fa-search"></i>&nbsp; Buscar</a-->
             <!--*******************-->
             <form  class="w3-bar-item w3-button w3-right  thumbnail-efect" method="post" action="resultBusqPubli.jsp">
-                <input type="text"  value="" id="searchterm" name="term" placeholder="¿Qué estas buscando?" style="text-align:left;width: 330px" required="true"/>
+                <input type="search"  value="" id="searchterm" name="term" placeholder="¿Qué estas buscando?" style="text-align:left;width: 330px" required="true"/>
                 <button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px"><a href="" ><i class="fa fa-search">&nbsp;Buscar</i></a></button>
             </form>
 
@@ -207,8 +207,10 @@
                 <h2 style="margin-top: 0px;" class="noticias page-header"><strong>Cursos</strong></h2>
             </div>
             <br>     
-            <%= cp.getAllCursos()%>
-            
+            <%= cp.getFourCursos("cursos")%>
+            <div class="divTituloSeccion ">
+                <a href='cerseu_AllCursos.jsp' style="color: #fff"><strong><center>Ver más...</center></strong></a>
+            </div>
         </div>  
     </div>
     <!-- end-Cursos -->
@@ -293,7 +295,7 @@
                         </div>
 
                         <div class="col-md-4 ">
-                            <input type="button" class = "btn btn-primary btn-block thumbnail-efect1" id='enviarCorreo' value="Regístrate" style="background-color: #243EFF;"/>
+                            <input type="submit" class = "btn btn-primary btn-block thumbnail-efect1" id='enviarCorreo' value="Regístrate" style="background-color: #243EFF;"/>
                         </div>	
                     </div>
                 </form>
@@ -305,10 +307,10 @@
 
 
    
-        <!--FINCOMPAÑIASASOCIADAS-->
         <br><br>
     </div>
     <!--FOOTER-->
+    <div class="col-md-12">
     <footer id="myFooter">
         <div class="container">
             <div class="row">
@@ -358,6 +360,7 @@
             </div>
         </div>
     </footer>
+        </div>
     <!--fin-Footer-->
 
     <br><br>

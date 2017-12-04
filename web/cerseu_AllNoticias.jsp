@@ -84,36 +84,22 @@
 </head>
 <body >
 
-    <header>
-        <div class="w3-bar w3-white w3-large">
+    <header style="font-family: sans-serif" >
+        <div class="w3-bar w3-white w3-large " style="box-shadow: 0px 10px 9px -2px rgba(0,0,0,0.44);">
             <div id="btn" class="btn2">
-                <a href="#" class="w3-bar-item w3-button w3-mobile" style="display: block; background: #5F6F81; color: white"><i class="fa fa-bars" aria-hidden="true"></i> &nbsp;La Facultad</a>
+                <a href="#" class="w3-bar-item w3-button w3-mobile" style="display: block; background: #5F6F81; color: white"><i class="fa fa-bars" aria-hidden="true"></i> &nbsp;CERSEU FISI</a>
             </div>
-            <a href="http://www.unmsm.edu.pe/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;UNMSM</a>
-            <a href="http://sum.unmsm.edu.pe/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;SUM</a>
+            <a href="unmsm.edu.pe" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;UNMSM</a>
+            <a href="sum.unmsm.edu.pe" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;SUM</a>
             <a href="blog.jsp" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;FISI Blog</a>
-            <a href="#" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-address-book-o" aria-hidden="true"></i>&nbsp;Contacto</a>
-            <a href="http://s01app.eastus.cloudapp.azure.com:8080/Portal_Transparencia/" class="w3-bar-item w3-button w3-mobile"><i class="material-icons" >gavel</i>&nbsp;Transparencia</a>
-            <!--a href="" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><i class="fa fa-search"></i>&nbsp; Buscar</a-->
-            <!--*******************-->
-            <form  class="w3-bar-item w3-button w3-right  thumbnail-efect" method="post" action="resultBusqPubli.jsp">
-                <input type="text"  value="" id="searchterm" name="term" placeholder="¿Qué estas buscando?" style="text-align:left;width: 330px" required="true"/>
-                <button type="submit" id="search" class="btn-primary" style="text-align:center;width: 100px"><a href="" ><i class="fa fa-search">&nbsp;Buscar</i></a></button>
-            </form>
-
-            <!--*******************-->
-
-
-
-            <!--***********-->
+            <a href="transparencia.jsp" class="w3-bar-item w3-button w3-mobile"><i class="fa fa fa-gavel" aria-hidden="true"></i>&nbsp;Transparencia</a>
+            <a href="resultBusqPubli.jsp" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><i class="fa fa-search"></i>&nbsp; Buscar</a>
         </div>
         <nav class="navegacion">
             <ul class="menu">
                 <!-- TITULAR -->
                 <li class="title-menu">FISI</li>
                 <!-- TITULAR -->
-
-                <li><a href="index.jsp"><span class="fa fa-home icon-menu"></span>Inicio</a></li>
 
                 <li class="item-submenu" menu="1">
                     <a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;La Facultad</a>
@@ -127,20 +113,17 @@
                     </ul>
                 </li>
                 <li><a href="eapis.jsp"><i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;Ing de Sistemas</a></li>
-                <li><a href="software.jsp"><i class="fa fa-code" aria-hidden="true"></i>&nbsp;Ing de Software</a></li>
+                <li><a href="eapis.jsp"><i class="fa fa-code" aria-hidden="true"></i>&nbsp;Ing de Software</a></li>
                 <li class="item-submenu" menu="2">
-                    <a href="http://40.71.217.135:8080/UPG_2/"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</a>
+                    <a href="UPG/index.html"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</a>
                     <ul class="submenu">
                         <li class="title-menu"><span class="fa fa-shopping-bag icon-menu"></span>Escuela de Postgrado</li>
                         <li class="go-back">Atras</li>
-
-                        <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Maestrías</a></li>
+                        <li><a href="UPG/Maestrías.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Maestrías</a></li>
                         <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Diplomaturas</a></li>
                         <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Doctorados</a></li>
                     </ul>
                 </li>
-
-                <li><a href="#"><span class="fa fa-envelope icon-menu"></span>Ins. De Investigación</a></li>
                 <li><a href="cenpro.jsp"><i class="fa fa-industry" aria-hidden="true"></i>&nbsp;CENPRO</a></li>
                 <li><a href="cerseu.jsp"><i class="fa fa-desktop" aria-hidden="true"></i>&nbsp;CERSEU</a></li>
                 <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Biblioteca</a></li>
@@ -180,16 +163,14 @@
 
     <!-- noticias -->
     <div thumbnail thumbnail-efect1>
-       
-
-        <div class="thumbnail col-md-10 col-md-offset-1  thumbnail-efect1" style="background-color: #006699">
-             <div class="col-xs-12 divTituloSeccion colAzul2">
-                <h2 style="margin-top: 0px;" class="noticias page-header"><strong>Últimas Noticias</strong></h2>
+        <div class="thumbnail col-md-12 thumbnail-efect1" style="background-color: #006699">
+            <div class="col-xs-12 divTituloSeccion colAzul2">
+                <h2 style="margin-top: 0px; font-family: sans-serif; color: white" class="noticias page-header"><strong>Últimas Noticias</strong></h2>
             </div>
             <br>
             <%controladorPublicacion cp = new controladorPublicacion();%>
             <%= cp.getAllPubliXcategoria("cerseu")%>
-           
+            
         </div>  
     </div>
     <!-- end-Noticias -->
@@ -200,9 +181,9 @@
     <!-- Cursos -->
     <div thumbnail thumbnail-efect1>
 
-        <div class="thumbnail col-md-10 col-md-offset-1  thumbnail-efect1" style="background-color: #006699">
+        <div class="thumbnail col-md-12 thumbnail-efect1" style="background-color: #006699">
             <div class="col-xs-12 divTituloSeccion colAzul2">
-                <h2 style="margin-top: 0px;" class="noticias page-header"><strong>Cursos</strong></h2>
+                <h2 style="margin-top: 0px; color: white; font-family: sans-serif" class="noticias page-header"><strong>Cursos</strong></h2>
             </div>
             <br>     
             <%= cp.getFourCursos("cursos")%>
@@ -215,100 +196,93 @@
 
 
     <!-- FORMULARIO -->
-    <section>
-        
-        <form id='frmconsulta' name='frmconsulta' class="thumbnail col-md-10 col-md-offset-1 thumbnail-efect1" style="background-color:#FFBF00">
+    <section style="font-family: sans-serif; color: white" class="col-md-12" >
+        <form id='frmconsulta' name='frmconsulta' class="thumbnail col-md-10 col-md-offset-1 thumbnail-efect1" style="background-color:#678">
             <div class=" col-md-8 col-md-offset-2">
-                <h2 class="noticias "><b><center>¡Escríbenos cualquier consulta que tengas!</center></b></h2>  
+                <h2 class="noticias" style="font-family: sans-serif; color: white" ><b><center><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>&nbsp;Contáctanos</center></b></h2>  
             </div>
-
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    <label for="InputNombre">Nombre</label>
+                    <label for="InputNombre"><i class="fa fa-check-square" aria-hidden="true"></i>&nbsp;Nombre</label>
                     <input type="text" name= "nombre" class="form-control" id='nombre' placeholder="Ingrese su nombre..." required="true"/>
                 </div>
                 <div class="form-group">
-                    <label for="InputApellidoP">Apellido Paterno</label>
+                    <label for="InputApellidoP"><i class="fa fa-check-square" aria-hidden="true"></i>&nbsp;Apellido Paterno</label>
                     <input type="text" name= "apellidop" class="form-control" id='apellidop'  placeholder="Ingrese su apellido paterno..." required="true"/>
                 </div>
                 <div class="form-group">
-                    <label for="InputApellidoM">Apellido Materno</label>
+                    <label for="InputApellidoM"><i class="fa fa-check-square" aria-hidden="true"></i>&nbsp;Apellido Materno</label>
                     <input type="text" name= "apellidom"  class="form-control" id='apellidom'  placeholder="Ingrese su apellido materno..." required="true"/>
                 </div>
                 <div class="form-group">
-                    <label for="InputCorreoE">Correo Electrónico</label>
+                    <label for="InputCorreoE"><i class="fa fa-check-square" aria-hidden="true"></i>&nbsp;Correo Electrónico</label>
                     <input type="email" name="correoe" class="form-control" id='correoe' aria-describedby="emailHelp" placeholder="Ingrese su correo..." required="true"/>
                 </div>
                 <div class="form-group">
-                    <label for="InputDNI">DNI</label>
+                    <label for="InputDNI"><i class="fa fa-check-square" aria-hidden="true"></i>&nbsp;DNI</label>
                     <input type="text" name="dni" class="form-control" id='dni'  placeholder="Ingrese su DNI..." required="true"/>
                 </div>
             </div>
-
             <div class="col-xs-12 col-md-6">
-
                 <div class="form-group">
-                    <label for="InputDirección">Dirección</label>
+                    <label for="InputDirección"><i class="fa fa-check-square" aria-hidden="true"></i>&nbsp;Dirección</label>
                     <input type="text" class="form-control" id='direccion'  placeholder="Detalle su dirección..." name="direccion"required="true"/>
                 </div>
                 <div class="form-group">
-                    <label for="InputDistrito">Distrito</label>
+                    <label for="InputDistrito"><i class="fa fa-check-square" aria-hidden="true"></i>&nbsp;Distrito</label>
                     <input type="text" class="form-control" id='distrito'  placeholder="Distrito de vivienda..." name="distrito" required="true"/>
                 </div>
                 <div class="form-group">
-                    <label for="InputDepartamento">Departamento</label>
-                    <input type="text" class="form-control" id='departamento'  placeholder="Departamento de vivienda..." name="departamento" required="true"/>
+                    <label for="InputDepartamento"><i class="fa fa-check-square" aria-hidden="true"></i>&nbsp;Curso de Interés</label>
+                    <select class="form-control">
+                        <option>SQL Profesional</option>
+                        <option>Excel Intermedio</option>
+                        <option>Office Avanzado</option>
+                        <option>Redes y Conectividad</option>
+                        <option>Ensamblaje de PC's</option>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label for="InputComentario">Comentario</label>
+                    <label for="InputComentario"><i class="fa fa-check-square" aria-hidden="true"></i>&nbsp;Comentario</label>
                     <textarea class="form-control" id='comentario' name="comentario" required="true"rows="5"></textarea>
                 </div>
             </div>
-
             <div class="col-md-4 col-md-offset-4 " style="padding-top: 10px">
                 <input type="button" class = "btn btn-primary btn-block btn-lg" id='enviarConsulta' value="Enviar" />
-
                 <br>
             </div>
-
         </form>
     </section>
     <!-- FIN FORMULARIO -->
 
+    
+    
     <br><br>
 
     <!-- SUSCRIPCIÓN -->
     <div >
-       
-        <div class="thumbnail col-md-10 col-md-offset-1 contacto  thumbnail-efect">
-
-            <div class="panel-body" >
-
-                <form id='frmcorreo' name='frmcorreo'>
-                    <h2 class="noticias"><b><center>Suscribete para conocer más de la carrera!</center></b></h2>
-
+        <div class="thumbnail col-md-12" style="padding-top: 1em; padding-bottom: 1em; margin: 0; background: #414752; color:white" >
+            <div >
+                <form id='frmcorreo' name='frmcorreo' style="padding-top: 1em; padding-bottom: 1em" >
+                    <h2 class="" style="font-family: sans-serif" ><b><center><i class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;Entérate de nuestros cursos</center></b></h2>
                     <div class="row col-md-8 col-md-offset-2 ">
                         <div class="col-md-8">
                             <input type="text" name='mail' id='mail' class="form-control" placeholder="Ingresa tu correo electrónico" required="true" >
                         </div>
-
                         <div class="col-md-4 ">
-                            <input type="button" class = "btn btn-primary btn-block thumbnail-efect1" id='enviarCorreo' value="Regístrate" style="background-color: #243EFF;"/>
+                            <input type="button" class = "btn btn-primary btn-block thumbnail-efect1" id='enviarCorreo' value="Regístrate" style="background-color: #78a239; color: white"/>
                         </div>	
                     </div>
                 </form>
             </div>	
-
         </div>
     </div>
     <!-- END-SUSCRIPCIÓN -->
 
-
-   
-        <!--FINCOMPAÑIASASOCIADAS-->
-        <br><br>
-    </div>
-    <!--FOOTER-->
+    <br><br>
+</div>
+<!--FOOTER-->
+<div class="col-md-12" style="padding: 0; margin: 0" >
     <footer id="myFooter">
         <div class="container">
             <div class="row">
@@ -358,39 +332,40 @@
             </div>
         </div>
     </footer>
-    <!--fin-Footer-->
+</div>
+<!--fin-Footer-->
 
-    <br><br>
+<br><br>
 
-    <script type="text/javascript" src="http://www.cepefodes.org.pe/Hector/libs/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="http://www.cepefodes.org.pe/Hector/dist/js/jquery.sliderPro.min.js"></script>
-    <script type="text/javascript" src="http://www.cepefodes.org.pe/Hector/libs/fancybox/jquery.fancybox.pack.js"></script>
-    <script src="js/header/mainHeader.js"></script>
+<script type="text/javascript" src="http://www.cepefodes.org.pe/Hector/libs/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://www.cepefodes.org.pe/Hector/dist/js/jquery.sliderPro.min.js"></script>
+<script type="text/javascript" src="http://www.cepefodes.org.pe/Hector/libs/fancybox/jquery.fancybox.pack.js"></script>
+<script src="js/header/mainHeader.js"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function ($) {
-            $('#example4').sliderPro({
-                width: 960,
-                height: 400,
-                autoHeight: true,
-                fade: true,
-                updateHash: true
-            });
-
-            // instantiate fancybox when a link is clicked
-            $('#example4 .sp-lightbox').on('click', function (event) {
-                event.preventDefault();
-
-                // check if the clicked link is also used in swiping the slider
-                // by checking if the link has the 'sp-swiping' class attached.
-                // if the slider is not being swiped, open the lightbox programmatically,
-                // at the correct index
-                if ($('#example4').hasClass('sp-swiping') === false) {
-                    $.fancybox.open(this);
-                }
-            });
+<script type="text/javascript">
+    $(document).ready(function ($) {
+        $('#example4').sliderPro({
+            width: 960,
+            height: 400,
+            autoHeight: true,
+            fade: true,
+            updateHash: true
         });
-    </script>
+
+        // instantiate fancybox when a link is clicked
+        $('#example4 .sp-lightbox').on('click', function (event) {
+            event.preventDefault();
+
+            // check if the clicked link is also used in swiping the slider
+            // by checking if the link has the 'sp-swiping' class attached.
+            // if the slider is not being swiped, open the lightbox programmatically,
+            // at the correct index
+            if ($('#example4').hasClass('sp-swiping') === false) {
+                $.fancybox.open(this);
+            }
+        });
+    });
+</script>
 
 </body>
 </html>

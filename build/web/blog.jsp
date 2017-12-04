@@ -155,24 +155,31 @@
             </div>
         </section>
 
-        <div class="thumbnail col-md-10 col-md-offset-1 contacto">
+        <!-- SUSCRIPCIÓN -->
+        <div >
+            <!-- SUSCRIPCIÓN -->
 
-            <div class="panel-body" >
+            <div class="thumbnail col-md-10 col-md-offset-1 contacto  thumbnail-efect">
 
-                <h2 class="noticias"><b>¡Escríbenos cualquier consulta que tengas!</b></h2>
+                <div class="panel-body" >
 
+                    <form id='frmcorreo' name='frmcorreo'>
+                        <h2 class="noticias"><b><center>Suscribete para enterarte de las nuevas noticias!</center></b></h2>
 
-                <div class="row col-md-8 col-md-offset-2">
-                    <div class="col-md-8">
-                        <input type="text" class="form-control" placeholder="Ingresa tu correo electrónico"  >
-                    </div>
+                        <div class="row col-md-8 col-md-offset-2 ">
+                            <div class="col-md-8">
+                                <input type="text" name='mail' id='mail' class="form-control" placeholder="Ingresa tu correo electrónico" required="true" >
+                            </div>
 
-                    <div class="col-md-4">
-                        <input type="button" class = "btn btn-primary btn-block"  value="Regístrate" style="background-color: #273640;">
-                    </div>	
-                </div>
-            </div>	
+                            <div class="col-md-4 ">
+                                <input type="submit" class = "btn btn-primary btn-block thumbnail-efect1" id='enviarCorreo' value="Regístrate" style="background-color: #243EFF;"/>
+                            </div>	
+                        </div>
+                    </form>
+                </div>	
 
+            </div>
         </div>
+        <!-- END-SUSCRIPCIÓN -->
     </body>
 </html>
