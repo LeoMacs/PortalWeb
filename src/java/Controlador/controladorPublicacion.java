@@ -408,12 +408,12 @@ public class controladorPublicacion {
         return htmlCode;
     }
 
-    public String getFourBlog(String categoria) {
+    public String getFourBlogXcategoria(String categoria) {
         String htmlCode = "<br>";
         modeloPublicacion modelop = new modeloPublicacion();
 
         for (publicacion p : modelop.getfourPublicacionesCategoria(categoria)) {
-            htmlCode = htmlCode + "<div class=\"col-md-3\">\n"
+            htmlCode = htmlCode + "<div class=\"col-md-4\">\n"
                     + "              <div class=\"thumbnail thumbnail-efect  thumb-shadow s-padding\" style=\"padding: 0px; height: 250px\">\n"
                     + "                 <a id='btnmodificarpublicacion' href='detallePubli.jsp?id=" + p.getId() + "'><img src=" + servidor + "/documents/" + codDocumento + p.getImagen() + "/ " + " alt=\"\" ></a>\n"
                     + "                <div class=\"caption bg3\">\n"
@@ -545,19 +545,24 @@ public class controladorPublicacion {
     }
     
     public String getFourBlog() {
-        String htmlCode = "<br>";
+        String htmlCode = "";
         modeloPublicacion modelop = new modeloPublicacion();
-
-        for (publicacion p : modelop.getFourPublicaciones()) {
-            htmlCode = htmlCode + "<div class=\"col-md-3\">\n"
-                    + "              <div class=\"thumbnail thumbnail-efect  thumb-shadow s-padding\" style=\"padding: 0px; height: 250px\">\n"
-                    + "                <div class=\"caption bg3\">\n"
-                    + "                  <h3 class='noticias'><strong>" + p.getTitulo() + " </strong></h3>\n"
-                    + "                 <a id='btnmodificarpublicacion' href='detalleCurso.jsp?id=" + p.getId() + "'><img src=" + servidor + "/documents/" + codDocumento + p.getImagen() + "/ " + " alt=\"\" ></a>\n"
-                    + "                </div>\n"
-                    + "              </div> \n"
-                    + "\n"
-                    + "            </div>";
+         for (publicacion p : modelop.getFourPublicaciones()) {
+            htmlCode = htmlCode + "<div class=\"col-md-3 \" style=\"padding-left: 0px;margin-top: 10px;\">\n" +
+" 	  			<div class=\"noti-eve thumb-shadow\" style=\"width: 100%; \">\n" +
+"             <div class=\"thumbnail   s-padding\" style=\"padding: 0px;  \"> \n" +
+"				<a id='btnmodificarpublicacion' href='detallePubli.jsp?id=" + p.getId() + "'> <img style = 'height: 270px;' src=" + servidor + "/documents/" + codDocumento + p.getImagen() + "/ ></a>\n"+
+"                <div class=\"caption bg2\">\n" +
+"                 <h3>"+p.getTitulo()+"</h3>\n" +
+"                  <div class=\\\"wrap\\\">\n" +
+"                    <p >"+p.getDetalle()+"</p>\n" +
+"                 </div>  \n" +
+"               </div>\n" +
+"             </div> \n" +
+"         </div>\n" +                  
+"             </div>"
+                    ;
+            //Prueba
         }
         return htmlCode;
     }
