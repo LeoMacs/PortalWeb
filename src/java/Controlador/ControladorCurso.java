@@ -183,7 +183,7 @@ public class ControladorCurso extends Conexion {
         PreparedStatement pst = null;
         boolean flag = false;
         try {
-            String sql = "call updatePublicacion(?,?,?,?)";
+            String sql = "update Curso updatePublicacion(?,?,?,?)";
             pst = getConnection().prepareStatement(sql);
 
             if (pst.executeUpdate() == 1) {

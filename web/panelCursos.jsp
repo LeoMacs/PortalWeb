@@ -91,7 +91,7 @@
                                 <button   class="btn btn-info" ><a href="detalleCursoPanel.jsp?idCurso=<%=curso.getId()%>"><i class="glyphicon glyphicon-eye-open" ></i></a></button>
                             </td>
                             <td> 
-                                <button   class="btn btn-info" ><a href="editarCurso.jsp?id=<%=curso.getId()%>" ><i class="glyphicon glyphicon-pencil" ></i></a></button>
+                                <button   class="btn btn-info" ><a href="editarCurso.jsp?idCurso=<%=curso.getId()%>" ><i class="glyphicon glyphicon-pencil" ></i></a></button>
                             </td>
                             <td>   
                                 <button   class="btn btn-info" ><a href="eliminarCurso.jsp?idCurso=<%=curso.getId()%>" ><i class="glyphicon glyphicon-trash" ></i></a></button>
