@@ -1,7 +1,7 @@
 <%-- 
-    Document   : index
-    Created on : 02/11/2017, 10:16:09 PM
-    Author     : PEDRO
+    Document   : CerseuAllNoticias
+    Created on : 02/12/2017, 05:09:49 PM
+    Author     : jlliuyav
 --%>
 
 <%@page import="Controlador.controladorPublicacion"%>
@@ -180,18 +180,16 @@
 
     <!-- noticias -->
     <div thumbnail thumbnail-efect1>
-
+       
 
         <div class="thumbnail col-md-10 col-md-offset-1  thumbnail-efect1" style="background-color: #006699">
-            <div class="col-xs-12 divTituloSeccion colAzul2">
+             <div class="col-xs-12 divTituloSeccion colAzul2">
                 <h2 style="margin-top: 0px;" class="noticias page-header"><strong>Últimas Noticias</strong></h2>
             </div>
             <br>
             <%controladorPublicacion cp = new controladorPublicacion();%>
-            <%= cp.getViewPublicacionesxCategoria("cerseu")%>
-            <div class="divTituloSeccion ">
-                <a href='cerseu_AllNoticias.jsp' style="color: #fff"><strong><center>Ver más...</center></strong></a>
-            </div>
+            <%= cp.getAllPubliXcategoria("cerseu")%>
+           
         </div>  
     </div>
     <!-- end-Noticias -->
@@ -218,7 +216,7 @@
 
     <!-- FORMULARIO -->
     <section>
-
+        
         <form id='frmconsulta' name='frmconsulta' class="thumbnail col-md-10 col-md-offset-1 thumbnail-efect1" style="background-color:#FFBF00">
             <div class=" col-md-8 col-md-offset-2">
                 <h2 class="noticias "><b><center>¡Escríbenos cualquier consulta que tengas!</center></b></h2>  
@@ -281,7 +279,7 @@
 
     <!-- SUSCRIPCIÓN -->
     <div >
-
+       
         <div class="thumbnail col-md-10 col-md-offset-1 contacto  thumbnail-efect">
 
             <div class="panel-body" >
@@ -306,12 +304,11 @@
     <!-- END-SUSCRIPCIÓN -->
 
 
-
-    <!--FINCOMPAÑIASASOCIADAS-->
-    <br><br>
-</div>
-<!--FOOTER-->
-<div class="col-md-12">
+   
+        <!--FINCOMPAÑIASASOCIADAS-->
+        <br><br>
+    </div>
+    <!--FOOTER-->
     <footer id="myFooter">
         <div class="container">
             <div class="row">
@@ -361,40 +358,39 @@
             </div>
         </div>
     </footer>
-</div>
-<!--fin-Footer-->
+    <!--fin-Footer-->
 
-<br><br>
+    <br><br>
 
-<script type="text/javascript" src="http://www.cepefodes.org.pe/Hector/libs/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="http://www.cepefodes.org.pe/Hector/dist/js/jquery.sliderPro.min.js"></script>
-<script type="text/javascript" src="http://www.cepefodes.org.pe/Hector/libs/fancybox/jquery.fancybox.pack.js"></script>
-<script src="js/header/mainHeader.js"></script>
+    <script type="text/javascript" src="http://www.cepefodes.org.pe/Hector/libs/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://www.cepefodes.org.pe/Hector/dist/js/jquery.sliderPro.min.js"></script>
+    <script type="text/javascript" src="http://www.cepefodes.org.pe/Hector/libs/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="js/header/mainHeader.js"></script>
 
-<script type="text/javascript">
-    $(document).ready(function ($) {
-        $('#example4').sliderPro({
-            width: 960,
-            height: 400,
-            autoHeight: true,
-            fade: true,
-            updateHash: true
+    <script type="text/javascript">
+        $(document).ready(function ($) {
+            $('#example4').sliderPro({
+                width: 960,
+                height: 400,
+                autoHeight: true,
+                fade: true,
+                updateHash: true
+            });
+
+            // instantiate fancybox when a link is clicked
+            $('#example4 .sp-lightbox').on('click', function (event) {
+                event.preventDefault();
+
+                // check if the clicked link is also used in swiping the slider
+                // by checking if the link has the 'sp-swiping' class attached.
+                // if the slider is not being swiped, open the lightbox programmatically,
+                // at the correct index
+                if ($('#example4').hasClass('sp-swiping') === false) {
+                    $.fancybox.open(this);
+                }
+            });
         });
-
-        // instantiate fancybox when a link is clicked
-        $('#example4 .sp-lightbox').on('click', function (event) {
-            event.preventDefault();
-
-            // check if the clicked link is also used in swiping the slider
-            // by checking if the link has the 'sp-swiping' class attached.
-            // if the slider is not being swiped, open the lightbox programmatically,
-            // at the correct index
-            if ($('#example4').hasClass('sp-swiping') === false) {
-                $.fancybox.open(this);
-            }
-        });
-    });
-</script>
+    </script>
 
 </body>
 </html>
