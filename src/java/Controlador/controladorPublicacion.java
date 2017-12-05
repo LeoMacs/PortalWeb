@@ -245,7 +245,7 @@ public class controladorPublicacion {
         modeloPublicacion mp = new modeloPublicacion();
         publicacion p = mp.getDetalle(idPubli);
         //nombreImagen=mp.getNombreImagen(p.getidImagen());  
-        return htmlCode = "<h1 class='titulo-blog' style='font-family: Western,\"Times New Roman\", Georgia, Serif;'>" + p.getTitulo() + "</h1>"
+        return htmlCode = "<h1 class='titulo-blog noticias' style='font-family: Western,\"Times New Roman\", Georgia, Serif;'>" + p.getTitulo() + "</h1>"
                 + "<h3 class='titulo-blog' style='font-family: Western,\"Times New Roman\", Georgia, Serif;'>" + p.getSubtitulo() + "</h3>"
                 + "<img src='" + servidor + "/documents/" + codDocumento + p.getNameImagen() + "' class=\"img-rounded center-block\" alt=\"Cinque Terre\">"
                 //+ "<img src='"+imagPrueba+"' class=\"img-rounded center-block\" alt=\"Cinque Terre\">"
@@ -398,8 +398,8 @@ public class controladorPublicacion {
                     + "     				<a id='btnmodificarpublicacion' href='detallePubli.jsp?id=" + p.getId() + "'> <img src=" + servidor + "/documents/" + codDocumento + p.getImagen() + "/ " + " class=\"col-md-12 imag-producto\" ></a>\n"
                     + "\n"
                     + "      				<div class=\"caption\">\n"
-                    + "	       				 <h1 class=\"lead\">" + p.getTitulo() + "</h1>\n"
-                    + "    	   		 		<p>" + p.getDetalle() + "</p>\n"
+                    + "	       				 <h1 class='lead noticias'>" + p.getTitulo() + "</h1>\n"
+                    + "    	   		 		<!--p>" + p.getDetalle() + "</p-->\n"
                     + "      				</div>\n"
                     + "\n"
                     + "    			</div>\n"

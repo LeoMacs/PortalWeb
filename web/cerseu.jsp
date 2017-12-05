@@ -12,7 +12,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-        <title>FISI</title>
+        <title>CERSEU-FISI</title>
         <link rel="icon" type="image/png" href="imagenes/asistencia.png" />
         <link rel="stylesheet" href="css/estilos-p.css">
         <link rel="stylesheet" href="css/estilos-home-p.css">
@@ -29,6 +29,9 @@
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/estilos_upg.css">
         <link rel="stylesheet" href="css/style_upg.css">
+        <link rel="stylesheet" href="css/footer_upg.css">
+        <link rel="stylesheet" href="css/font-awesome_upg.css">
+
         <!--finstilos-footer-->
         <script src="js/jquery-3.2.1.js"></script>
         <script src="js/main.js"></script>
@@ -71,7 +74,7 @@
         </script>
     </head>
 
-    <title>FISI</title>
+    <title>CERSEU</title>
 
     <script>
         $(document).ready(function () {
@@ -98,9 +101,9 @@
         <nav class="navegacion">
             <ul class="menu">
                 <!-- TITULAR -->
-                <li class="title-menu">FISI</li>
+                <li class="title-menu">CERSEU-FISI</li>
                 <!-- TITULAR -->
-
+                <li><a href="index.jsp"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Inicio</a></li>
                 <li class="item-submenu" menu="1">
                     <a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;La Facultad</a>
                     <ul class="submenu">
@@ -132,7 +135,7 @@
     </header>
 
     <div class="social" style="float: right">
-        <ul>
+        <ul >
             <li><a href="http://wwww." class="icon-facebook"></a></li>
             <li><a href="http://wwww." class="icon-google-plus"></a></li>
             <li><a href="http://wwww." class="icon-twitter"></a></li>
