@@ -117,7 +117,7 @@
                 <div class="container center991">
                     <div class="secundarias">
                         <% controladorPublicacion cp = new controladorPublicacion();%>
-                        <%= cp.getFourBlog("eapis")%>
+                        <%= cp.getFourBlogXcategoria("eapis")%>
                     </div>
                 </div>
             </section>   
@@ -137,7 +137,7 @@
                 </h1>
             </div>
             <div class="row">
-                <div class="col-xs-6 col-md-3" style ="padding-left: 0px; padding-right: 0px">
+                <div class="col-xs-6 col-md-3 " style ="padding-left: 0px; padding-right: 0px">
                     <a href="http://sistemas2.unmsm.edu.pe/ASISTENCIADOCENTE/inicio.jsf" class="thumbnail" style ="padding:0px;">
                         <img src="imagenes/AsisDoc.jpg">
                     </a>
