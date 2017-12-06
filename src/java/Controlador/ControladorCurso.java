@@ -18,7 +18,7 @@ import java.util.ArrayList;
  * @author User
  */
 public class ControladorCurso extends Conexion {
-    
+
     String servidor = "http://52.168.71.59:8080";
     //String servidor = "http://localhost:8080";
 
@@ -26,16 +26,16 @@ public class ControladorCurso extends Conexion {
     //String codDocumento = "30951/30978/";
 
     public Curso getCursoXid(int idCurso) {
-         Curso curso = new Curso();
+        Curso curso = new Curso();
         PreparedStatement pst = null;
         ResultSet rs = null;
 
         try {
-            String sql = "SELECT * FROM `Curso` WHERE id="+idCurso+"; ";
+            String sql = "SELECT * FROM `Curso` WHERE id=" + idCurso + "; ";
             pst = getConnection().prepareCall(sql);
             rs = pst.executeQuery();
             while (rs.next()) {
-                 curso=new Curso(rs.getInt("id"), rs.getString("titulo"), rs.getString("fechaInicio"), rs.getString("fechaFin"), rs.getString("descripcion"), rs.getString("url"));
+                curso = new Curso(rs.getInt("id"), rs.getString("titulo"), rs.getString("fechaInicio"), rs.getString("fechaFin"), rs.getString("descripcion"), rs.getString("url"));
                 //(rs.getInt("entryId"), "", rs.getString("title"), rs.getString("description"), rs.getString("fileName"))
             }
         } catch (Exception e) {
@@ -63,7 +63,7 @@ public class ControladorCurso extends Conexion {
         ResultSet rs = null;
 
         try {
-            String sql = "SELECT * FROM `Curso`ORDER BY fechaInicio DESC; ";
+            String sql = "SELECT * FROM `Curso`ORDER BY id DESC; ";
             pst = getConnection().prepareCall(sql);
             rs = pst.executeQuery();
             while (rs.next()) {
@@ -96,7 +96,7 @@ public class ControladorCurso extends Conexion {
 
         try {
 
-            String sql = "SELECT entryId, DLFileEntry.fileEntryId FROM SELECT * FROM `Curso`ORDER BY fechaInicio DESC LIMIT 4;";
+            String sql = "SELECT entryId, DLFileEntry.fileEntryId FROM SELECT * FROM `Curso`ORDER BY id DESC LIMIT 4;";
             pst = getConnection().prepareCall(sql);
             rs = pst.executeQuery();
 
@@ -127,11 +127,11 @@ public class ControladorCurso extends Conexion {
         boolean flag = false;
         try {
             String sql = "insert into Curso(titulo,fechaInicio,fechaFin,descripcion,url) VALUES"
-                    + "('"+curso.getTitulo()+"',"
-                    + "'"+curso.getFechai()+"',"
-                    + "'"+curso.getFechaf()+"',"
-                    + "'"+curso.getDescripcion()+"',"
-                    + "'"+curso.getUrlImagen()+"');";
+                    + "('" + curso.getTitulo() + "',"
+                    + "'" + curso.getFechai() + "',"
+                    + "'" + curso.getFechaf() + "',"
+                    + "'" + curso.getDescripcion() + "',"
+                    + "'" + curso.getUrlImagen() + "');";
             pst = getConnection().prepareStatement(sql);
             if (pst.executeUpdate() == 1) {
                 flag = true;
@@ -183,7 +183,14 @@ public class ControladorCurso extends Conexion {
         PreparedStatement pst = null;
         boolean flag = false;
         try {
-            String sql = "update Curso updatePublicacion(?,?,?,?)";
+            String sql = "update Curso set titulo='" + curso.getTitulo() + "', "
+                    + "fechaInicio='" + curso.getFechai() + "', "
+                    + "fechaFin='" + curso.getFechaf() + "', "
+                    + "descripcion='" + curso.getDescripcion() + "', "
+                    + "url='" + curso.getUrlImagen() + "' "
+                    + "where id='" + curso.getId() + "';";
+            // curso = new Curso("), rs.getString("fechaFin"), rs.getString("descripcion"), rs.getString("url"));
+
             pst = getConnection().prepareStatement(sql);
 
             if (pst.executeUpdate() == 1) {
@@ -206,7 +213,7 @@ public class ControladorCurso extends Conexion {
         }
         return flag;
     }
-    
+
     public String getRelacionada(int idPubli) {
         String htmlCode = "";
         modeloPublicacion mp = new modeloPublicacion();
@@ -223,7 +230,7 @@ public class ControladorCurso extends Conexion {
         }
         return htmlCode;
     }
-    
+
     public String getAllCursos1() {
         String htmlCode = "";
         modeloPublicacion modelop = new modeloPublicacion();
@@ -246,6 +253,5 @@ public class ControladorCurso extends Conexion {
         }
         return htmlCode;
     }
-
 
 }

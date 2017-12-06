@@ -10,6 +10,7 @@
          <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title>Editar Curso</title>
+         <link rel="icon" href="http://sistemas.unmsm.edu.pe/assets/fisi/img/logo/logo-fisi.png">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="css/estilos-home-p.css">
@@ -28,20 +29,20 @@
        
         <!-------------->
     </head>
-    <body>
+    <body style="background: #FFB918">
         <div class="container ">
 
             <ol class="breadcrumb ">
-                <li><a href="panelCursos.jsp" style="text-decoration: underline;color: #0077e2" class="thumbnail-efect1">Panel de Cursos</a></li>
-                <li class="active">Editar</li>
+                <li><a href="panelCursos.jsp" style="text-decoration: underline;color: #0077e2" class="thumbnail-efect1"><strong>Panel de Cursos</strong></a></li>
+                <li class="active"><strong>Editar Curso</strong></li>
                    
             </ol>
 
             <div class="panel panel-primary thumbnail-efect1">
-                <div class="panel-heading"><h2 class="noticias" style="color: white"><strong>ActualizarCurso</strong></h2></div>
+                <div class="panel-heading"><h2 class="noticias" style="color: white"><strong>Actualizar Curso</strong></h2></div>
                 <div class="panel-body">
                     <!-- -------->
-                    <form  action="panelCursos.jsp"   name='frmcurso' id='frmcurso' method="post">
+                    <form  action="editarCurso"   name='frmcurso' id='frmcurso' method="post">
 
                         <div class="form-group">
                             <label for="nombrec">Nombre</label>
@@ -60,18 +61,20 @@
 
                         <div class="form-group">
                             <label for="descripcionc">Descripción</label>
-                            <textarea rows="6" required="true" class="form-control" name="descripcion" value="<%=curso.getDescripcion()%>"></textarea>
+                            <input  class="form-control">
+                                
+                            <textarea rows="6" required="true" class="form-control" name="descripcion" ></textarea>
                             <!--input type="text" class="form-control" id="descripcionc" required="true"-->
                         </div>
 
                         <div class="form-group">
-                            <label for="urli">UrlImagen</label>
+                            <label for="urli">Url Imagen</label>
                             <input type="text" class="form-control" id="urli" name="urli"  required="true" value="<%=curso.getUrlImagen()%>">
                         </div>
 
                         <br />
                         <div class="">
-                            <input type="submit" value="Registrar" class="btn btn-primary thumbnail-efect" id='registrarCurso' name='registrarCurso' style=""/>
+                            <input type="submit" value="Registrar" class="btn btn-primary thumbnail-efect" id='editarCurso' name='editarCurso' style=""/>
                         </div>
                     </form>
                 </div>

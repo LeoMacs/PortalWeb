@@ -14,6 +14,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Panel de Cursos</title>
+         <link rel="icon" href="http://sistemas.unmsm.edu.pe/assets/fisi/img/logo/logo-fisi.png">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="css/estilos-home-p.css">
@@ -28,7 +29,7 @@
 
     </head>
 
-    <body class="">
+    <body style="background: #FFB918">
         <div >
             <h1 class="noticias "><center><strong>Panel de Cursos</strong></center></h1>
                     <%  System.out.println("PANEL DE CURSOS");
@@ -51,7 +52,7 @@
                         }
 
                     %>
-            <div class="container">
+            <div class="container ">
                 <div style="align-content: center">
                     <p>
                         <a href="registroDeCurso.jsp" class="btn btn-primary "><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Registrar</a>
@@ -88,13 +89,13 @@
 
                                 %>
                             <td>
-                                <button   class="btn btn-info" ><a href="detalleCursoPanel.jsp?idCurso=<%=curso.getId()%>"><i class="glyphicon glyphicon-eye-open" ></i></a></button>
+                               <a href="detalleCursoPanel.jsp?idCurso=<%=curso.getId()%>" class="btn btn-primary"><i class="glyphicon glyphicon-eye-open" ></i></a>
                             </td>
                             <td> 
-                                <button   class="btn btn-info" ><a href="editarCurso.jsp?idCurso=<%=curso.getId()%>" ><i class="glyphicon glyphicon-pencil" ></i></a></button>
+                                <a href="editarCurso.jsp?idCurso=<%=curso.getId()%>" class="btn btn-primary"><i class="glyphicon glyphicon-pencil" ></i></a>
                             </td>
                             <td>   
-                                <button   class="btn btn-info" ><a href="eliminarCurso.jsp?idCurso=<%=curso.getId()%>" ><i class="glyphicon glyphicon-trash" ></i></a></button>
+                                <a href="eliminarCurso.jsp?idCurso=<%=curso.getId()%>" class="btn btn-primary"><i class="glyphicon glyphicon-trash" ></i></a>
                             </td>
 
                             <% out.println("</tr>");
