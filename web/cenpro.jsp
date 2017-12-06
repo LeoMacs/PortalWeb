@@ -12,11 +12,13 @@
         <link rel="shortcut icon" href="http://sistemas.unmsm.edu.pe/assets/fisi/img/logo/logo-fisi.png"/>
         <!--Icons-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/estilos-slider.css">
+        <link rel="stylesheet" href="css/font-awesome-1.css">
         <link rel="stylesheet" href="css/estilos.css">
         <link rel="stylesheet" href="css/estilos-home.css">
         <link rel="stylesheet" href="css/font-awesome.css">
-		<link rel="stylesheet" href="css/estilos_trans2.css">
-		<link rel="stylesheet" href="css/estilos_trans3.css">
+	<link rel="stylesheet" href="css/estilos_trans2.css">
+	<link rel="stylesheet" href="css/estilos_trans3.css">
         <link rel="stylesheet" href="css/estilos_trans4.css">
         <link rel="stylesheet" href="css/estilos_trans5.css">
         <link rel="stylesheet" href="css/estilos-home.css">
