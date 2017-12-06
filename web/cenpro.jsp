@@ -1,5 +1,3 @@
-
-
 <%@page import="Controlador.controladorPublicacion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -17,6 +15,12 @@
         <link rel="stylesheet" href="css/estilos.css">
         <link rel="stylesheet" href="css/estilos-home.css">
         <link rel="stylesheet" href="css/font-awesome.css">
+		<link rel="stylesheet" href="css/estilos_trans2.css">
+		<link rel="stylesheet" href="css/estilos_trans3.css">
+        <link rel="stylesheet" href="css/estilos_trans4.css">
+        <link rel="stylesheet" href="css/estilos_trans5.css">
+        <link rel="stylesheet" href="css/estilos-home.css">
+        <link rel="stylesheet" href="css/estilos_upg.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -92,94 +96,54 @@
 
         <br><br>
 
-
-        <!-- Slider -->
-        <div class="container">
-            <h2></h2>  
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="http://sistemas.unmsm.edu.pe/ceups/archivos/banners/banner_web_2.jpg" alt="Los Angeles" style="width:100%;height:450px">
-                    </div>
-
-                    <div class="item">
-                        <img src="img\\bannerCenpro01.jpg" alt="Chicago" style="width:100%;height:450px">
-                    </div>
-
-                    <div class="item">
-                        <img src="http://aulavirtual.sistemas.unmsm.edu.pe/cerseu/pluginfile.php/3/course/section/2/taller.jpg" alt="New york" style="width:100%;height:450px">
-                    </div>
-                </div>
-
-                <!-- Left and right controls -->
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
+		    <!---¨*******INICIO-SLIDER***********--->
+    <div class="slideshow" style="background-color :#9AD7FF;">
+        <ul class="slider">
+            <%controladorPublicacion cp1 = new controladorPublicacion();%>
+            <%= cp1.getSliderXcategoria("cenpro")%>
+        </ul>
+        <div class="left">
+            <span class="fa fa-chevron-left"></span>
         </div>
 
-        <!--*********FIN-SLIDER*************-->
+        <div class="right">
+            <span class="fa fa-chevron-right"></span>
+        </div>
+    </div>
+    <!--*********FIN-SLIDER*************-->
+		    <div class="container centered">
+                <div class="thumbnail col-md-12 " style="padding-left: 10px; margin-bottom: 0px;" >
 
-        <section class="b3">
-            <div class="wancho">
-                <div class="col-xs-12" >
-                    <h2 style="margin-top: 0px; color:#1C71F7;">Nuestros Servicios</h2> 
+                    <div class="hero-unit2">
+                        <div class="letras">
+                            <h4 > Nuestros Servicios</h4>
+                        </div>
+                    </div>
+                    <br>    
+
+                    <div class="col-md-3" style="padding-left:0px;margin-top: 10px ">
+                        <a class="btn btn-primary" style="width: 280px;height: 100px" href=# ><img src="img/b3-img1.png"></a>
+                        <center><div class="" style= "color:#1C71F7;">Desarrollo de soluciones <br> informáticas</div></center>
+                    </div>
+                    <div class="col-md-3" style="padding-left:0px;margin-top: 10px ">
+                        <a class="btn btn-primary" style="width: 280px;height: 100px" href=# ><img src="img/b3-img5.png"></a>
+                         <center><div class="" style= "color:#1C71F7;">Desarrollo de <br> Software a medida</div></center>
+                    </div>
+                    <div class="col-md-3" style="padding-left:0px;margin-top: 10px ">
+                        <a class="btn btn-primary" style="width: 280px;height: 100px" href=# ><img src="img/b3-img3.png"></a>
+                         <center><div class="" style= "color:#1C71F7;">Capacitación a <br> Estudiantes</div></center>
+                    </div>
+                    <div class="col-md-3" style="padding-left:0px;margin-top: 10px ">
+                        <a class="btn btn-primary" style="width: 280px;height: 100px" href=# ><img src="img/b3-img4.png"></a>
+                         <center><div class="" style= "color:#1C71F7;">Creación de Soluciones TIC <br> innovadoras</div></center>
+                    </div>
+
                 </div>
-                <div class="b3-item">
-                    <div class="b3-img">
-                        <img src="img/b3-img1.png" alt="Cenpro" width="75" height="75">
-                    </div>
-                    <div class="b3-txt">
-                        <p>Desarrollo de soluciones <br> informáticas</p>
-                    </div>
-                </div>
-                <div class="b3-item">
-                    <div class="b3-img">
-                        <img src="img/b3-img5.png" alt="Cenpro" width="75" height="75">
-                    </div>
-                    <div class="b3-txt">
-                        <p>Desarrollo de <br> Software a medida</p>
-                    </div>
-                </div>
-                <div class="b3-item">
-                    <div class="b3-img">
-                        <img src="img/b3-img3.png" alt="Cenpro" width="75" height="75">
-                    </div>
-                    <div class="b3-txt">
-                        <p>Capacitación a <br> Estudiantes</p>
-                    </div>
-                </div>
-                <div class="b3-item">
-                    <div class="b3-img">
-                        <img src="img/b3-img4.png" alt="Cenpro" width="75" height="75">
-                    </div>
-                    <div class="b3-txt">
-                        <p>Creación de Soluciones TIC <br> innovadoras</p>
-                    </div>
-                </div>
-                <div class="b3-item">
-                    <div class="b3-img">
-                        <img src="img/b3-img2.png" alt="Cenpro" width="75" height="75">
-                    </div>
-                    <div class="b3-txt">
-                        <p>Arquitectura empresarial</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </div>	
+	   
+	   
+
+        
         <!-- Noticias -->
         <section style="background-color: #363740; margin-top: 3%; margin-bottom: 3%;">
             <div class="container center991">
