@@ -9,6 +9,59 @@
         <title>Centro de Producción</title>
         <!-- Favicon -->
         <link rel="icon" href="http://sistemas.unmsm.edu.pe/assets/fisi/img/logo/logo-fisi.png">
+        <link rel="icon" type="image/png" href="imagenes/asistencia.png" />
+        <link rel="stylesheet" href="css/estilos-p.css">
+        <link rel="stylesheet" href="css/estilos-home-p.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/estilos-slider-p.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!--stilosfooter-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/estilos_upg.css">
+        <link rel="stylesheet" href="css/style_upg.css">
+        <link rel="stylesheet" href="css/footer_upg.css">
+                <link rel="stylesheet" href="css/estilos.css">
+
+        <link rel="stylesheet" href="css/font-awesome_upg.css">
+           <link rel="stylesheet" href="css/font-awesome.css">
+           <link rel="stylesheet" href="css/estilos-slider.css">
+        <link rel="stylesheet" href="css/font-awesome-1.css">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/estilos-home.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/estilos_trans2.css">
+        <link rel="stylesheet" href="css/estilos_trans3.css">
+        <link rel="stylesheet" href="css/estilos_trans4.css">
+        <link rel="stylesheet" href="css/estilos_trans5.css">
+         <link rel="stylesheet" href="css/estilos-home.css">
+        <link rel="stylesheet" href="css/estilos_upg.css">
+        <link rel="stylesheet" href="http://www2.trabajo.gob.pe/wp-content/themes/mitraTheme/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://www2.trabajo.gob.pe/wp-content/themes/mitraTheme/css/owl.carousel.css">
+        <link rel="stylesheet" href="http://www2.trabajo.gob.pe/wp-content/themes/mitraTheme/css/admin.css">
+        <link rel="stylesheet" type="text/css" href="http://www.cepefodes.org.pe/Hector/css/hector.css">
+        <link rel="stylesheet" href="sss/sss.css"/>
+        <link rel="stylesheet" href="sss/sss.css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="sss/sss.js"></script>
+        <script src="js/main.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <!--finstilos-footer-->
+        <script src="js/jquery-3.2.1.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/panelAdministracion.js"></script>
+
+        <link rel="stylesheet" href="css/estilos-slider.css">
+        <link rel="stylesheet" href="css/font-awesome-1.css">
+
+        <script src="js/jquery-3.1.0.min.js"></script>
+        <script src="js/main-1.js"></script>
+        <!------------------***********************------------------------------------->
         <link rel="shortcut icon" href="http://sistemas.unmsm.edu.pe/assets/fisi/img/logo/logo-fisi.png"/>
         <!--Icons-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,15 +70,8 @@
         <link rel="stylesheet" href="css/estilos.css">
         <link rel="stylesheet" href="css/estilos-home.css">
         <link rel="stylesheet" href="css/font-awesome.css">
-	<link rel="stylesheet" href="css/estilos_trans2.css">
-	<link rel="stylesheet" href="css/estilos_trans3.css">
-        <link rel="stylesheet" href="css/estilos_trans4.css">
-        <link rel="stylesheet" href="css/estilos_trans5.css">
-        <link rel="stylesheet" href="css/estilos-home.css">
-        <link rel="stylesheet" href="css/estilos_upg.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	
+       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="http://www2.trabajo.gob.pe/wp-content/themes/mitraTheme/css/bootstrap.min.css">
         <link rel="stylesheet" href="http://www2.trabajo.gob.pe/wp-content/themes/mitraTheme/css/owl.carousel.css">
@@ -36,7 +82,6 @@
         <script src="sss/sss.js"></script>
 
         <script src="js/main.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script>
             jQuery(function ($) {
                 $('.slider-testimonial').sss({
@@ -45,6 +90,39 @@
                 });
             });
         </script>
+        <!--------------------***************************----------------------------------->
+
+        <script>
+            $(document).ready(function () {
+                $("#fotoPrincipal").click(function () {
+                    $("#fotoPrincipal").animate({height: 30}, 1500);
+                });
+
+            });
+        </script> 
+
+        <script>
+            $(document).ready(function () {
+                $("#fecha").onmouseover(function () {
+                    $("#fecha").animate({height: 120}, 700);
+                });
+
+            });
+        </script> 
+
+        <script>
+            function bigImg(x) {
+                x.style.height = "100px";
+            }
+        </script>
+
+        <script>
+            function normalImg(x) {
+                x.style.height = "70px";
+            }
+        </script>
+      
+        
     </head>
     <body>
         <!-- Header -->
@@ -52,7 +130,7 @@
         <header style="font-family: sans-serif" >
             <div class="w3-bar w3-white w3-large " style="box-shadow: 0px 10px 9px -2px rgba(0,0,0,0.44);">
                 <div id="btn" class="btn2">
-                    <a href="#" class="w3-bar-item w3-button w3-mobile" style="display: block; background: #5F6F81; color: white"><i class="fa fa-bars" aria-hidden="true"></i> &nbsp;Sistemas</a>
+                    <a href="#" class="w3-bar-item w3-button w3-mobile" style="display: block; background: #5F6F81; color: white"><i class="fa fa-bars" aria-hidden="true"></i> &nbsp;CENPRO</a>
                 </div>
                 <a href="unmsm.edu.pe" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;UNMSM</a>
                 <a href="sum.unmsm.edu.pe" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;SUM</a>
@@ -63,9 +141,9 @@
             <nav class="navegacion">
                 <ul class="menu">
                     <!-- TITULAR -->
-                    <li class="title-menu">FISI</li>
+                    <li class="title-menu">CENPRO-FISI</li>
                     <!-- TITULAR -->
-
+                    <li><a href="index.jsp"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Inicio</a></li>
                     <li class="item-submenu" menu="1">
                         <a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;La Facultad</a>
                         <ul class="submenu">
@@ -96,61 +174,62 @@
             </nav>
         </header>
 
+       
         <br><br>
 
-		    <!---¨*******INICIO-SLIDER***********--->
-    <div class="slideshow" style="background-color :#9AD7FF;">
-        <ul class="slider">
-            <%controladorPublicacion cp1 = new controladorPublicacion();%>
-            <%= cp1.getSliderXcategoria("cenpro")%>
-        </ul>
-        <div class="left">
-            <span class="fa fa-chevron-left"></span>
+        <!---¨*******INICIO-SLIDER***********--->
+        <div class="slideshow" style="background-color :#9AD7FF;">
+            <ul class="slider">
+                <%controladorPublicacion cp1 = new controladorPublicacion();%>
+                <%= cp1.getSliderXcategoria("cenpro")%>
+            </ul>
+            <div class="left">
+                <span class="fa fa-chevron-left"></span>
+            </div>
+
+            <div class="right">
+                <span class="fa fa-chevron-right"></span>
+            </div>
         </div>
+        <!--*********FIN-SLIDER*************-->
+        <div class="container centered">
+            <div class="thumbnail col-md-12 " style="padding-left: 10px; margin-bottom: 0px;" >
 
-        <div class="right">
-            <span class="fa fa-chevron-right"></span>
-        </div>
-    </div>
-    <!--*********FIN-SLIDER*************-->
-		    <div class="container centered">
-                <div class="thumbnail col-md-12 " style="padding-left: 10px; margin-bottom: 0px;" >
-
-                    <div class="hero-unit2">
-                        <div class="letras">
-                            <h4 > Nuestros Servicios</h4>
-                        </div>
+                <div class="hero-unit2">
+                    <div class="letras">
+                        <h4 > Nuestros Servicios</h4>
                     </div>
-                    <br>    
-
-                    <div class="col-md-3" style="padding-left:0px;margin-top: 10px ">
-                        <a class="btn btn-primary" style="width: 280px;height: 100px" href=# ><img src="img/b3-img1.png"></a>
-                        <center><div class="" style= "color:#1C71F7;">Desarrollo de soluciones <br> informáticas</div></center>
-                    </div>
-                    <div class="col-md-3" style="padding-left:0px;margin-top: 10px ">
-                        <a class="btn btn-primary" style="width: 280px;height: 100px" href=# ><img src="img/b3-img5.png"></a>
-                         <center><div class="" style= "color:#1C71F7;">Desarrollo de <br> Software a medida</div></center>
-                    </div>
-                    <div class="col-md-3" style="padding-left:0px;margin-top: 10px ">
-                        <a class="btn btn-primary" style="width: 280px;height: 100px" href=# ><img src="img/b3-img3.png"></a>
-                         <center><div class="" style= "color:#1C71F7;">Capacitación a <br> Estudiantes</div></center>
-                    </div>
-                    <div class="col-md-3" style="padding-left:0px;margin-top: 10px ">
-                        <a class="btn btn-primary" style="width: 280px;height: 100px" href=# ><img src="img/b3-img4.png"></a>
-                         <center><div class="" style= "color:#1C71F7;">Creación de Soluciones TIC <br> innovadoras</div></center>
-                    </div>
-
                 </div>
-            </div>	
-	   
-	   
+                <br>    
 
-        
+                <div class="col-md-3" style="padding-left:0px;margin-top: 10px ">
+                    <a class="btn btn-primary" style="width: 280px;height: 100px" href=# ><img src="img/b3-img1.png"></a>
+                    <center><div class="" style= "color:#1C71F7;">Desarrollo de soluciones <br> informáticas</div></center>
+                </div>
+                <div class="col-md-3" style="padding-left:0px;margin-top: 10px ">
+                    <a class="btn btn-primary" style="width: 280px;height: 100px" href=# ><img src="img/b3-img5.png"></a>
+                    <center><div class="" style= "color:#1C71F7;">Desarrollo de <br> Software a medida</div></center>
+                </div>
+                <div class="col-md-3" style="padding-left:0px;margin-top: 10px ">
+                    <a class="btn btn-primary" style="width: 280px;height: 100px" href=# ><img src="img/b3-img3.png"></a>
+                    <center><div class="" style= "color:#1C71F7;">Capacitación a <br> Estudiantes</div></center>
+                </div>
+                <div class="col-md-3" style="padding-left:0px;margin-top: 10px ">
+                    <a class="btn btn-primary" style="width: 280px;height: 100px" href=# ><img src="img/b3-img4.png"></a>
+                    <center><div class="" style= "color:#1C71F7;">Creación de Soluciones TIC <br> innovadoras</div></center>
+                </div>
+
+            </div>
+        </div>	
+
+
+
+
         <!-- Noticias -->
         <section style="background-color: #363740; margin-top: 3%; margin-bottom: 3%;">
             <div class="container center991">
                 <div class="secundarias">
-                    <h1 style="text-align: center; margin-top: 0px; color:white;">Ultimas Noticias</h1> 
+                    <h1 style="text-align: center; margin-top: 0px; color:white;" >Ultimas Noticias</h1> 
                     <% controladorPublicacion cp = new controladorPublicacion();%>
                     <%= cp.getFourBlogXcategoria("cenpro")%>
                 </div>
@@ -220,7 +299,7 @@
                 </div>
                 <div class="testimonial-text">
                     <p>Creativos que supieron captar perfectamente la idea de lo que queríamos hacer. Intuitivos porque con una idea que les trasladamos supieron ampliar y trasladar al trabajo que han desempeñado.
-                    Hablan algo y escuchan mucho. Nosotros estamos contentos con Distintiva porque les consideramos unos buenos profesionales.</p>
+                        Hablan algo y escuchan mucho. Nosotros estamos contentos con Distintiva porque les consideramos unos buenos profesionales.</p>
                 </div>
             </div>
             <div class="testimonial-item">
